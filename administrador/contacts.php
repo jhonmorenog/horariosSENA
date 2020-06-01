@@ -231,6 +231,8 @@ require_once "conexion/Conexion.php";?>
                           </tr>
                             <?php }
     
+     ?><?php }
+    
      ?>
                             </tbody>
                             </table>
