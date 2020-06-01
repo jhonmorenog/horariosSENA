@@ -18,7 +18,7 @@
         }
         }
         $_SESSION["expira"] = time();
-
+        
 ?>
 <!DOCTYPE html>
 <html lang="es">
