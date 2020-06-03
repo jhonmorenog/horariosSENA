@@ -1,5 +1,5 @@
 <?php 
-require_once "conexion/Conexion.php";
+require_once "../utili/Conexion.php";
 $direccion=$_POST['direccion'];
 $nombre_sede=$_POST['nombre_sede'];
 $centro=$_POST['centro'];

@@ -1,5 +1,5 @@
 <?php
-require_once "conexion/Conexion.php";
+require_once "../utili/Conexion.php";
 $lectiva=$_POST['lectiva'];
 $productiva=$_POST['productiva'];
 $found=false;

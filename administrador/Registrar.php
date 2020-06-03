@@ -52,7 +52,7 @@
                 <select name="rol" class="form-control" class="form-control" required="">
                     <option value="0" >Seleccionar</option>
                     <?php
-                    require("conexion/Conexion.php");
+                    require_once "../utili/Conexion.php";
                     $query=$mysqli->query("SELECT * FROM rol");
                     while($valores=mysqli_fetch_array($query)){
                         echo '<option value="'.$valores[id_rol].'">'.$valores[rol].'</option>';

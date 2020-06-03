@@ -1,5 +1,5 @@
 <?php 
-require_once "conexion/Conexion.php";
+require_once "../utili/Conexion.php";
 $id=$_POST['id'];
 $sede=$_POST['sede'];
 $descripcion=$_POST['descripcion'];

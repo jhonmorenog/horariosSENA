@@ -1,11 +1,13 @@
 <?php
-$conn = new mysqli("localhost","root","","id12868532_horarios");
+
+require_once "../utili/Conexion.php";
+//$conn = new mysqli("localhost","root","","id12868532_horarios");
 
 $sql = "UPDATE datos SET estado = 1 WHERE estado = 0";	
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($mysqli, $sql);
 
 $sql = "SELECT * FROM datos ORDER BY id DESC limit 5";
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($mysqli, $sql);
 
 $response='';
 

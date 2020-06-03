@@ -1,5 +1,5 @@
 <?php 
-require_once "conexion/Conexion.php";
+require_once "../utili/Conexion.php";
 $dia=$_POST['dia'];
 $trimestre=$_POST['trimestre'];
 $rango_horas=$_POST['rango_horas'];

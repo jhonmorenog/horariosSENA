@@ -30,14 +30,15 @@
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
     <?php if($flag == '1'){
-            
+        require_once "../utili/Conexion.php";    
         $SQL  = "UPDATE aula SET activated = '1' WHERE id_aula='$id_aula'";
-        mysql_query($SQL,$dbCon) or die(mysql_error());
-      
+        //mysql_query($SQL,$dbCon) or die(mysql_error());
+      echo "debe usar la misma conexión,modifique ésta parte.";
     }else if($flag == '0'){
  
         $SQL  = "UPDATE aula SET activated = '0' WHERE id_aula='$id_aula'";
-        mysql_query($SQL,$dbCon) or die(mysql_error());
+        //mysql_query($SQL,$dbCon) or die(mysql_error());
+        echo "debe usar la misma conexión,modifique ésta parte.";
     }
  ?>
     <script language="JavaScript" type="text/JavaScript">

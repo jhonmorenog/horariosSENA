@@ -1,5 +1,5 @@
 <?php
-	require_once"conexion/Conexion.php";
+	require_once "../utili/Conexion.php";
 	$count=0;
 	if(!empty($_POST['add'])) {
 		$evento = mysqli_real_escape_string($mysqli,$_POST["evento"]);

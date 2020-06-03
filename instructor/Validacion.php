@@ -1,5 +1,5 @@
 <?php 
-require_once "conexion/Conexion.php";
+require_once "../utili/Conexion.php";
 $email=$_POST['email'];
 $clave=md5($_POST['password']);
 $query="SELECT * FROM persona WHERE email='$email' AND clave='$clave'";

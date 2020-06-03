@@ -1,5 +1,5 @@
 <?php 
-require_once "conexion/Conexion.php";
+require_once "../utili/Conexion.php";
 $denominacion=$_POST['denominacion'];
 $duracion=$_POST['duracion'];
 

@@ -21,7 +21,7 @@
 
 ?>
 <?php
-require_once "conexion/Conexion.php";?>
+require_once "../utili/Conexion.php";?>
 <!DOCTYPE html>
 <html lang="es">
   <head>

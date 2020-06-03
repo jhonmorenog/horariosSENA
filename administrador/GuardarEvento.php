@@ -1,5 +1,5 @@
 <?php
-require_once "conexion/Conexion.php";
+require_once "../utili/Conexion.php";
 $nombre_evento=$_POST['nombre'];
 $inicio=$_POST['inicio'];
 $fin=$_POST['fin'];

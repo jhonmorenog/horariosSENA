@@ -1,5 +1,5 @@
 <?php
-require_once "conexion/Conexion.php";
+require_once "../utili/Conexion.php";
 if(isset($_POST['actualizar'])){
 $id_sede = $_POST['idu'];
 $direccion = $_POST['direccionu'];
