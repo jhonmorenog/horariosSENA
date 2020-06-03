@@ -103,7 +103,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="profileInstructor.php"> Perfil</a>
-                      <a class="dropdown-item"  href="login.php"><i class="fa fa-sign-out pull-right"></i> Salir</a>
+                      <a class="dropdown-item"  href="../utili/logout.php"><i class="fa fa-sign-out pull-right"></i> Salir</a>
                     </div>
                   </li>
                   <li role="presentation" class="nav-item dropdown open">
