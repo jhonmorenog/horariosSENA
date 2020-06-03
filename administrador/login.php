@@ -89,13 +89,13 @@
                </div> 
               <div>
                 <button class="btn btn-default submit" type="submit">Log in</button>
-                <button class="btn btn-default submit" href="#">Olvidaste tu contraseña?</button>
+                <button class="btn btn-default submit" href="#">¿olvidaste tu contraseña?</button>
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">Eres nuevo?
+                <p class="change_link">¿eres nuevo?
                   <a href="#signup" class="to_register"> Crea una cuenta </a>
                 </p>
 
@@ -138,7 +138,7 @@
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">Ya eres miembro?
+                <p class="change_link">¿ya eres miembro?
                   <a href="#signin" class="to_register"> Log in </a>
                 </p>
 
