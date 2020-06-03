@@ -10,11 +10,8 @@
         if(isset($_SESSION["expira"])){
         $sessionTTL = time() - $_SESSION["expira"];
         if($sessionTTL > $inactividad){
-            require_once './logout.php';
-//            session_destroy();
-//            print"<script>alert(\"Su sesion ha finalizado por inactividad.\");
-//    		window.location='../index.php';</script>";
-//            exit();
+            require_once 'logout.php';
+
         }
         }
         $_SESSION["expira"] = time();
