@@ -82,7 +82,6 @@
                     <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
                        <li class="nav-item">
                         <a class="dropdown-item" href="profile.php">
-                          <span class="image"><img src="images/img3.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>Johanna Cifuentes</span>
                             <span class="time">Hace 3 minutos</span>
@@ -94,7 +93,6 @@
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item" href="profile.php">
-                          <span class="image"><img src="images/img1.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Moreno</span>
                             <span class="time">Hace 10 minutos</span>
