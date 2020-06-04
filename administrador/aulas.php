@@ -101,7 +101,7 @@
                                 <select name="descripcion" class="form-control" required="">
                                 <option value="0">Seleccionar</option>
                                 <?php
-                                  require("conexion/Conexion.php");
+                                  require_once '../utili/Conexion.php';
                                   $query=$mysqli->query("SELECT * FROM descripcion_aula");
                                   while($valores=mysqli_fetch_array($query)){
                                       echo '<option value="'.$valores[id_descripcion].'">'.$valores[descripcion].'</option>';

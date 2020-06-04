@@ -100,7 +100,7 @@
                                   <select name="id_duracion" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
-                                      require("conexion/Conexion.php");
+                                      require_once '../utili/Conexion.php';
                                       $query=$mysqli->query("SELECT * FROM duracion");
                                       while($valores=mysqli_fetch_array($query)){
                                           echo '<option value="'.$valores[id_duracion].'">'.$valores[meses_lectiva].'</option>';
@@ -113,7 +113,7 @@
                                   <select name="id_duracion" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
-                                      require("conexion/Conexion.php");
+                                      require_once '../utili/Conexion.php';
                                       $query=$mysqli->query("SELECT * FROM duracion");
                                       while($valores=mysqli_fetch_array($query)){
                                           echo '<option value="'.$valores[id_duracion].'">'.$valores[meses_productiva].'</option>';
@@ -126,7 +126,7 @@
                                   <select name="id_formacion" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
-                                      require("conexion/Conexion.php");
+                                      require_once '../utili/Conexion.php';
                                       $query=$mysqli->query("SELECT * FROM nivel_formacion");
                                       while($valores=mysqli_fetch_array($query)){
                                           echo '<option value="'.$valores[id_nivel].'">'.$valores[denominacion_nivel].'</option>';
@@ -139,7 +139,7 @@
                               <select name="id_tipo" class="form-control" required="">
                     <option value="0">Seleccionar</option>
                     <?php
-                    require("conexion/Conexion.php");
+                    require_once '../utili/Conexion.php';
                     $query=$mysqli->query("SELECT * FROM tipo");
                     while($valores=mysqli_fetch_array($query)){
                         echo '<option value="'.$valores[id_tipo].'">'.$valores[tipo].'</option>';
@@ -164,7 +164,7 @@
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
                             <?php
-                              require_once "conexion/Conexion.php";
+                              require_once '../utili/Conexion.php';
                             
                             $sql1="SELECT * FROM programa,tipo,nivel_formacion,duracion where tipo.id_tipo=programa.id_tipo and nivel_formacion.id_nivel=programa.id_formacion and duracion.id_duracion=programa.id_duracion";
                             $query=$mysqli->query($sql1);
@@ -238,7 +238,7 @@
                                   <select name="id_duracionu" id="id_duracionu" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
-                                      require("conexion/Conexion.php");
+                                      require_once '../utili/Conexion.php';
                                       $query=$mysqli->query("SELECT * FROM duracion");
                                       while($valores=mysqli_fetch_array($query)){
                                           echo '<option value="'.$valores[id_duracion].'">'.$valores[meses_lectiva].'</option>';
@@ -251,7 +251,7 @@
                                   <select name="id_duracionu" id="id_duracionu"class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
-                                      require("conexion/Conexion.php");
+                                      require_once '../utili/Conexion.php';
                                       $query=$mysqli->query("SELECT * FROM duracion");
                                       while($valores=mysqli_fetch_array($query)){
                                           echo '<option value="'.$valores[id_duracion].'">'.$valores[meses_productiva].'</option>';
@@ -264,7 +264,7 @@
                                   <select name="id_formacionu" id="id_formacionu" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
-                                      require("conexion/Conexion.php");
+                                      require_once '../utili/Conexion.php';
                                       $query=$mysqli->query("SELECT * FROM nivel_formacion");
                                       while($valores=mysqli_fetch_array($query)){
                                           echo '<option value="'.$valores[id_nivel].'">'.$valores[denominacion_nivel].'</option>';
@@ -277,7 +277,7 @@
                               <select name="id_tipou" id="id_tipou" class="form-control" required="">
                     <option value="0">Seleccionar</option>
                     <?php
-                    require("conexion/Conexion.php");
+                    require_once '../utili/Conexion.php';
                     $query=$mysqli->query("SELECT * FROM tipo");
                     while($valores=mysqli_fetch_array($query)){
                         echo '<option value="'.$valores[id_tipo].'">'.$valores[tipo].'</option>';

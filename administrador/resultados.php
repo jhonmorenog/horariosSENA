@@ -100,7 +100,7 @@
                 <select name="id_competencia" class="form-control" class="form-control" required="">
                     <option value="0" >Seleccionar</option>
                     <?php
-                    require("conexion/Conexion.php");
+                    require_once '../utili/Conexion.php';
                     $query=$mysqli->query("SELECT * FROM competencia");
                     while($valores=mysqli_fetch_array($query)){
                         echo '<option value="'.$valores[id_competencia].'">'.$valores[denominacion].'</option>';
@@ -125,7 +125,7 @@
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
                     <?php
-                              require_once "conexion/Conexion.php";
+                             require_once '../utili/Conexion.php';
                             
                             $sql1="SELECT * FROM competencia, resultado where competencia.id_competencia=resultado.id_competencia";
                             $query=$mysqli->query($sql1);
@@ -196,7 +196,7 @@
                                       <select name="id_competenciau" id="id_competenciau" class="form-control" class="form-control" required="">
                                           <option value="0" >Seleccionar</option>
                                           <?php
-                                          require("conexion/Conexion.php");
+                                          require_once '../utili/Conexion.php';
                                           $query=$mysqli->query("SELECT * FROM competencia");
                                           while($valores=mysqli_fetch_array($query)){
                                               echo '<option value="'.$valores[id_competencia].'">'.$valores[denominacion].'</option>';

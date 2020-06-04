@@ -119,7 +119,7 @@
                                   <select name="persona_documento" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
-                                      require("conexion/Conexion.php");
+                                      require_once '../utili/Conexion.php';
                                       $query=$mysqli->query("SELECT * FROM persona");
                                       while($valores=mysqli_fetch_array($query)){
                                           echo '<option value="'.$valores[documento].'">'.$valores[nombre].'</option>';
@@ -132,7 +132,7 @@
                                   <select name="fichanumero_ficha" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
-                                      require("conexion/Conexion.php");
+                                      require_once '../utili/Conexion.php';
                                       $query=$mysqli->query("SELECT * FROM ficha");
                                       while($valores=mysqli_fetch_array($query)){
                                           echo '<option value="'.$valores[numero_ficha].'">'.$valores[numero_ficha].'</option>';
@@ -145,7 +145,7 @@
                                   <select name="aulaid_aula" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
-                                      require("conexion/Conexion.php");
+                                      require_once '../utili/Conexion.php';
                                       $query=$mysqli->query("SELECT * FROM aula");
                                       while($valores=mysqli_fetch_array($query)){
                                           echo '<option value="'.$valores[id_aula].'">'.$valores[id_aula].'</option>';
@@ -173,7 +173,7 @@
                           <div class="col-md-12 col-sm-12">
                             <div class="card-box table-responsive">
                             <?php
-                              require_once "conexion/Conexion.php";
+                              require_once '../utili/Conexion.php';
                             
                             $sql1="SELECT * FROM bloque,aula,persona,ficha where bloque.persona_documento=persona.documento and bloque.aulaid_aula=aula.id_aula and bloque.fichanumero_ficha=ficha.numero_ficha";
                             $query=$mysqli->query($sql1);

@@ -154,7 +154,7 @@
                           <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab2">
                             <div class="col-md-4">
                             <?php
-                                  require("conexion/Conexion.php");
+                                  require_once '../utili/Conexion.php';
                                   $email=$_SESSION['correo'];
                                   $query=$mysqli->query("SELECT documento FROM persona where email='$email'");
                                   if ($query->num_rows>=1){

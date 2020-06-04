@@ -111,7 +111,7 @@
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
                     <?php
-                              require_once "conexion/Conexion.php";
+                            require_once '../utili/Conexion.php';
                             
                             $sql1="SELECT * FROM descripcion_aula";
                             $query=$mysqli->query($sql1);

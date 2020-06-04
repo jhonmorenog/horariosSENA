@@ -103,7 +103,7 @@
                                   <select name="centro" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
-                                      require("conexion/Conexion.php");
+                                      require_once '../utili/Conexion.php';
                                       $query=$mysqli->query("SELECT * FROM centro");
                                       while($valores=mysqli_fetch_array($query)){
                                           echo '<option value="'.$valores[id_centro].'">'.$valores[nombre_centro].'</option>';
@@ -128,7 +128,7 @@
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
                             <?php
-                              require_once "conexion/Conexion.php";
+                             require_once '../utili/Conexion.php';
                             
                             $sql1="SELECT * FROM sede,centro where centro.id_centro=sede.centroid_centro";
                             $query=$mysqli->query($sql1);
@@ -204,7 +204,7 @@
                                   <select name="centrou" id="centrou" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
-                                      require("conexion/Conexion.php");
+                                      require_once '../utili/Conexion.php';
                                       $query=$mysqli->query("SELECT * FROM centro");
                                       while($valores=mysqli_fetch_array($query)){
                                           echo '<option value="'.$valores[id_centro].'">'.$valores[nombre_centro].'</option>';
