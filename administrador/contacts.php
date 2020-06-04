@@ -3,7 +3,10 @@
 
 ?>
 <?php
-require_once "../utili/Conexion.php";?>
+  
+ require_once '../utili/Conexion.php';
+
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -68,111 +71,61 @@ require_once "../utili/Conexion.php";?>
                         </ul>
                       </div>
 
-                      <div class="clearfix"></div>
-                      <div class="col-md-3 col-sm-3  profile_details">
-                        <div class="well profile_view">
-                          <div class="col-sm-12">
-                            <?php
-                              require_once "conexion/Conexion.php";
+                      
+                             <?php
+                               require_once '../utili/Conexion.php';
                             $sql1="SELECT * FROM persona";
                             $query=$mysqli->query($sql1);
                               if ($query->num_rows>=1){?>
-                                <div class="container">
-                                <table id="datatable" class="table table-striped table-bordered" style="width:100%">
-                                <thead>
-                                <tr>
-                                <th>Número</th> 
-                              <th>Descripcion</th>
-                              <th>Sede</th>
-                              <th>Actualizar</th>
-                              <th>Habilitar/Deshabilitar</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                            <?php foreach ($query as $key) {
-                                    $datos=$key['id_aula']."||".
-                                    $key['descripcion']."||".
-                                    $key['nombre']."||".
-                                    $key['estado'];
-
-                             ?>
-                             <tr>
-                             <td id="column1"><?php echo  mb_strtoupper($key['nombre']); ?></td>
-                             <td id="column2"><?php echo  mb_strtoupper($key['email']); ?></td>
-                            <td id="column3"><?php echo  mb_strtoupper($key['nombre']); ?></td>
-                              <td>
-                                <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info" data-toggle="modal" data-target="#dataHabi" onclick="estadoh('<?php echo $datos?>')"><i class="fa fa-check" style="margin-left: -5px"></i></button>
-                                <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info" data-toggle="modal" data-target="#dataDeshabi" onclick="estadod('<?php echo $datos?>')"><i class="fa fa-close" style="margin-left: -3px"></i></button>
-                                </td>
-                          </tr>
-                            <?php }
-    
-     ?><?php }
-    
-     ?>
-                            </tbody>
-                            </table>
-                            <h4 class="brief"><i>Instructor</i></h4>
-                            <div class="left col-md-7 col-sm-7">
-                              <h2>Alvaro Cortez</h2>
-                              <p><strong>Especialidad: </strong> Diseñador Grafico </p>
+                                <?php foreach ($query as $key) {
+                                    ?>
+                               <div class="col-md-55">
+                          
+                          <div class="well profile_view">
+                            <div class="mask">
+                              <h2 class="brief"><i class="fa fa-user"></i><i> Instructor</i></h2>
+                              <br>
+                              <div>
+                              <h4 class="brief"> <?php echo $key['nombre'];?> <?php echo $key['apellido'];?></h4>
+                              <br>
+                              <strong>Especialidad: </strong> Diseñador Grafico 
                               <ul class="list-unstyled">
-                                <li><i class="fa fa-envelope"></i> Email: </li>
+                                <li><i class="fa fa-envelope-o"></i> E-mail: <?php echo $key['email'];?></li>
                               </ul>
                             </div>
-                            <div class="right col-md-5 col-sm-5 text-center">
                             </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-md-3 col-sm-3  profile_details">
-                        <div class="well profile_view">
-                          <div class="col-sm-12">
-                            <h4 class="brief"><i>Instructor</i></h4>
-                            <div class="left col-sm-7">
-                              <h2>Johanna Cifuentes</h2>
-                              <p><strong>Especialidad: </strong> Ingeniera en Sistemas</p>
-                              <ul class="list-unstyled">
-                                <li><i class="fa fa-envelope"></i> Email: </li>
-                              </ul>
-                            </div>
-                            <div class="right col-sm-5 text-center"></div>
-                            </div>
-                          </div>
-                        </div>
-
-                      <div class="col-md-3 col-sm-3  profile_details">
-                        <div class="well profile_view">
-                          <div class="col-sm-12">
-                            <h4 class="brief"><i>Instructor</i></h4>
-                            <div class="left col-sm-7">
-                              <h2>Jhon Moreno</h2>
-                              <p><strong>Especialidad: </strong> Ingeniero en Sistemas</p>
-                              <ul class="list-unstyled">
-                                 <li><i class="fa fa-envelope"></i> Email: </li>
-                              </ul>
-                            </div>
-                            <div class="right col-sm-5 text-center"></div>
                           </div>
                           
-                          </div>
-                        </div>
                       </div>
+                      <?php }
+                    ?>
+                 <?php }else{
+                              echo "Tabla vacía";
+                          }
+                          ?>
+                            
+                      
+                            
+                                    
+
+                             
+                             
+                             
+                            
+                            
+                            
 
                      
                          
 
                      
-                            </div>
+                            
                           </div>
                         </div>
                       </div>
                   </div>
-                </div>
-            </div>
-          </div>
-        </div>
+
+
         <!-- /page content -->
 
         <!-- footer content -->

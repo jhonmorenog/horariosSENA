@@ -114,7 +114,7 @@
                                 <select name="sede" class="form-control" required="">
                                   <option value="0">Seleccionar</option>
                                   <?php
-                                    require("conexion/Conexion.php");
+                                    require_once '../utili/Conexion.php';
                                     $query=$mysqli->query("SELECT * FROM sede");
                                     while($valores=mysqli_fetch_array($query)){
                                         echo '<option value="'.$valores[id_sede].'">'.$valores[nombre].'</option>';
@@ -137,7 +137,7 @@
                           <div class="col-sm-12">
                             <div class="card-box table-responsive">
                             <?php
-                              require_once "conexion/Conexion.php";
+                              require_once '../utili/Conexion.php';
                             
                             $sql1="SELECT * FROM aula,descripcion_aula,sede where aula.id_descripcion=descripcion_aula.id_descripcion and aula.sedeid_sede=sede.id_sede";
                             $query=$mysqli->query($sql1);
@@ -210,7 +210,7 @@
                                 <select name="descripcionu" id="descripcionu"class="form-control" required="">
                                 <option value="0">Seleccionar</option>
                                 <?php
-                                  require("conexion/Conexion.php");
+                                  require_once '../utili/Conexion.php';
                                   $query=$mysqli->query("SELECT * FROM descripcion_aula");
                                   while($valores=mysqli_fetch_array($query)){
                                       echo '<option value="'.$valores[id_descripcion].'">'.$valores[descripcion].'</option>';
@@ -223,7 +223,7 @@
                                 <select name="sedeu" id="sedeu" class="form-control" required="">
                                   <option value="0">Seleccionar</option>
                                   <?php
-                                    require("conexion/Conexion.php");
+                                    require_once '../utili/Conexion.php';
                                     $query=$mysqli->query("SELECT * FROM sede");
                                     while($valores=mysqli_fetch_array($query)){
                                         echo '<option value="'.$valores[id_sede].'">'.$valores[nombre].'</option>';
