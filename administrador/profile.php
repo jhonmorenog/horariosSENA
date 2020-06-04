@@ -84,7 +84,7 @@
                             <!-- start recent activity -->
                             <ul class="messages">
                               <li>
-                                <img src="images/img3.jpg" class="avatar" alt="Avatar">
+                                
                                 <div class="message_date">
                                   <h3 class="date text-info">24</h3>
                                   <p class="month">May</p>
@@ -105,7 +105,7 @@
                               </div>
                               </li>
                               <li>
-                                <img src="images/img1.jpg" class="avatar" alt="Avatar">
+                                
                                 <div class="message_date">
                                   <h3 class="date text-error">21</h3>
                                   <p class="month">May</p>
