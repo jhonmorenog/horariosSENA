@@ -1,5 +1,28 @@
 <?php
 
+//selecciono la ficha y nombre del programa de las que no salen en el siguiente trimestre
+$fichasQuery="select numero_ficha, denominacion
+from ficha inner join programa_ficha fp on numero_ficha=fichanumero_ficha
+inner join programa p on p.id_programa=fp.id_programa
+where ficha.salida > \"".date("yy")."-".date("m")."-30\" order by denominacion asc;";
+
+
+//selecciona los datos de los instructores y si título 
+$instructoresQuery="select documento, nombre, apellido, rol, certificacion from titulo t
+inner join 
+persona_titulo pt on t.id_titulo=pt.id_titulo
+inner join 
+persona on persona_documento=documento
+inner join 
+rol on rol_documento=id_rol
+where rol='instructor';";
+
+
+//selecciona el aula y su descripción
+$sedeAulaQuery="SELECT id_sede, nombre, id_aula, descripcion from sede INNER JOIN aula a on id_sede=sedeid_sede INNER JOIN descripcion_aula da on a.id_descripcion=da.id_descripcion";
+
+
+
 $AsignarFichasQuery="select numero_ficha, denominacion, persona_documento
 from
 instructor_ficha i  

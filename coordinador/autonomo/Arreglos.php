@@ -1,4 +1,7 @@
 <?php
+
+//arreglos con la ionformación de la DB
+
 $fichas=array();
 $instructores=array();
 $sedeAula=array();
