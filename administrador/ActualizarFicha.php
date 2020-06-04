@@ -12,5 +12,5 @@ if($mysqli->query($query)){
 }else {
 	echo "Ocurrio un error";
 }
-
+$mysqli->close();
 ?>

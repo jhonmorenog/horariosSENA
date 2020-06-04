@@ -14,5 +14,8 @@ if($mysqli->query($query)){
 }
 }
 else {
-	echo "Error";}
+	echo "Error";
+        
+}
+$mysqli->close();
 ?>
