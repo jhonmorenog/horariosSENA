@@ -151,7 +151,9 @@
                                   $query=$mysqli->query("SELECT documento FROM persona where email='$email'");
                                   if ($query->num_rows>=1){
                                   foreach ($query as $key) {
-                                  $key['documento'];}}?>
+                                  $key['documento'];}}
+                                  $mysqli->close();
+                                  ?>
                     <form action="ActualizarPersona.php?documento=<?php echo $key['documento']?>" method="POST">
                         <div class="form-group">
                            <label for="nombre"> Nombre: </label>
