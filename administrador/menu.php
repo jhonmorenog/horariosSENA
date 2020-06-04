@@ -27,7 +27,6 @@
                 <h3>Administrador</h3>
                 <ul class="nav side-menu">
                  <li><a href="profile.php"><i class="fa fa-laptop"></i> Inicio</a></li>
-                    <li><a href="calendar.php"><i class="fa fa-calendar"></i>Calendario</a></li>
                      <li><a><i class="fa fa-info-circle"></i> Información</a><ul class="nav child_menu">
                       <li><a href="aulas.php">Aulas</a></li>
                       <li><a href="sedes.php">Sedes</a></li>
@@ -74,44 +73,7 @@
                     </div>
                   </li>
   
-                  <li role="presentation" class="nav-item dropdown open">
-                    <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
-                      <i class="fa fa-envelope-o"></i>
-                      <span class="badge bg-green">2</span>
-                    </a>
-                    <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
-                       <li class="nav-item">
-                        <a class="dropdown-item" href="profile.php">
-                          <span>
-                            <span>Johanna Cifuentes</span>
-                            <span class="time">Hace 3 minutos</span>
-                          </span>
-                          <span class="message">
-                            Buen día señor coordinador la presente es para informar...
-                          </span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="dropdown-item" href="profile.php">
-                          <span>
-                            <span>John Moreno</span>
-                            <span class="time">Hace 10 minutos</span>
-                          </span>
-                          <span class="message">
-                            Señor coordinador quisierar verificar mi horario pues...
-                          </span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <div class="text-center">
-                          <a class="dropdown-item">
-                            <strong>Todas las notificaciones</strong>
-                            <i class="fa fa-angle-right"></i>
-                          </a>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
+                  
                 </ul>
               </nav>
             </div>
