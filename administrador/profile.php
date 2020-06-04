@@ -69,89 +69,10 @@
                       <!-- start of user-activity-graph -->
                       <!-- end of user-activity-graph -->
 
-                      <div class="" role="tabpanel" data-example-id="togglable-tabs">
-                        <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
-                          <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Respuestas</a>
-                          </li>
-                          <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Anuncios</a>
-                          </li>
-                          <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">Perfil</a>
-                          </li>
-                        </ul>
-                        <div id="myTabContent" class="tab-content">
-                          <div role="tabpanel" class="tab-pane active " id="tab_content1" aria-labelledby="home-tab">
-
-                            <!-- start recent activity -->
-                            <ul class="messages">
-                              <li>
-                                
-                                <div class="message_date">
-                                  <h3 class="date text-info">24</h3>
-                                  <p class="month">May</p>
-                                </div>
-                                <div class="message_wrapper">
-                                  <h4 class="heading">Johanna Cifuentes</h4>
-                                  <blockquote class="message">Buen día señor coordinador la presente es para informar que el día de mañana no puedo presentarme en formación porque tengo cita médica, gracias</blockquote>
-                                  <br />
-                                  <div id="cnt_form">
-                                    <form id="contact-form" class="contact" name="cantact-form" method="post" action="mailto:ingbra12@hotmail.com">
-                                       <div class="form-group">
-                                        <textarea name="mensaje" id="message"
-                                        required="required" class="form-control" rows="8" placeholder="Mensaje..."></textarea></div>
-                                         <div class="form-group">
-                                      <button type="submit" class="btn btn-dark">Responder</button></div>
-                                    </form>
-                              </div>
-                              </div>
-                              </li>
-                              <li>
-                                
-                                <div class="message_date">
-                                  <h3 class="date text-error">21</h3>
-                                  <p class="month">May</p>
-                                </div>
-                                <div class="message_wrapper">
-                                  <h4 class="heading">Jhon moreno</h4>
-                                  <blockquote class="message">Señor coordinador quisiera verificar mi horario pues tiene el nombre de otra persona</blockquote>
-                                  <br />
-                                  <div id="cnt_form">
-                                    <form id="contact-form" class="contact" name="cantact-form" method="post" action="mailto:ingbra12@hotmail.com">
-                                       <div class="form-group">
-                                        <textarea name="mensaje" id="message"
-                                        required="required" class="form-control" rows="8" placeholder="Mensaje..."></textarea></div>
-                                  <button class="btn btn-dark">Responder</button>
-                                </form>
-                                </div>
-                              </div>
-                              </li>
-
-                            </ul>
-                            <!-- end recent activity -->
-
-                          </div>
-                          <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
-
-                            <!-- start user projects -->
-                           <div class="col-md-6">
-                            <div id="cnt_form">
-                          <form id="contact-form" class="contact" name="cantact-form" method="post" action="mailto:ingbra12@hotmail.com">
-                            <div class="form-group">
-                              <input type="text" name="nombre" class="form-control name-field" required="required" placeholder="Nombre del evento"></div>
-                               <div class="form-group">
-                            
-                              <textarea name="mensaje" id="message"
-                              required="required" class="form-control" rows="8" placeholder="Asunto"></textarea></div>
-                               <div class="form-group">
-                            <button type="submit" class="btn btn-default" style="background-color: #73879C;color:#fff">Enviar</button></div>
-                         
-                        </form>
-                            <!-- end user projects -->
-                              </div>
-                               </div>
-                          </div>
+                      
                           
 
-                          <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab2">
+                          <div  class="formulario" id="formulario" >
                             <div class="col-md-4">
                             <?php
                                   require_once '../utili/Conexion.php';
