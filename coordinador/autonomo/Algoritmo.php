@@ -33,6 +33,7 @@ seleccionFicha();
 function seleccionFicha(){
     global $fichas;
     foreach ($fichas as $f) {
+        
         seleccionInstructor($f);
     } 
 }
