@@ -55,7 +55,6 @@
                 <h3>Instructor</h3>
                 <ul class="nav side-menu">
                  <li><a href="horarioInstructor.php"><i class="fa fa-laptop"></i> Mi Horario</a></li>
-                    <li><a href="homeInstructor.php"><i class="fa fa-calendar"></i>Calendario</a></li>
                  </ul>
               </div>
 
@@ -88,39 +87,7 @@
                     </div>
                   </li>
   
-                  <li role="presentation" class="nav-item dropdown open">
-                    <a href="form_validation.html" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
-                      <i class="fa fa-envelope-o"></i>
-                      <span class="badge bg-green">2</span>
-                    </a>
-                    <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
-                       <li class="nav-item">
-                        <a class="dropdown-item" href="profile.php">
-                          <span class="image"><img src="images/img3.jpg" alt="Profile Image" /></span>
-                          <span>
-                            <span>Johanna Cifuentes</span>
-                            <span class="time">Hace 3 minutos</span>
-                          </span>
-                          <span class="message">
-                            Buen día señor coordinador la presente es para informar...
-                          </span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="dropdown-item" href="profileInstructor.php">
-                          <span class="image"><img src="images/img1.jpg" alt="Profile Image" /></span>
-                          <span>
-                            <span>John Moreno</span>
-                            <span class="time">Hace 10 minutos</span>
-                          </span>
-                          <span class="message">
-                            Señor coordinador quisierar verificar mi horario pues...
-                          </span>
-                        </a>
-                      </li>
-                     
-                    </ul>
-                  </li>
+                  
                 </ul>
               </nav>
             </div>
@@ -146,7 +113,7 @@
                   </div>
                   <div class="x_content">
                        <?php
-                                  require("conexion/Conexion.php");
+                                  require("../utili/Conexion.php");
                                   $email=$_SESSION['correo'];
                                   $query=$mysqli->query("SELECT documento FROM persona where email='$email'");
                                   if ($query->num_rows>=1){

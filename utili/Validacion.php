@@ -19,7 +19,7 @@ if ($consulta2->num_rows >= 1) {
     $_SESSION['expira'] = $_SESSION['tiempo'];
 
     if ($fila['rol'] == 'Instructor') {
-        header("Location: ../instructor/homeInstructor.php");
+        header("Location: ../instructor/horarioInstructor.php");
     } else if ($fila['rol'] == 'Administrador') {
         header("Location: ../administrador/profile.php");
     } else if ($fila['rol'] == 'Coordinador') {

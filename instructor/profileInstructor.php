@@ -57,7 +57,7 @@
                 <h3>Instructor</h3>
                 <ul class="nav side-menu">
                  <li><a href="horarioInstructor.php"><i class="fa fa-laptop"></i> Mi Horario</a></li>
-                    <li><a href="homeInstructor.php"><i class="fa fa-calendar"></i>Calendario</a></li>
+                    
                  </ul>
               </div>
 
@@ -127,40 +127,6 @@
                   
                       <!-- end of skills -->
 
-                    </div>
-                    <div class="col-md-9 col-sm-9 ">
-                      <!-- start of user-activity-graph -->
-                      <!-- end of user-activity-graph -->
-
-                      <div class="" role="tabpanel" data-example-id="togglable-tabs">
-                        <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
-                          
-                          <li role="presentation" class="active"><a href="#" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="true">Sugerencia</a>
-                          </li>
-                        </ul>
-                          <div role="tabpanel" class="tab-pane active" id="tab_content2" aria-labelledby="profile-tab">
-
-                            <!-- start user projects -->
-                           <div class="col-md-6">
-                            <div id="cnt_form">
-                          <form id="contact-form" class="contact" name="cantact-form" method="post" action="mailto:ingbra12@hotmail.com">
-                            <div class="form-group">
-                              <input type="text" name="nombre" class="form-control name-field" required="required" placeholder="Asunto"></div>
-                               <div class="form-group">
-                             <div class="form-group">
-                              <textarea name="mensaje" id="message"
-                              required="required" class="form-control" rows="8" placeholder="Descripción"></textarea></div>
-                               <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Enviar</button></div>
-                            <!-- end user projects -->
-
-                          </div>
-                          <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
-                            <p>xxFood truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui
-                              photo booth letterpress, commodo enim craft beer mlkshk </p>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>

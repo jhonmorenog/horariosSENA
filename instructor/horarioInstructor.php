@@ -59,7 +59,7 @@
                 <ul class="nav side-menu">
                  
                     <li><a href="horarioInstructor.php"><i class="fa fa-laptop"></i> Mi Horario</a></li>
-                    <li><a href="homeInstructor.php"><i class="fa fa-calendar"></i>Calendario</a></li>
+                    
                  </ul>
               </div>
 
