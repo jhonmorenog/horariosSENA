@@ -116,8 +116,9 @@
                             <div class="card-box table-responsive">
                      <?php
                              require_once '../utili/Conexion.php';
-                            
+                             
                             $sql1="SELECT * FROM competencia";
+                           
                             $query=$mysqli->query($sql1);
                               if ($query->num_rows>=1){?>
                                 <div class="container">

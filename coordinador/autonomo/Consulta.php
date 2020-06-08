@@ -1,21 +1,23 @@
 <?php
-
+@session_start();
 // variables de acceso 
 $dataBD = null;
 
 
-include '../../ScriptDB/Querys.php';
-include './Arreglos.php';
+@include '../../ScriptDB/Querys.php';
+@include './Arreglos.php';
 
 //envío los querys y el nombre del arreglo para rellenar los arreglos con la informaciónde la BD
 x($fichasQuery,"fichas");
 x($instructoresQuery,"instructores");
 x($sedeAulaQuery,"sedeAula");
+x(bloquePorInstructor($_SESSION['documento']),"bloquePorInstructor");
 
 
 // trae los datos de la base de datos y lo envía a data y luego a creaArreglo
 function x($sql,$arreglo){
-    include '../../utili/Conexion.php';
+    @include '../../utili/Conexion.php';
+ 
     creaArreglo(data($mysqli->query($sql)),$arreglo);
     $mysqli->close();
 }

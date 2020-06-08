@@ -98,85 +98,17 @@
                 <div class="x_panel">
                   <div class="x_title">
                     <div class="container">
-                    <div class="table-responsive">            
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Bloque</th>
-        <th>Lunes</th>
-        <th>Martes</th>
-        <th>Miércoles</th>
-        <th>Jueves</th>
-        <th>Viernes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>06:00 a 07:40</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>08:00 a 09:40</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>10:00 a 11:40</td>
-        <td></td>
-        <td></td>
-        <td>1828917-ADSI-502</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>12:00 a 13:40</td>
-        <td></td>
-        <td></td>
-        <td>1828917-ADSI-502</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>14:20 a 16:00</td>
-        <td>1828917-ADSI-502</td>
-        <td>1828917-ADSI-502</td>
-        <td>1828917-ADSI-502</td>
-        <td>1828917-ADSI-502</td>
-        <td>1828917-ADSI-502</td>
-      </tr>
-      <tr>
-        <td>16:20 a 18:00</td>
-        <td>1828917-ADSI-502</td>
-        <td>1828917-ADSI-502</td>
-        <td>1828917-ADSI-502</td>
-        <td>1828917-ADSI-502</td>
-        <td>1828917-ADSI-502</td>
-      </tr>
-      <tr>
-        <td>18:15 a 19:45</td>
-        <td>1828917-ADSI-502</td>
-        <td>1828917-ADSI-502</td>
-        <td></td>
-        <td>1828917-ADSI-502</td>
-        <td>1828917-ADSI-502</td>
-      </tr>
-      <tr>
-        <td>20:00 a 21:40</td>
-        <td>1828917-ADSI-502</td>
-        <td>1828917-ADSI-502</td>
-        <td></td>
-        <td>1828917-ADSI-502</td>
-        <td>1828917-ADSI-502</td>
-      </tr>
-    </tbody>
-  </table>
+                    <div class="table-responsive">   
+                        <?php
+                               include_once './horarios.php';
+                        ?>
+                        <p>El trimestre  del año</p>
+                      
+                        
+                        <hr>
+                        
+                        
+                      
 </div>
 </div>
                   </div>

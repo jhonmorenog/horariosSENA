@@ -158,7 +158,7 @@
                                     $datos=$key['id_aula']."||".
                                     $key['descripcion']."||".
                                     $key['nombre']."||".
-                                    $key['estado_aula'];
+                                    $key['estado'];
 
                              ?>
                              <tr id="table">

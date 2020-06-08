@@ -69,21 +69,21 @@
                                 <ul class="nav side-menu">
                                     <li><a><i class="fa fa-search"></i>Consultar datos<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-                                            <li><a href="index2.html">Ficha</a></li>
-                                            <li><a href="index3.html">Programa</a></li>
-                                            <li><a href="index4.html">Ambiente</a></li>
-                                            <li><a href="index5.html">Sede</a></li>
+                                            <li><a href="index2.php">Ficha</a></li>
+                                            <li><a href="index3.php">Programa</a></li>
+                                            <li><a href="index4.php">Ambiente</a></li>
+                                            <li><a href="index5.php">Sede</a></li>
                                         </ul>
                                     </li>
                                     <li><a><i class="fa fa-calendar"></i>Horarios<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-                                            <li><a href="horarios.html">Generar</a></li>
-                                            <li><a href="tables_dynamic.html">Tablas de creación</a></li>
-                                            <li><a href="horarios2.html">Ver horarios</a></li>
+                                            <li><a href="horarios.php">Generar</a></li>
+                                            <li><a href="tables_dynamic.php">Tablas de creación</a></li>
+                                            <li><a href="horarios2.php">Ver horarios</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contacts.html"><i class="fa fa-users"></i>Instructores</a>
-                                    <li><a href="calendar.html"><i class="fa fa-calendar-o"></i>Calendario</a>
+                                    <li><a href="contacts.php"><i class="fa fa-users"></i>Instructores</a>
+                                    <li><a href="calendar.php"><i class="fa fa-calendar-o"></i>Calendario</a>
                                     </li>
                                 </ul>
                             </div>
