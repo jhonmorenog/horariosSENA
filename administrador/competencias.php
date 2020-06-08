@@ -84,7 +84,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <button style="margin: 10px" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal8" action="">Registrar Competencia</button>
-                  <form action="GuardarCompetencia.php" method="post">
+                  <form action="Guardar/GuardarCompetencia.php" method="post">
                     <div class="modal fade" id="myModal8" role="dialog">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -168,7 +168,7 @@
               </div>
               </div>
               </div>
-              <form action="ActualizarCompetencia.php" method="post"> 
+                <form action="Actualizar/ActualizarCompetencia.php" method="post"> 
                     <div class="modal fade" id="dataUpdate" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -195,7 +195,7 @@
                     </div>
                     </div>
                     </form>
-                    <form action="DeshabilitarCompetencia.php" method="post"> 
+                <form action="Deshabilitar/DeshabilitarCompetencia.php" method="post"> 
                     <div class="modal fade" id="dataDeshabi" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -219,7 +219,7 @@
                     </div>
                     </div>
                     </form>
-                    <form action="HabilitarCompetencia.php" method="post"> 
+                <form action="Habilitar/HabilitarCompetencia.php" method="post"> 
                     <div class="modal fade" id="dataHabi" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">

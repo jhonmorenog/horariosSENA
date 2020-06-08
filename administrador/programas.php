@@ -84,7 +84,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <button style="margin: 10px" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal4" action="">Registrar Programa</button>
-                  <form action="GuardarPrograma.php" method="post">
+                  <form action="Guardar/GuardarPrograma.php" method="post">
                     <div class="modal fade" id="myModal4" role="dialog">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -220,7 +220,7 @@
             </div>
                 </div>
               </div>
-              <form action="ActualizarPrograma.php" method="post"> 
+                <form action="Actualizar/ActualizarPrograma.php" method="post"> 
                     <div class="modal fade" id="dataUpdate1" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -296,7 +296,7 @@
                     </div>
                     </div>
                     </form>
-                    <form action="DeshabilitarPrograma.php" method="post"> 
+                <form action="Deshabilitar/DeshabilitarPrograma.php" method="post"> 
                     <div class="modal fade" id="dataDeshabi" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -320,7 +320,7 @@
                     </div>
                     </div>
                     </form>
-                    <form action="HabilitarPrograma.php" method="post"> 
+                <form action="Habilitar/HabilitarPrograma.php" method="post"> 
                     <div class="modal fade" id="dataHabi" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">

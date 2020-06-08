@@ -83,7 +83,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <button style="margin: 10px" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal11" action="">Registrar Tipo de Formación</button>
-                  <form action="GuardarTipo.php" method="post">
+                  <form action="Guardar/GuardarTipo.php" method="post">
   <div class="modal fade" id="myModal11" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -164,7 +164,7 @@
               </div>
               </div>
               </div>
-              <form action="ActualizarTipo.php" method="post"> 
+                <form action="Actualizar/ActualizarTipo.php" method="post"> 
                     <div class="modal fade" id="dataUpdate" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -188,7 +188,7 @@
                     </div>
                     </div>
                     </form>
-                    <form action="DeshabilitarTipo.php" method="post"> 
+                <form action="Deshabilitar/DeshabilitarTipo.php" method="post"> 
                     <div class="modal fade" id="dataDeshabi" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -212,7 +212,7 @@
                     </div>
                     </div>
                     </form>
-                    <form action="HabilitarTipo.php" method="post"> 
+                <form action="Habilitar/HabilitarTipo.php" method="post"> 
                     <div class="modal fade" id="dataHabi" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">

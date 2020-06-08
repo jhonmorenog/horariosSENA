@@ -84,7 +84,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <button style="margin: 10px" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal2" action="">Registrar Sedes</button>
-                  <form action="GuardarSede.php" method="post">
+                  <form action="Guardar/GuardarSede.php" method="post">
                     <div class="modal fade" id="myModal2" role="dialog">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -187,7 +187,7 @@
                 </div>
               </div>
               
-              <form action="ActualizarSede.php" method="post">
+                <form action="Actualizar/ActualizarSede.php" method="post">
                     <div class="modal fade" id="dataUpdate" role="dialog">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -224,7 +224,7 @@
                   </div>
                   </div>
                   </form> 
-                  <form action="DeshabilitarSede.php" method="post"> 
+                <form action="Deshabilitar/DeshabilitarSede.php" method="post"> 
                     <div class="modal fade" id="dataDeshabi" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -248,7 +248,7 @@
                     </div>
                     </div>
                     </form>
-                    <form action="HabilitarSede.php" method="post"> 
+                <form action="Habilitar/HabilitarSede.php" method="post"> 
                     <div class="modal fade" id="dataHabi" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">

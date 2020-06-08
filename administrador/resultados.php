@@ -84,7 +84,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <button style="margin: 10px" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal9" action="">Registrar Resultado</button>
-                  <form action="GuardarResultado.php" method="post">
+                  <form action="Guardar/GuardarResultado.php" method="post">
   <div class="modal fade" id="myModal9" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -178,7 +178,7 @@
               </div>
               </div>
               </div>
-              <form action="ActualizarResultado.php" method="post"> 
+                <form action="Actualizar/ActualizarResultado.php" method="post"> 
                     <div class="modal fade" id="dataUpdate" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -214,7 +214,7 @@
                     </div>
                     </div>
                     </form>
-                    <form action="DeshabilitarResultado.php" method="post"> 
+                <form action="Deshabilitar/DeshabilitarResultado.php" method="post"> 
                     <div class="modal fade" id="dataDeshabi" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -238,7 +238,7 @@
                     </div>
                     </div>
                     </form>
-                    <form action="HabilitarResultado.php" method="post"> 
+                <form action="Habilitar/HabilitarResultado.php" method="post"> 
                     <div class="modal fade" id="dataHabi" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">

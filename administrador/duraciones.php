@@ -85,7 +85,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <button style="margin: 10px" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal10" action="">Registrar Duración</button>
-                  <form action="GuardarDuracion.php" method="post">
+                  <form action="Guardar/GuardarDuracion.php" method="post">
   <div class="modal fade" id="myModal10" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -170,7 +170,7 @@
               </div>
               </div>
               </div>
-              <form action="ActualizarDuracion.php" method="post"> 
+                <form action="Actualizar/ActualizarDuracion.php" method="post"> 
                     <div class="modal fade" id="dataUpdate" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -197,7 +197,7 @@
                     </div>
                     </div>
                     </form>
-                    <form action="DeshabilitarDuracion.php" method="post"> 
+                <form action="Deshabilitar/DeshabilitarDuracion.php" method="post"> 
                     <div class="modal fade" id="dataDeshabi" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -221,7 +221,7 @@
                     </div>
                     </div>
                     </form>
-                    <form action="HabilitarDuracion.php" method="post"> 
+                <form action="Habilitar/HabilitarDuracion.php" method="post"> 
                     <div class="modal fade" id="dataHabi" role="dialog">
                       <div class="modal-dialog">
                         <div class="modal-content">
