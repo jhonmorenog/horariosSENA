@@ -23,6 +23,7 @@
   </head>
 
   <body class="nav-md">
+      
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -87,7 +88,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="../../utili/logout.php">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -112,7 +113,7 @@
                         <a class="dropdown-item"  href="form_validation.html">
                           <span>Configuración</span>
                         </a>
-                      <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Salir</a>
+                      <a class="dropdown-item"  href="../../index.php"><i class="fa fa-sign-out pull-right"></i> Salir</a>
                     </div>
                   </li>
   
