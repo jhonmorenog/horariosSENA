@@ -7,27 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="images/favicon.jpg" type="image/ico" />
-
      <title>SENA | Horarios </title>
 
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-  
-    <!-- bootstrap-progressbar -->
-    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <link href="../../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
-    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="../../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="../../build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -36,7 +28,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-             <a href="index.html" class="site_title"><i class="fa fa-calendar"></i> <span>SENA Horarios</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-calendar"></i> <span>SENA Horarios</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -158,116 +150,54 @@
                         <div class="text-center">
                           <a class="dropdown-item">
                             <strong>Ver todas...</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
+                            <i class="fa fa-angle-right"></i>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
-        </div>
         <!-- /top navigation -->
-
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
-              <div class="title_left">
-                <h3>Información personal</h3>
-              </div>
-            </div>
-            <div class="clearfix"></div>
+          <div class="col-md-12" style="height: 100px;">
+          <br />
+        <h1>Perfil personal</h1>
+        </div>
+          <div class="col-md-3 col-sm-3  profile_left">
+                      <div class="profile_img">
+                        <div id="crop-avatar">
+                          <!-- Current avatar -->
+                          <img class="img-responsive avatar-view" src="images/img.jpg" alt="Avatar" title="Change the avatar">
+                        </div>
+                      </div>
+                      <h3>Eddie Merck Camacho</h3>
 
-            <div class="row">
-              <div class="col-md-12 col-sm-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                   
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <span class="section">Tus datos</span>
-                    <div class="col-md-6 offset-md-3">
-                          <button id="send" type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal1">Cambiar datos</button>
-                        </div>
-                        <div id="myModal1" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+                      <ul class="list-unstyled user_data">
+                        <li><i class="fa fa-map-marker user-profile-icon"></i> Bogotá, Colombia
+                        </li>
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Perfil de instructor</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal form-label-left" novalidate>
-                      <span class="section">Editar mi información</span>
+                        <li>
+                          <i class="fa fa-briefcase user-profile-icon"></i> Coordinador
+                        </li>
 
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Nombre 
-                        </label>
-                        <div class="col-md-6 col-sm-6">
-                          <input id="name" class="form-control" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="ejemplo: edi jhon"  type="text">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="email">Email
-                        </label>
-                        <div class="col-md-6 col-sm-6">
-                          <input type="email" id="email" name="email"  class="form-control">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="email">Confirmar Email <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6">
-                          <input type="email" id="email2" name="confirm_email" data-validate-linked="email" required="required" class="form-control">
-                        </div>
-                      </div>
+                        <li class="m-top-xs">
+                          <i class="fa fa-external-link user-profile-icon"></i>
+                          <a href="http://www.kimlabs.com/profile/" target="_blank">www.cacamargo125@misena.edu.co</a>
+                        </li>
+                      </ul>
 
-                      <div class="item form-group">
-                        <label for="password" class="col-form-label col-md-3 label-align">Contraseña</label>
-                        <div class="col-md-6 col-sm-6">
-                          <input id="password" type="password" name="password" data-validate-length="6,8" class="form-control" >
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label for="password2" class="col-form-label col-md-3 col-sm-3 label-align ">Confirmar contraseña</label>
-                        <div class="col-md-6 col-sm-6">
-                          <input id="password2" type="password" name="password2" data-validate-linked="password" class="form-control" required="required">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="telephone">Telefono 
-                        </label>
-                        <div class="col-md-6 col-sm-6">
-                          <input type="tel" id="telephone" name="phone"  data-validate-length-range="8,20" class="form-control">
-                        </div>
-                      </div>
-                      
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 offset-md-3">
-                          <button type="submit" class="btn btn-primary">Cancelar</button>
-                          <button id="send" type="submit" class="btn btn-success">Actualizar</button>
-                        </div>
-                      </div>
-                    </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
+                      <a class="btn btn-success" href="form_validation.html"><i class="fa fa-edit m-right-xs"></i>Editar Perfil</a>
+                      <br />
 
-  </div>
-</div>
-                </div>
-              </div>
-            </div>
-          </div>
+                      <!-- start skills -->
+                  
+                      <!-- end of skills -->
+
+                    </div>
         </div>
         <!-- /page content -->
 
@@ -282,46 +212,35 @@
       </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+   <!-- jQuery -->
+    <script src="../../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="../../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
+    <script src="../../vendors/nprogress/nprogress.js"></script>
     <!-- Chart.js -->
-    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
-    <!-- gauge.js -->
-    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- iCheck -->
-    <script src="../vendors/iCheck/icheck.min.js"></script>
-    <!-- Skycons -->
-    <script src="../vendors/skycons/skycons.js"></script>
+    <script src="../../vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- jQuery Sparklines -->
+    <script src="../../vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
     <!-- Flot -->
-    <script src="../vendors/Flot/jquery.flot.js"></script>
-    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="../vendors/Flot/jquery.flot.time.js"></script>
-    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.resize.js"></script>
     <!-- Flot plugins -->
-    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+    <script src="../../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../../vendors/flot.curvedlines/curvedLines.js"></script>
     <!-- DateJS -->
-    <script src="../vendors/DateJS/build/date.js"></script>
-    <!-- JQVMap -->
-    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
-    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="../../vendors/DateJS/build/date.js"></script>
     <!-- bootstrap-daterangepicker -->
-    <script src="../vendors/moment/min/moment.min.js"></script>
-    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-
+    <script src="../../vendors/moment/min/moment.min.js"></script>
+    <script src="../../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    
     <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
-  
+    <script src="../../build/js/custom.min.js"></script>
   </body>
 </html>

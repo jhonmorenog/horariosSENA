@@ -7,34 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="images/favicon.jpg" type="image/ico" />
-
      <title>SENA | Horarios </title>
 
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-  
-    <!-- bootstrap-progressbar -->
-    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <link href="../../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
-    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- FullCalendar -->
-    <link href="../vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
-    <link href="../vendors/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
-
-    <!-- Custom styling plus plugins -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="../../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="../../build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -43,7 +28,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-             <a href="index.html" class="site_title"><i class="fa fa-calendar"></i> <span>SENA Horarios</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-calendar"></i> <span>SENA Horarios</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -165,55 +150,85 @@
                         <div class="text-center">
                           <a class="dropdown-item">
                             <strong>Ver todas...</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <!-- /top navigation -->
-
-        <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
-              <div class="title_left">
-                <h3>Calendario <small>Click para añadir/editar eventos</small></h3>
-              </div>
-            </div>
-
-            <div class="clearfix"></div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Calendario <small>Eventos</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Editar</a>
-                          </div>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                            <i class="fa fa-angle-right"></i>
+                          </a>
+                        </div>
                       </li>
                     </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        <!-- /top navigation -->
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="col-md-12" style="height: 100px;">
+          <br />
+        <h1>Fichas registradas</h1>
+        </div>
+          <div class="">
+            <div class="row" style="display: inline-block;">
+              <hr>
 
-                    <div id='calendar'></div>
-
-                  </div>
+            <div class="top_tiles">
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1828917</div>
+                  <h3>ADSI</h3>
+                  <p>Tecnólogo</p>
                 </div>
               </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1860179</div>
+                  <h3>Ilustración</h3>
+                  <p>Técnico</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1797658</div>
+                  <h3>Serigrafía</h3>
+                  <p>Tecnólogo</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1245079</div>
+                  <h3>P. Multimedia</h3>
+                  <p>Tecnólogo</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1784609</div>
+                  <h3>Fotografía</h3>
+                  <p>Complementaria</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1570769</div>
+                  <h3>Sistemas</h3>
+                  <p>Tecnólogo</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1654879</div>
+                  <h3>Sistemas</h3>
+                  <p>Técnico</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1276579</div>
+                  <h3>Impresión 3D</h3>
+                  <p>Tecnólogo</p>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
         </div>
@@ -230,96 +245,35 @@
       </div>
     </div>
 
-    <!-- calendar modal -->
-    <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title" id="myModalLabel">Agendar eventos</h4>
-          </div>
-          <div class="modal-body">
-            <div id="testmodal" style="padding: 5px 20px;">
-              <form id="antoform" class="form-horizontal calender" role="form">
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">Evento</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="title" name="title">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">Descripción</label>
-                  <div class="col-sm-9">
-                    <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary antosubmit">Guardar cambios</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title" id="myModalLabel2">Editar calendario</h4>
-          </div>
-          <div class="modal-body">
-
-            <div id="testmodal2" style="padding: 5px 20px;">
-              <form id="antoform2" class="form-horizontal calender" role="form">
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">Evento</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="title2" name="title2">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">Descripción</label>
-                  <div class="col-sm-9">
-                    <textarea class="form-control" style="height:55px;" id="descr2" name="descr"></textarea>
-                  </div>
-                </div>
-
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary antosubmit2">Guardar cambios</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
-    <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
-    <!-- /calendar modal -->
-        
     <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-   <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="../../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- FullCalendar -->
-    <script src="../vendors/moment/min/moment.min.js"></script>
-
-    <script src="../vendors/fullcalendar/dist/fullcalendar.min.js"></script>
-
-    <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
-        
+    <script src="../../vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="../../vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- jQuery Sparklines -->
+    <script src="../../vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+    <!-- Flot -->
+    <script src="../../vendors/Flot/jquery.flot.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../../vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="../../vendors/DateJS/build/date.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../../vendors/moment/min/moment.min.js"></script>
+    <script src="../../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
     
+    <!-- Custom Theme Scripts -->
+    <script src="../../build/js/custom.min.js"></script>
   </body>
 </html>

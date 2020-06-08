@@ -23,7 +23,7 @@ if ($consulta2->num_rows >= 1) {
     } else if ($fila['rol'] == 'Administrador') {
         header("Location: ../administrador/profile.php");
     } else if ($fila['rol'] == 'Coordinador') {
-        header("Location: ../coordinador/profile.php");
+        header("Location: ../coordinador/production/index.html");
     } 
 }else {
         print"<script>alert(\"Datos no reconocidos.\");

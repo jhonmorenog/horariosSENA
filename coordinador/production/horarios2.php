@@ -10,16 +10,16 @@
      <title>SENA | Horarios </title>
 
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="../../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
     <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="../../build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -56,7 +56,7 @@
                     <ul class="nav child_menu">
                       <li><a href="index2.html">Ficha</a></li>
                       <li><a href="index3.html">Programa</a></li>
-                      <li><a href="index4.html">Ambiente</a></li>
+                      <li><a href="index4.html">Ambientes</a></li>
                       <li><a href="index5.html">Sede</a></li>
                     </ul>
                   </li>
@@ -165,33 +165,135 @@
         <div class="right_col" role="main">
           <div class="col-md-12" style="height: 100px;">
           <br />
-        <h1>Sedes registradas</h1>
+        <h1>Horarios recientes</h1>
         </div>
           <div class="">
             <div class="row" style="display: inline-block;">
               <hr>
 
             <div class="top_tiles">
-              <div class="animated flipInY col-lg-4 col-md-4">
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
                 <div class="tile-stats">
-                  <div class="count">CENIGRAF</div>
-                  <p>Dirección: Cl. 15 #31-42, Bogotá</p>
+                  <div class="count">1828917</div>
+                  <h3>ADSI</h3>
+                  <p>Tecnólogo</p>
                 </div>
               </div>
-              <div class="animated flipInY col-lg-4 col-md-4">
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
                 <div class="tile-stats">
-                  <div class="count">Calle 69</div>
-                  <p>Dirección: Cl. 69 ## 14 - 30, Bogotá</p>
+                  <div class="count">1860179</div>
+                  <h3>Ilustración</h3>
+                  <p>Técnico</p>
                 </div>
               </div>
-              <div class="animated flipInY col-lg-4 col-md-4">
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
                 <div class="tile-stats">
-                  <div class="count">Metalmecánico</div>
-                  <p>Dirección: Cra. 30 ##17B-25S, Bogotá</p>
+                  <div class="count">1797658</div>
+                  <h3>Serigrafía</h3>
+                  <p>Tecnólogo</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1245079</div>
+                  <h3>P. Multimedia</h3>
+                  <p>Tecnólogo</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1784609</div>
+                  <h3>Fotografía</h3>
+                  <p>Complementaria</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1570769</div>
+                  <h3>Sistemas</h3>
+                  <p>Tecnólogo</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1654879</div>
+                  <h3>Sistemas</h3>
+                  <p>Técnico</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1276579</div>
+                  <h3>Impresión 3D</h3>
+                  <p>Tecnólogo</p>
                 </div>
               </div>
 
             </div>
+              </div>
+              
+              <div class="row" style="display: inline-block;">
+              <hr>
+
+            <div class="top_tiles">
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1828917</div>
+                  <h3>ADSI</h3>
+                  <p>Tecnólogo</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1860179</div>
+                  <h3>Ilustración</h3>
+                  <p>Técnico</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1797658</div>
+                  <h3>Serigrafía</h3>
+                  <p>Tecnólogo</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1245079</div>
+                  <h3>P. Multimedia</h3>
+                  <p>Tecnólogo</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1784609</div>
+                  <h3>Fotografía</h3>
+                  <p>Complementaria</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1570769</div>
+                  <h3>Sistemas</h3>
+                  <p>Tecnólogo</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1654879</div>
+                  <h3>Sistemas</h3>
+                  <p>Técnico</p>
+                </div>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                <div class="tile-stats">
+                  <div class="count">1276579</div>
+                  <h3>Impresión 3D</h3>
+                  <p>Tecnólogo</p>
+                </div>
+              </div>
+            </div>
+              </div>
             </div>
           </div>
         </div>
@@ -206,37 +308,37 @@
         </footer>
         <!-- /footer content -->
       </div>
-    </div>
+    
 
     <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-   <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="../../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
+    <script src="../../vendors/nprogress/nprogress.js"></script>
     <!-- Chart.js -->
-    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+    <script src="../../vendors/Chart.js/dist/Chart.min.js"></script>
     <!-- jQuery Sparklines -->
-    <script src="../vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+    <script src="../../vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
     <!-- Flot -->
-    <script src="../vendors/Flot/jquery.flot.js"></script>
-    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="../vendors/Flot/jquery.flot.time.js"></script>
-    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.resize.js"></script>
     <!-- Flot plugins -->
-    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+    <script src="../../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../../vendors/flot.curvedlines/curvedLines.js"></script>
     <!-- DateJS -->
-    <script src="../vendors/DateJS/build/date.js"></script>
+    <script src="../../vendors/DateJS/build/date.js"></script>
     <!-- bootstrap-daterangepicker -->
-    <script src="../vendors/moment/min/moment.min.js"></script>
-    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../../vendors/moment/min/moment.min.js"></script>
+    <script src="../../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
     
     <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+    <script src="../../build/js/custom.min.js"></script>
   </body>
 </html>
