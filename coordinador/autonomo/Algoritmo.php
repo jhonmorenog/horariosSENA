@@ -57,8 +57,11 @@ function seleccionDia($instruc,$ficha,$aula){
 }
 function seleccionBloque($instruc,$ficha,$aula,$d){
     global $bloque;
+
     foreach ($bloque as $blo => $b) {
-        echo "El día ".$d." y el trimestre ".trimestreProximo()." en el bloque ".$b." la ficha ".$ficha["numero_ficha"]." con el instructor ".$instruc["documento"]." En el aula ".$aula["id_aula"]."<br>";
+      
+            echo "El día ".$d." y el trimestre ".trimestreProximo()." en el bloque ".$b." la ficha ".$ficha["numero_ficha"]." con el instructor ".$instruc["documento"]." En el aula ".$aula["id_aula"]."<br>";
+       
     }
     
 }

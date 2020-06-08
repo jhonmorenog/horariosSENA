@@ -2396,18 +2396,17 @@ if (typeof NProgress != 'undefined') {
 					left: 'prev,next today',
 					center: 'title',
 					right: 'month,agendaWeek,agendaDay,listMonth'
-
 				  },
 				  selectable: true,
 				  selectHelper: true,
 				  select: function(start, end, allDay) {
 					$('#fc_create').click();
+
 					started = start;
 					ended = end;
 
 					$(".antosubmit").on("click", function() {
-						
-					  var title = $("#title").val(); 
+					  var title = $("#title").val();
 					  if (end) {
 						ended = end;
 					  }
@@ -2416,7 +2415,6 @@ if (typeof NProgress != 'undefined') {
 
 					  if (title) {
 						calendar.fullCalendar('renderEvent', {
-
 							title: title,
 							start: started,
 							end: end,
@@ -2532,14 +2530,6 @@ if (typeof NProgress != 'undefined') {
 				}();
 
 				$('#datatable').dataTable();
-				$('#datatable1').dataTable();
-				$('#datatable2').dataTable();
-				$('#datatable3').dataTable();
-				$('#datatable4').dataTable();
-				$('#datatable5').dataTable();
-				$('#datatable6').dataTable();
-				$('#datatable7').dataTable();
-				$('#datatable8').dataTable();
 
 				$('#datatable-keytable').DataTable({
 				  keys: true

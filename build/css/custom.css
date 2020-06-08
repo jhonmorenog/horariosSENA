@@ -87,9 +87,9 @@
   .calendar-exibit .show-calendar.picker_1 {
     background: #34495E; }
 .calendar-exibit .calendar-table {
-  padding: 0 0 4px 0; } 
+  padding: 0 0 4px 0; }
 
-@charset"UTF-8";
+@charset "UTF-8";
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url("https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot");
