@@ -95,9 +95,7 @@
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">¿eres nuevo?
-                  <a href="#signup" class="to_register"> Crea una cuenta </a>
-                </p>
+       
 
                 <div class="clearfix"></div>
                 <br />
@@ -111,48 +109,7 @@
           </section>
         </div>
 
-        <div id="register" class="animate form registration_form">
-          <section class="login_content">
-            <form action="GuardarDatos.php" method="post">
-              <h1>Crear cuenta</h1>
-              <div>
-                <input type="text" class="form-control" name="documento" placeholder="Documento" pattern="[0-9]+{10,}" title="Este campo es obligatorio y solo admite valores numericos" required=""/>
-              </div>
-              <div>
-                <input type="text" class="form-control" name="nombre" placeholder="Nombre" pattern="[A-Za-z]+" title="Este campo es obligatorio y solo admite valores de la A a Z" required="" />
-              </div>
-              <div>
-                <input type="text" class="form-control" name="apellido" placeholder="Apellido" pattern="[A-Za-z]+" title="Este campo es obligatorio y solo admite valores de la A a Z" required="" />
-              </div>
-              <div>
-                <input type="email" class="form-control" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Este campo es obligatorio" required="" />
-              </div>
-              <div>
-               <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 o más caracteres">
-                	<span class="input-group-text" onclick="verPass()">
-                	<i id="hide1" class="fa fa-eye"></i>
-                	<i id="hide2" class="fa fa-eye-slash"></i></span>
-               </div> 
-                <button class="btn btn-default" type="submit">Registrar</button>
-              
-              <div class="clearfix"></div>
-
-              <div class="separator">
-                <p class="change_link">¿ya eres miembro?
-                  <a href="#signin" class="to_register"> Log in </a>
-                </p>
-
-                <div class="clearfix"></div>
-                <br />
-
-                <div>
-                  <h1><i></i> Horarios SENA</h1>
-                  <p>©2020</p>
-                </div>
-              </div>
-            </form>
-          </section>
-        </div>
+        
       </div>
     </div>
   </body>
