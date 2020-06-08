@@ -10,7 +10,7 @@ require_once '../utili/Conexion.php';
   array("Land Rover",17,15)
   );
  */
-
+/*
 $rango1 = '06:00-07:40';
 $rango2 = '08:00-09:40';
 $rango3 = '10:00-11:40';
@@ -18,7 +18,7 @@ $rango4 = '12:00-13:40';
 $rango5 = '14:20-16:00';
 $rango6 = '16:20-18:00';
 $rango7 = '18:15-19:45';
-$rango8 = '20:00-21:40';
+$rango8 = '20:00-21:40';*/
 
 $bloque=array(
     "06:00-07:40Lunes"=>"",
@@ -51,6 +51,24 @@ $bloque=array(
     "14:20-16:00Jueves"=>"",
     "14:20-16:00Viernes"=>"",
     "14:20-16:00Sábado"=>"",
+     "16:20-18:00Lunes"=>"",
+    "16:20-18:00Martes"=>"",
+    "16:20-18:00Miércoles"=>"",
+    "16:20-18:00Jueves"=>"",
+    "16:20-18:00Viernes"=>"",
+    "16:20-18:00Sábado"=>"",
+     "18:15-19:45Lunes"=>"",
+    "18:15-19:45Martes"=>"",
+    "18:15-19:45Miércoles"=>"",
+    "18:15-19:45Jueves"=>"",
+    "18:15-19:45Viernes"=>"",
+    "18:15-19:45Sábado"=>"",
+     "20:00-21:40Lunes"=>"",
+    "20:00-21:40Martes"=>"",
+    "20:00-21:40Miércoles"=>"",
+    "20:00-21:40Jueves"=>"",
+    "20:00-21:40Viernes"=>"",
+    "20:00-21:40Sábado"=>"",
     
     
     );
@@ -128,40 +146,40 @@ echo "Trimestre (" . $key['trimestre'] . ") del año (" . $key['anio'] . ")";
         </tr>
         <tr>
             <td>14:20 a 16:00</td>
-            <td><?php echo $bloque["06:00-07:40Lunes"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Martes"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Miércoles"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Jueves"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Viernes"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Sábado"] ?></td>
+            <td><?php echo $bloque["14:20-16:00Lunes"] ?></td>
+           <td><?php echo $bloque["14:20-16:00Martes"] ?></td>
+           <td><?php echo $bloque["14:20-16:00Miércoles"] ?></td>
+           <td><?php echo $bloque["14:20-16:00Jueves"] ?></td>
+           <td><?php echo $bloque["14:20-16:00Viernes"] ?></td>
+           <td><?php echo $bloque["14:20-16:00Sábado"] ?></td>
         </tr>
         <tr>
             <td>16:20 a 18:00</td>
-            <td><?php echo $bloque["06:00-07:40Lunes"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Martes"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Miércoles"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Jueves"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Viernes"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Sábado"] ?></td>
+            <td><?php echo $bloque["16:20-18:00Lunes"] ?></td>
+           <td><?php echo $bloque["16:20-18:00Martes"] ?></td>
+           <td><?php echo $bloque["16:20-18:00Miércoles"] ?></td>
+           <td><?php echo $bloque["16:20-18:00Jueves"] ?></td>
+           <td><?php echo $bloque["16:20-18:00Viernes"] ?></td>
+           <td><?php echo $bloque["16:20-18:00Sábado"] ?></td>
         </tr>
         <tr>
             <td>18:15 a 19:45</td>
-              <td><?php echo $bloque["06:00-07:40Lunes"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Martes"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Miércoles"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Jueves"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Viernes"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Sábado"] ?></td>            
+              <td><?php echo $bloque["18:15-19:45Lunes"] ?></td>
+           <td><?php echo $bloque["18:15-19:45Martes"] ?></td>
+           <td><?php echo $bloque["18:15-19:45Miércoles"] ?></td>
+           <td><?php echo $bloque["18:15-19:45Jueves"] ?></td>
+           <td><?php echo $bloque["18:15-19:45Viernes"] ?></td>
+           <td><?php echo $bloque["18:15-19:45Sábado"] ?></td>            
 
         </tr>
         <tr>
             <td>20:00 a 21:40</td>
-            <td><?php echo $bloque["06:00-07:40Lunes"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Martes"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Miércoles"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Jueves"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Viernes"] ?></td>
-           <td><?php echo $bloque["06:00-07:40Sábado"] ?></td>
+            <td><?php echo $bloque["20:00-21:40Lunes"] ?></td>
+           <td><?php echo $bloque["20:00-21:40Martes"] ?></td>
+           <td><?php echo $bloque["20:00-21:40Miércoles"] ?></td>
+           <td><?php echo $bloque["20:00-21:40Jueves"] ?></td>
+           <td><?php echo $bloque["20:00-21:40Viernes"] ?></td>
+           <td><?php echo $bloque["20:00-21:40Sábado"] ?></td>
         </tr>
 
     </tbody>
