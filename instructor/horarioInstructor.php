@@ -122,6 +122,15 @@
     <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
     <!-- /calendar modal -->
         
+    <footer>
+          <div class="pull-right">
+           Horarios SENA by ADSI</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
