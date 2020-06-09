@@ -40,7 +40,7 @@
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
-                <h2>Eddie Merck Camacho </h2>
+                 <h2><?php echo $_SESSION['user'] ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -105,7 +105,7 @@
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="images/img.jpg" alt="">Eddie Merck Camacho
+                      <img src="images/SENA Horarios.jpg" alt=""><h2><?php echo $_SESSION['user'] ?></h2>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="profile.html"> Perfil</a>
