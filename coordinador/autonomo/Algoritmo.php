@@ -7,26 +7,7 @@ $bloque = array("06:00-07:04", "08:00-09:40", "10:00-11:40", "12:00-13:40", "14:
 
 $dia = array("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
 
-//foreach ($dia as $key => $d) {// se inicia por los días de la semana 
-//    //echo $d;
-//    //seleccionar el bloque
-//    foreach ($bloque as $blo => $b) {
-//        //echo $b;
-//        // miro ficha por ficha
-//        foreach ($fichas as $f) {
-//           //echo $f["numero_ficha"];
-//            
-//            //busco los instructores
-//            foreach ($instructores as $instruc) {
-//               // echo $instruc["documento"];
-//               foreach ($sedeAula as $aula) {
-//                   //echo $aula["id_aula"];
-//                   echo "El día ".$d." y el trimestre ".trimestreProximo()." en el bloque ".$b." la ficha ".$f["numero_ficha"]." con el instructor ".$instruc["documento"]." En el aula ".$aula["id_aula"]."<br>";
-//               }
-//            }
-//        }
-//    }
-//}
+
 //inicio el proeceso de automatización
 seleccionFicha();
 
