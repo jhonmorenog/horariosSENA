@@ -1,6 +1,6 @@
 -- MariaDB dump 10.17  Distrib 10.4.6-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: horariostarde
+-- Host: localhost    Database: horarios_sena
 -- ------------------------------------------------------
 -- Server version	10.4.6-MariaDB
 
@@ -76,7 +76,7 @@ CREATE TABLE `bloque` (
 
 LOCK TABLES `bloque` WRITE;
 /*!40000 ALTER TABLE `bloque` DISABLE KEYS */;
-INSERT INTO `bloque` VALUES ('Lunes',1,'06:00-07:40',1335,2000649,507,2020);
+INSERT INTO `bloque` VALUES ('Lunes',1,'06:00-07:40',1335,2000649,102,2020),('Martes',1,'10:00-11:40',1335,2000649,507,2020);
 /*!40000 ALTER TABLE `bloque` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -168,10 +168,9 @@ CREATE TABLE `competencia` (
   `id_competencia` int(11) NOT NULL AUTO_INCREMENT,
   `denominacion` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `duracion` int(11) NOT NULL,
-  `estado` tinyint(1) NOT NULL,
   PRIMARY KEY (`id_competencia`),
   UNIQUE KEY `denominacion` (`denominacion`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=240201504 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -180,7 +179,7 @@ CREATE TABLE `competencia` (
 
 LOCK TABLES `competencia` WRITE;
 /*!40000 ALTER TABLE `competencia` DISABLE KEYS */;
-INSERT INTO `competencia` VALUES (2,'leer textos en ingles',180,0),(5,'Inglés',180,0),(6,'Ética',180,0),(7,'ANALIZAR LOS REQUISITOS DEL CLIENTE PARA CONSTRUIR EL SISTEMA DE INFORMACIÓN.',400,0),(8,'Información',3,0);
+INSERT INTO `competencia` VALUES (220501006,'ESPECIFICAR LOS REQUISITOS NECESARIOS PARA DESARROLLAR EL SISTEMA DE',120),(220501007,'CONSTRUIR EL SISTEMA QUE CUMPLA CON LOS REQUISITOS DE LA SOLUCIÓN',600),(220501009,'PARTICIPAR EN EL PROCESO DE NEGOCIACIÓN DE TECNOLOGÍA INFORMÁTICA PARA',140),(220501032,'ANALIZAR LOS REQUISITOS DEL CLIENTE PARA CONSTRUIR EL SISTEMA DE INFORMACION',400),(220501033,'DISEÑAR EL SISTEMA DE ACUERDO CON LOS REQUISITOS DEL CLIENTE',350),(220501034,'IMPLANTAR LA SOLUCIÓN QUE CUMPLA CON LOS REQUISITOS PARA SU OPERACIÓN.',360),(220501035,'APLICAR BUENAS PRÁCTICAS DE CALIDAD EN EL PROCESO DE DESARROLLO DE SOFTWARE,',200),(240201500,'PROMOVER LA INTERACCIÓN IDÓNEA CONSIGO MISMO, CON LOS DEMÁS Y CON LA',0),(240201501,'COMPRENDER TEXTOS EN INGLÉS EN FORMA ESCRITA Y AUDITIVA',180),(240201502,'PRODUCIR TEXTOS EN INGLÉS EN FORMA ESCRITA Y ORAL.',180),(240201503,'APLICAR EN LA RESOLUCIÓN DE PROBLEMAS REALES DEL SECTOR PRODUCTIVO',0);
 /*!40000 ALTER TABLE `competencia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -259,7 +258,7 @@ CREATE TABLE `ficha` (
 
 LOCK TABLES `ficha` WRITE;
 /*!40000 ALTER TABLE `ficha` DISABLE KEYS */;
-INSERT INTO `ficha` VALUES (1818975,'2020-03-03','2020-04-16',0),(1828914,'2020-03-03','2020-03-17',0),(1828917,'2020-03-09','2020-03-17',0),(1828918,'2019-02-02','2021-01-21',0),(2000649,'2020-03-01','2020-03-31',0);
+INSERT INTO `ficha` VALUES (1818975,'2020-03-03','2020-04-16',0),(1828914,'2020-03-03','2020-03-17',0),(1828917,'2020-03-09','2020-03-17',0),(1828918,'2019-02-02','2021-01-21',0),(2000649,'2020-03-01','2021-01-21',0);
 /*!40000 ALTER TABLE `ficha` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -345,8 +344,35 @@ CREATE TABLE `persona` (
 
 LOCK TABLES `persona` WRITE;
 /*!40000 ALTER TABLE `persona` DISABLE KEYS */;
-INSERT INTO `persona` VALUES (1,'Administrador','hernandez','admin1828917@gmail.com','6bcd04b48ad302a3db05d8c4ef1708d0',1,NULL),(1335,'Juan','Valdez','juan@gmail.com','827ccb0eea8a706c4c34a16891f84e7b',3,NULL);
+INSERT INTO `persona` VALUES (1,'Administrador','hernandez','admin1828917@gmail.com','e10adc3949ba59abbe56e057f20f883e',1,NULL),(2,'John','Moreno','jhon@gmail.com','e10adc3949ba59abbe56e057f20f883e',2,NULL),(3,'Jhon','Moreno','jhonw@gmail.com','e10adc3949ba59abbe56e057f20f883e',3,NULL),(1335,'Juan','Valdez','juan@gmail.com','e10adc3949ba59abbe56e057f20f883e',3,NULL);
 /*!40000 ALTER TABLE `persona` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `persona_resultado`
+--
+
+DROP TABLE IF EXISTS `persona_resultado`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `persona_resultado` (
+  `documento_persona` int(11) NOT NULL,
+  `id_resultado` int(11) NOT NULL,
+  PRIMARY KEY (`documento_persona`,`id_resultado`),
+  KEY `fk_resultado_persona_resultado_idx` (`id_resultado`),
+  CONSTRAINT `fk_persona_persona_resultado` FOREIGN KEY (`documento_persona`) REFERENCES `persona` (`documento`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_resultado_persona_resultado` FOREIGN KEY (`id_resultado`) REFERENCES `resultado` (`id_resultado`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `persona_resultado`
+--
+
+LOCK TABLES `persona_resultado` WRITE;
+/*!40000 ALTER TABLE `persona_resultado` DISABLE KEYS */;
+INSERT INTO `persona_resultado` VALUES (3,9),(1335,1);
+/*!40000 ALTER TABLE `persona_resultado` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -373,6 +399,7 @@ CREATE TABLE `persona_titulo` (
 
 LOCK TABLES `persona_titulo` WRITE;
 /*!40000 ALTER TABLE `persona_titulo` DISABLE KEYS */;
+INSERT INTO `persona_titulo` VALUES (1335,1);
 /*!40000 ALTER TABLE `persona_titulo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -392,13 +419,14 @@ CREATE TABLE `programa` (
   `estado` tinyint(1) NOT NULL,
   PRIMARY KEY (`id_programa`),
   UNIQUE KEY `denominacion` (`denominacion`,`id_tipo`),
+  UNIQUE KEY `denominacion_UNIQUE` (`denominacion`),
   KEY `fk_duracion_programa` (`id_duracion`),
   KEY `fk_nivel_formacion_programa` (`id_formacion`),
   KEY `fk_tipo_programa` (`id_tipo`),
   CONSTRAINT `fk_duracion_programa` FOREIGN KEY (`id_duracion`) REFERENCES `duracion` (`id_duracion`) ON DELETE NO ACTION ON UPDATE CASCADE,
   CONSTRAINT `fk_nivel_formacion_programa` FOREIGN KEY (`id_formacion`) REFERENCES `nivel_formacion` (`id_nivel`) ON DELETE NO ACTION ON UPDATE CASCADE,
   CONSTRAINT `fk_tipo_programa` FOREIGN KEY (`id_tipo`) REFERENCES `tipo` (`id_tipo`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=228107 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -407,7 +435,7 @@ CREATE TABLE `programa` (
 
 LOCK TABLES `programa` WRITE;
 /*!40000 ALTER TABLE `programa` DISABLE KEYS */;
-INSERT INTO `programa` VALUES (8,'Analisis y desarrollo de sistemas de informac',13,1,2,0),(9,'Multimedia',13,2,3,0),(11,'Analisis y desarrollo de sistemas de informacion',13,1,3,0),(13,'Multimedia',14,1,2,0);
+INSERT INTO `programa` VALUES (9,'Multimedia',13,2,3,0),(228106,'Analisis y desarrollo de sistemas de informacion',13,1,2,0);
 /*!40000 ALTER TABLE `programa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -424,6 +452,7 @@ CREATE TABLE `programa_competencia` (
   PRIMARY KEY (`id_programa`,`id_competencia`),
   KEY `fk_programa_programa_competencia` (`id_programa`),
   KEY `fk_competencia_programa_competencia` (`id_competencia`),
+  CONSTRAINT `fk_programa_competencia` FOREIGN KEY (`id_competencia`) REFERENCES `competencia` (`id_competencia`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_programa_programa_competencia` FOREIGN KEY (`id_programa`) REFERENCES `programa` (`id_programa`) ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -434,6 +463,7 @@ CREATE TABLE `programa_competencia` (
 
 LOCK TABLES `programa_competencia` WRITE;
 /*!40000 ALTER TABLE `programa_competencia` DISABLE KEYS */;
+INSERT INTO `programa_competencia` VALUES (228106,220501006),(228106,220501007),(228106,220501009),(228106,220501032),(228106,220501033),(228106,220501034),(228106,220501035),(228106,240201500),(228106,240201501),(228106,240201502),(228106,240201503);
 /*!40000 ALTER TABLE `programa_competencia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -461,7 +491,7 @@ CREATE TABLE `programa_ficha` (
 
 LOCK TABLES `programa_ficha` WRITE;
 /*!40000 ALTER TABLE `programa_ficha` DISABLE KEYS */;
-INSERT INTO `programa_ficha` VALUES (8,1818975);
+INSERT INTO `programa_ficha` VALUES (9,1828914),(9,1828918),(228106,1818975),(228106,1828917),(228106,2000649);
 /*!40000 ALTER TABLE `programa_ficha` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -475,12 +505,11 @@ DROP TABLE IF EXISTS `resultado`;
 CREATE TABLE `resultado` (
   `id_resultado` int(11) NOT NULL AUTO_INCREMENT,
   `denominacion_resultado` varchar(1024) COLLATE utf8_unicode_ci NOT NULL,
-  `id_competencia` int(11) DEFAULT NULL,
-  `estado` tinyint(1) NOT NULL,
+  `id_competencia` int(11) NOT NULL,
   PRIMARY KEY (`id_resultado`),
   UNIQUE KEY `denominacion` (`denominacion_resultado`),
   KEY `fk_competencia_resultado` (`id_competencia`),
-  CONSTRAINT `fk_competencia_resultado` FOREIGN KEY (`id_competencia`) REFERENCES `competencia` (`id_competencia`) ON DELETE NO ACTION ON UPDATE CASCADE
+  CONSTRAINT `Fk_resultado_competencia` FOREIGN KEY (`id_competencia`) REFERENCES `competencia` (`id_competencia`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -490,7 +519,7 @@ CREATE TABLE `resultado` (
 
 LOCK TABLES `resultado` WRITE;
 /*!40000 ALTER TABLE `resultado` DISABLE KEYS */;
-INSERT INTO `resultado` VALUES (4,'comprende textos en ingles',2,0),(5,'complejidads',2,0),(12,'Analisis y desarrollo de sistemas de informacion',2,0),(13,'Hablar inglés',5,0),(14,'Es etico',6,0);
+INSERT INTO `resultado` VALUES (1,'RECONOCER EL ROL DE LOS PARTICIPANTES EN EL PROCESO FORMATIVO, EL PAPEL DE LOS AMBIENTES DE',240201500),(2,'DESARROLLAR PROCESOS COMUNICATIVOS EFICACES Y ASERTIVOS DENTRO DE CRITERIOS DE',240201500),(3,'INTERACTUAR EN LOS CONTEXTOS PRODUCTIVOS Y SOCIALES EN FUNCIÓN DE LOS PRINCIPIOS Y VALORES',240201500),(4,'GENERAR HÁBITOS SALUDABLES EN SU ESTILO DE VIDA PARA GARANTIZAR LA PREVENCIÓN DE RIESGOS',240201500),(5,'DESARROLLAR PERMANENTEMENTE LAS HABILIDADES PSICOMOTRICES Y DE PENSAMIENTO EN LA',240201500),(6,'IDENTIFICAR LAS OPORTUNIDADES QUE EL SENA OFRECE EN EL MARCO DE LA FORMACIÓN PROFESIONAL',240201500),(7,'CONCERTAR ALTERNATIVAS Y ACCIONES DE FORMACIÓN PARA EL DESARROLLO DE LAS COMPETENCIAS DEL',240201500),(8,'ASUMIR LOS DEBERES Y DERECHOS CON BASE EN LAS LEYES Y LA NORMATIVA INSTITUCIONAL EN EL',240201500),(9,'APLICAR TÉCNICAS DE CULTURA FÍSICA PARA EL MEJORAMIENTO DE SU EXPRESIÓN CORPORAL,',240201500),(10,'GESTIONAR LA INFORMACIÓN DE ACUERDO CON LOS PROCEDIMIENTOS ESTABLECIDOS Y CON LAS',240201500),(11,'ASUMIR RESPONSABLEMENTE LOS CRITERIOS DE PRESERVACIÓN Y CONSERVACIÓN DEL MEDIO AMBIENTE Y',240201500),(12,'REDIMENSIONAR PERMANENTEMENTE SU PROYECTO DE VIDA DE ACUERDO CON LAS CIRCUNSTANCIAS DEL',240201500),(13,'GENERAR PROCESOS AUTÓNOMOS Y DE TRABAJO COLABORATIVO PERMANENTES, FORTALECIENDO EL',240201500),(14,'ASUMIR ACTITUDES CRÍTICAS , ARGUMENTATIVAS Y PROPOSITIVAS EN FUNCIÓN DE LA RESOLUCIÓN DE',240201500);
 /*!40000 ALTER TABLE `resultado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -586,7 +615,7 @@ CREATE TABLE `titulo` (
   `certificacion` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id_titulo`),
   UNIQUE KEY `certificacion` (`certificacion`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -595,6 +624,7 @@ CREATE TABLE `titulo` (
 
 LOCK TABLES `titulo` WRITE;
 /*!40000 ALTER TABLE `titulo` DISABLE KEYS */;
+INSERT INTO `titulo` VALUES (2,'Cultura Física'),(1,'Ingeniero de sistemas');
 /*!40000 ALTER TABLE `titulo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -607,4 +637,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-03 14:11:59
+-- Dump completed on 2020-06-10 15:51:17
