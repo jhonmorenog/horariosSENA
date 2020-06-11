@@ -12,7 +12,7 @@ x($fichasQuery,"fichas");
 x($instructoresQuery,"instructores");
 x($sedeAulaQuery,"sedeAula");
 x(bloquePorInstructor($_SESSION['documento']),"bloquePorInstructor");
-
+x($competenciasQuery, "competencias");
 
 // trae los datos de la base de datos y lo envía a data y luego a creaArreglo
 function x($sql,$arreglo){

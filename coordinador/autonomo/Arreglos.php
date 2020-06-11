@@ -7,6 +7,7 @@ $instructores=array();
 $sedeAula=array();
 $tituloInstructor=array();
 $competencias=array();
+$bloquePorInstructor=array();
 
 
 

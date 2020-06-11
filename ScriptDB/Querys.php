@@ -46,3 +46,4 @@ $SeleccionarProgramaCompetencia = "Select c.id_competencia, c.denominacion AS 'D
 function bloquePorInstructor($documentoInstructor) {
     return "SELECT * FROM bloque where persona_documento='$documentoInstructor' and anio='2020' and trimestre =1 order by rango_horas;";
 }
+$competenciasQuery="SELECT id_competencia, denominacion from competencia";
