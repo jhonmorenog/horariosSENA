@@ -76,6 +76,9 @@ function seleccionInstructor($ficha) {
 function seleccionAula($instruc, $ficha) {
     global $sedeAula;
     foreach ($sedeAula as $aula) {
+        
+        
+        echo"La ficha " . $ficha["numero_ficha"]. "con el instructor" .$instruc["documento"]. "En el aula" .$aula["id_aula"]."<br>";
         // mirar la descripción del aula y de acuerdo al programa asignar
         /*
          * saco el $aula
@@ -119,7 +122,7 @@ function seleccionCompetencia($ficha) {
 
     foreach ($competencias as $com ) {
         
-        echo "La competencia " . $com["id_competencia"] ." la ficha que estoy  usan en este moemtno es :".$ficha["numero_ficha"]. "<br>";
+        echo "La competencia " . $com["id_competencia"] ." la ficha que estoy  usan en este momento es :".$ficha["numero_ficha"]. "<br>";
         //echo "La competencia " . $com["id_competencia"] ." la ficha que estoy  usan en este moemtno es :<br>";
     }
 }
