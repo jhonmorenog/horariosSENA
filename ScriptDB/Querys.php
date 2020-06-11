@@ -34,6 +34,7 @@ inner join
 programa p on  p.id_programa=pf.id_programa;
 ;";
 
+$competenciasQuery="SELECT id_competencia, denominacion from competencia";
 
 $SeleccionarAulaQuery = "select id_aula, descripcion, nombre 
 from aula a, descripcion_aula da, sede s
