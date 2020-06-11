@@ -124,7 +124,7 @@
                                         <a class="dropdown-item"  href="form_validation.html">
                                             <span>Configuración</span>
                                         </a>
-                                        <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Salir</a>
+                                        <a class="dropdown-item"  href="../../utili/logout.php"><i class="fa fa-sign-out pull-right"></i>Salir</a>
                                     </div>
                                 </li>
 
