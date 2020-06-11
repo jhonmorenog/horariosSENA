@@ -3,7 +3,7 @@
 require_once "Conexion.php";
 $email = $_POST['email'];
 $clave = md5($_POST['password']);
-$query = "SELECT documento,nombre, email, rol FROM 
+ $query = "SELECT documento,nombre, email, rol, estado FROM 
 persona 
 inner join
 rol on id_rol=rol_documento WHERE email='$email' AND clave='$clave'";
@@ -18,7 +18,9 @@ if ($consulta2->num_rows >= 1) {
     $_SESSION['documento'] = $fila['documento'];
     $_SESSION['tiempo'] = time();
     $_SESSION['expira'] = $_SESSION['tiempo'];
-
+ 
+    
+ if($fila['estado']==0){
     if ($fila['rol'] == 'Instructor') {
         header("Location: ../instructor/horarioInstructor.php");
     } else if ($fila['rol'] == 'Administrador') {
@@ -26,8 +28,13 @@ if ($consulta2->num_rows >= 1) {
     } else if ($fila['rol'] == 'Coordinador') {
         header("Location: ../coordinador/production/index.php");
     } 
+ }else{
+     print"<script>alert(\"Su estado esta inhbilitado. consulte con el administrador del sistema .\");
+		window.location='../index.php';</script>";
+ }
 }else {
         print"<script>alert(\"Datos no reconocidos.\");
 		window.location='../index.php';</script>";
     }
+    
 ?>
