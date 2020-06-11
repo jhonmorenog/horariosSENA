@@ -3,6 +3,7 @@
 include './Consulta.php';
 include './functionx.php';
 
+
 $bloque = array("06:00-07:04", "08:00-09:40", "10:00-11:40", "12:00-13:40", "14:20.16:00", "16:20-18:00", "18:15-19:45", "20:00-21:40");
 
 $dia = array("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
@@ -16,10 +17,12 @@ seleccionFicha();
  * a seleccionInstructor una a una
  */
 
+
 function seleccionFicha() {
     global $fichas;
     foreach ($fichas as $f) {
-
+        seleccionCompetencia($f);
+       
         seleccionInstructor($f);
     }
 }
@@ -54,7 +57,7 @@ function seleccionInstructor($ficha) {
         /*
          * select documento, r.id_resultado, r.id_competencia
           from
-          persona
+          person
           inner join
           persona_resultado pr on documento_persona=documento
           inner join
@@ -104,6 +107,22 @@ function seleccionBloque($instruc, $ficha, $aula, $d) {
     }
 }
 
+function seleccionPrograma($id_programa) {
+    global $programas;
+
+    foreach ($programas as $pro => $p) {
+        
+    }
+}
+function seleccionCompetencia($ficha) {
+    global $competencias;
+
+    foreach ($competencias as $com ) {
+        
+        echo "La competencia " . $com["id_competencia"] ." la ficha que estoy  usan en este moemtno es :".$ficha["numero_ficha"]. "<br>";
+        //echo "La competencia " . $com["id_competencia"] ." la ficha que estoy  usan en este moemtno es :<br>";
+    }
+}
 /*
  * mirar el programa de formación
  * qué materias por programa se ven en cada trimestre
