@@ -124,6 +124,7 @@ function seleccionCompetencia($ficha) {
         
         echo "La competencia " . $com["id_competencia"] ." la ficha que estoy  usan en este momento es :".$ficha["numero_ficha"]. "<br>";
         //echo "La competencia " . $com["id_competencia"] ." la ficha que estoy  usan en este moemtno es :<br>";
+        echo 'hola perro';
     }
 }
 /*
