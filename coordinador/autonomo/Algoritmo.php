@@ -22,7 +22,7 @@ function seleccionFicha() {
     global $fichas;
     foreach ($fichas as $f) {
         seleccionCompetencia($f);
-       
+        seleccionResultadoMinMax($f);
         seleccionInstructor($f);
     }
 }
@@ -124,9 +124,27 @@ function seleccionCompetencia($ficha) {
         
         echo "La competencia " . $com["id_competencia"] ." la ficha que estoy  usan en este momento es :".$ficha["numero_ficha"]. "<br>";
         //echo "La competencia " . $com["id_competencia"] ." la ficha que estoy  usan en este moemtno es :<br>";
-        echo 'hola perro';
     }
-}
+    }
+    function seleccionResultadoMinMax($ficha) {
+    global $minResultado;
+    global $maxResultado;
+    
+     foreach ($minResultado as $min ) {
+         foreach ($maxResultado as $max ) {
+        $r=rand($min["id_resultado"],$max["id_resultado"]);
+            //echo $r;
+           echo "El resultado " . $r ." está asignado a la ficha :".$ficha["numero_ficha"]. "<br>"; 
+        
+  
+ }
+        }
+    }
+    
+    ////
+    
+    
+    
 /*
  * mirar el programa de formación
  * qué materias por programa se ven en cada trimestre

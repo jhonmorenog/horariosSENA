@@ -35,6 +35,12 @@ programa p on  p.id_programa=pf.id_programa;
 ;";
 
 $competenciasQuery="SELECT id_competencia, denominacion from competencia";
+$minResultadoQuery="select id_resultado from resultado "
+        . "where id_resultado = ( select min(id_resultado) from resultado)";
+
+$maxResultadoQuery="select id_resultado  from resultado  "
+        . " where id_resultado  = ( select max(id_resultado ) "
+        . "from resultado  )";
 
 $SeleccionarAulaQuery = "select id_aula, descripcion, nombre 
 from aula a, descripcion_aula da, sede s

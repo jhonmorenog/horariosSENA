@@ -8,7 +8,8 @@ $sedeAula=array();
 $tituloInstructor=array();
 $competencias=array();
 $bloquePorInstructor=array();
-
+$minResultado=array();
+$maxResultado=array();
 
 
 
