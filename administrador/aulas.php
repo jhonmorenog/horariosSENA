@@ -161,7 +161,7 @@
                                     $key['estado'];
 
                              ?>
-                             <tr id="table">
+                             <tr >
                              <td ><?php echo  mb_strtoupper($key['id_aula']); ?></td>
                              <td ><?php echo  mb_strtoupper($key['descripcion']); ?></td>
                             <td ><?php echo  mb_strtoupper($key['nombre']); ?></td>
