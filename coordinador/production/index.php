@@ -212,115 +212,130 @@
                                                         <div class="form-group">
                                                             <div class="form-group">
                                                                 <textarea name="mensaje" id="message"
-                                                                          required="required" class="form-control" rows="8" placeholder="Mensaje..."></textarea></div>
+                                                                          required="required" class="form-control" rows="8" placeholder="Mensaje...">
+
+                                                                </textarea>
+                                                            </div>
                                                             <div class="form-group">
-                                                                <button type="submit" class="btn btn-dark">Responder</button></div>
-                                                            </li>
-                                                            <li>
-                                                                <img src="images/img1.jpg" class="avatar" alt="Avatar">
-                                                                <div class="message_date">
-                                                                    <h3 class="date text-error">21</h3>
-                                                                    <p class="month">May</p>
-                                                                </div>
-                                                                <div class="message_wrapper">
-                                                                    <h4 class="heading">Jhon moreno</h4>
-                                                                    <blockquote class="message">Señor coordinador quisiera verificar mi horario pues tiene el nombre de otra persona</blockquote>
-                                                                    <br />
-                                                                    <div id="cnt_form">
-                                                                        <form id="contact-form" class="contact" name="cantact-form" method="post" action="mailto:ingbra12@hotmail.com">
-                                                                            <div class="form-group">
-                                                                                <div class="form-group">
-                                                                                    <textarea name="mensaje" id="message"
-                                                                                              required="required" class="form-control" rows="8" placeholder="Mensaje..."></textarea></div>
-                                                                                <button class="btn btn-dark">Responder</button>
-                                                                            </div>
-                                                                            </li>
-
-                                                                            </ul>
-                                                                            <!-- end recent activity -->
-
-                                                                    </div>
-                                                                    <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
-
-                                                                        <!-- start user projects -->
-                                                                        <div class="col-md-6">
-                                                                            <div id="cnt_form">
-                                                                                <form id="contact-form" class="contact" name="cantact-form" method="post" action="mailto:ingbra12@hotmail.com">
-                                                                                    <div class="form-group">
-                                                                                        <input type="text" name="nombre" class="form-control name-field" required="required" placeholder="Nombre del evento"></div>
-                                                                                    <div class="form-group">
-                                                                                        <div class="form-group">
-                                                                                            <textarea name="mensaje" id="message"
-                                                                                                      required="required" class="form-control" rows="8" placeholder="Asunto"></textarea></div>
-                                                                                        <div class="form-group">
-                                                                                            <button type="submit" class="btn btn-primary">Enviar</button></div>
-                                                                                        <!-- end user projects -->
-
-                                                                                    </div>
-                                                                                    <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
-                                                                                        <p>xxFood truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui
-                                                                                            photo booth letterpress, commodo enim craft beer mlkshk </p>
-                                                                                    </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                <button type="submit" class="btn btn-dark">Responder</button>
+                                                            </div>
                                                         </div>
+                                                    </form>
                                                 </div>
                                             </div>
-                                            <!-- /page content -->
+                                        </li>
+                                        <li>
+                                            <img src="images/img1.jpg" class="avatar" alt="Avatar">
+                                            <div class="message_date">
+                                                <h3 class="date text-error">21</h3>
+                                                <p class="month">May</p>
+                                            </div>
+                                            <div class="message_wrapper">
+                                                <h4 class="heading">Jhon moreno</h4>
+                                                <blockquote class="message">Señor coordinador quisiera verificar mi horario pues tiene el nombre de otra persona</blockquote>
+                                                <br />
+                                                <div id="cnt_form">
+                                                    <form id="contact-form" class="contact" name="cantact-form" method="post" action="mailto:ingbra12@hotmail.com">
+                                                        <div class="form-group">
+                                                            <div class="form-group">
+                                                                <textarea name="mensaje" id="message"
+                                                                          required="required" class="form-control" rows="8" placeholder="Mensaje...">
 
-                                            <!-- footer content -->
-                                            <footer>
-                                                <div class="pull-right">
-                                                    SENA Horarios. <a href="https://colorlib.com">Política de privacidad</a>
+                                                                </textarea>
+                                                            </div>
+                                                            <button class="btn btn-dark">Responder</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
-                                                <div class="clearfix"></div>
-                                            </footer>
-                                            <!-- /footer content -->
                                             </div>
-                                            </div>
+                                        </li>
 
-                                            <!-- jQuery -->
-                                            <script src="../../vendors/jquery/dist/jquery.min.js"></script>
-                                            <!-- Bootstrap -->
-                                            <script src="../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-                                            <!-- FastClick -->
-                                            <script src="../../vendors/fastclick/lib/fastclick.js"></script>
-                                            <!-- NProgress -->
-                                            <script src="../../vendors/nprogress/nprogress.js"></script>
-                                            <!-- Chart.js -->
-                                            <script src="../../vendors/Chart.js/dist/Chart.min.js"></script>
-                                            <!-- gauge.js -->
-                                            <script src="../../vendors/gauge.js/dist/gauge.min.js"></script>
-                                            <!-- bootstrap-progressbar -->
-                                            <script src="../../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-                                            <!-- iCheck -->
-                                            <script src="../../vendors/iCheck/icheck.min.js"></script>
-                                            <!-- Skycons -->
-                                            <script src="../../vendors/skycons/skycons.js"></script>
-                                            <!-- Flot -->
-                                            <script src="../../vendors/Flot/jquery.flot.js"></script>
-                                            <script src="../../vendors/Flot/jquery.flot.pie.js"></script>
-                                            <script src="../../vendors/Flot/jquery.flot.time.js"></script>
-                                            <script src="../../vendors/Flot/jquery.flot.stack.js"></script>
-                                            <script src="../../vendors/Flot/jquery.flot.resize.js"></script>
-                                            <!-- Flot plugins -->
-                                            <script src="../../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-                                            <script src="../../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-                                            <script src="../../vendors/flot.curvedlines/curvedLines.js"></script>
-                                            <!-- DateJS -->
-                                            <script src="../../vendors/DateJS/build/date.js"></script>
-                                            <!-- JQVMap -->
-                                            <script src="../../vendors/jqvmap/dist/jquery.vmap.js"></script>
-                                            <script src="../../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-                                            <script src="../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-                                            <!-- bootstrap-daterangepicker -->
-                                            <script src="../../vendors/moment/min/moment.min.js"></script>
-                                            <script src="../../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+                                    </ul>
+                                    <!-- end recent activity -->
 
-                                            <!-- Custom Theme Scripts -->
-                                            <script src="../../build/js/custom.min.js"></script>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
 
-                                            </body>
-                                            </html>
+                                    <!-- start user projects -->
+                                    <div class="col-md-6">
+                                        <div id="cnt_form">
+                                            <form id="contact-form" class="contact" name="cantact-form" method="post" action="mailto:ingbra12@hotmail.com">
+                                                <div class="form-group">
+                                                    <input type="text" name="nombre" class="form-control name-field" required="required" placeholder="Nombre del evento"></div>
+                                                <div class="form-group">
+                                                    <div class="form-group">
+                                                        <textarea name="mensaje" id="message"
+                                                                  required="required" class="form-control" rows="8" placeholder="Asunto"></textarea></div>
+                                                    <div class="form-group">
+                                                        <button type="submit" class="btn btn-primary">Enviar</button></div>
+                                                    <!-- end user projects -->
+
+                                                </div>
+                                                <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
+                                                    <p>xxFood truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui
+                                                        photo booth letterpress, commodo enim craft beer mlkshk </p>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /page content -->
+
+                <!-- footer content -->
+                <footer>
+                    <div class="pull-right">
+                        SENA Horarios. <a href="https://colorlib.com">Política de privacidad</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
+                <!-- /footer content -->
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="../../vendors/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- FastClick -->
+        <script src="../../vendors/fastclick/lib/fastclick.js"></script>
+        <!-- NProgress -->
+        <script src="../../vendors/nprogress/nprogress.js"></script>
+        <!-- Chart.js -->
+        <script src="../../vendors/Chart.js/dist/Chart.min.js"></script>
+        <!-- gauge.js -->
+        <script src="../../vendors/gauge.js/dist/gauge.min.js"></script>
+        <!-- bootstrap-progressbar -->
+        <script src="../../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+        <!-- iCheck -->
+        <script src="../../vendors/iCheck/icheck.min.js"></script>
+        <!-- Skycons -->
+        <script src="../../vendors/skycons/skycons.js"></script>
+        <!-- Flot -->
+        <script src="../../vendors/Flot/jquery.flot.js"></script>
+        <script src="../../vendors/Flot/jquery.flot.pie.js"></script>
+        <script src="../../vendors/Flot/jquery.flot.time.js"></script>
+        <script src="../../vendors/Flot/jquery.flot.stack.js"></script>
+        <script src="../../vendors/Flot/jquery.flot.resize.js"></script>
+        <!-- Flot plugins -->
+        <script src="../../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+        <script src="../../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+        <script src="../../vendors/flot.curvedlines/curvedLines.js"></script>
+        <!-- DateJS -->
+        <script src="../../vendors/DateJS/build/date.js"></script>
+        <!-- JQVMap -->
+        <script src="../../vendors/jqvmap/dist/jquery.vmap.js"></script>
+        <script src="../../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+        <script src="../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+        <!-- bootstrap-daterangepicker -->
+        <script src="../../vendors/moment/min/moment.min.js"></script>
+        <script src="../../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+        <!-- Custom Theme Scripts -->
+        <script src="../../build/js/custom.min.js"></script>
+
+    </body>
+</html>
