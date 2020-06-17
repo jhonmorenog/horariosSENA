@@ -31,6 +31,14 @@
     <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="icon/Horarios.ico" />
+    <style>
+        .des1{
+            color: gainsboro;
+        }
+        .des0{
+            color: black;
+        }
+    </style>
     <script type="text/javascript">
         function agregaform(datos){
             d=datos.split('||');
@@ -123,7 +131,7 @@
                          <?php
                              require_once '../utili/Conexion.php';
                             
-                            $sql1="SELECT * FROM ficha";
+                            $sql1="SELECT *, ficha.estado as f FROM ficha";
                             $query=$mysqli->query($sql1);
                               if ($query->num_rows>=1){?>
                                 <div class="container">
@@ -143,7 +151,7 @@
                                     $key['ingreso']."||".
                                     $key['salida'];
                              ?>
-                             <tr>
+                             <tr class="des<?php echo $key['f']; ?>">
                              <td><?php echo $key['numero_ficha']; ?></td>
                              <td><?php echo $key['ingreso']; ?></td>
                             <td><?php echo $key['salida']; ?></td>

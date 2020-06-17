@@ -31,6 +31,14 @@
     <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="icon/Horarios.ico" />
+    <style>
+        .des1{
+            color: gainsboro;
+        }
+        .des0{
+            color: black;
+        }
+    </style>
      <script type="text/javascript">
         function agregaform(datos){
             d=datos.split('||');

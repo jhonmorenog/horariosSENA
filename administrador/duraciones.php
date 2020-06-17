@@ -31,6 +31,14 @@
     <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="icon/Horarios.ico" />
+    <style>
+        .des1{
+            color: gainsboro;
+        }
+        .des0{
+            color: black;
+        }
+    </style>
      <script type="text/javascript">
         function agregaform(datos){
             d=datos.split('||');
@@ -117,7 +125,7 @@
                      <?php
                              require_once '../utili/Conexion.php';
                             
-                            $sql1="SELECT * FROM duracion ";
+                            $sql1="SELECT *, duracion.estado as u FROM duracion ";
                             $query=$mysqli->query($sql1);
                               if ($query->num_rows>=1){?>
                                 <div class="container">
@@ -139,7 +147,7 @@
                                         $key['meses_lectiva']."||".
                                         $key['meses_productiva'];
                              ?>
-                             <tr>
+                             <tr class="des<?php echo $key['u']; ?>">
                              <td><?php echo $key['id_duracion']; ?></td>
                              <td><?php echo $key['meses_lectiva']; ?></td>
                              <td><?php echo $key['meses_productiva']; ?></td>

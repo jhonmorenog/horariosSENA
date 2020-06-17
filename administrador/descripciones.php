@@ -31,6 +31,14 @@
     <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="icon/Horarios.ico" />
+    <style>
+        .des1{
+            color: gainsboro;
+        }
+        .des0{
+            color: black;
+        }
+    </style>
     <script type="text/javascript">
         function agregaform(datos){
             d=datos.split('||');
@@ -113,7 +121,7 @@
                     <?php
                             require_once '../utili/Conexion.php';
                             
-                            $sql1="SELECT * FROM descripcion_aula";
+                            $sql1="SELECT * , descripcion.estado as d FROM descripcion_aula";
                             $query=$mysqli->query($sql1);
                               if ($query->num_rows>=1){?>
                                 <div class="container">
@@ -133,7 +141,7 @@
                               $datos=$key['id_descripcion']."||".
                                         $key['descripcion'];
                              ?>
-                             <tr>
+                             <tr class="des<?php echo $key['d']; ?>">
                              <td><?php echo $key['id_descripcion']; ?></td>
                              <td><?php echo mb_strtoupper($key['descripcion']);?></td>
                              <td>
