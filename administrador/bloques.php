@@ -85,6 +85,8 @@
                     </ul>
                     <div class="clearfix"></div>
                   </div> 
+                  
+                  
                   <div class="x_content">
                       <div class="row">
                           <div class="col-md-12 col-sm-12">
@@ -106,10 +108,12 @@
                               <th>Año</th>
                               <th>Ficha</th>
                               <th>Instructor</th>
+                              <th>Actualizar</th>
                               </tr>
                             </thead>
                             <tbody>
                             <?php foreach ($query as $key) {
+                                
                              ?>
                              <tr>
                              <td><?php echo $key['id_aula']; ?></td>
@@ -119,10 +123,13 @@
                             <td><?php echo $key['anio']; ?></td>
                             <td><?php echo $key['numero_ficha']; ?></td>
                             <td><?php echo mb_strtoupper($key['nombre']);?></td>
+                             <td>
+                                <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" action=""><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
+                                </td>
                             </tr>
                             <?php }
     
-                             ?>
+                                ?>
                             </tbody>
                             </table>
                             <?php
@@ -139,8 +146,96 @@
               </div>
               </div>
               </div>
+                <form action="Actualizar/ActualizarBloque.php" method="post"> 
+                    <div class="modal fade" id="dataUpdate" role="dialog">
+                      <div class="modal-dialog">
+                        <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Registrar Bloques</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button></div>
+                          <div class="modal-body">
+                            <div class="form-group">
+                            <input type="text" name="dia" class="form-control" placeholder="Dia">
+                              </div>  
+                              <div class="form-group">
+                            <input type="number" name="trimestre" class="form-control" placeholder="Trimestre">
+                              </div>  
+                              <div class="form-group">
+                                <label>Rango de Horas</label> 
+                                  <select name="rango_horas" class="form-control" type="time">
+                                      <option value="0">Seleccionar</option>
+                                      <option value="1">6:00-7:40</option>
+                                      <option value="2">8:00-9:40</option>
+                                      <option value="3">10:00-11:40</option>
+                                      <option value="4">12:00-13:40</option>
+                                      <option value="5">14:20-16:00</option>
+                                      <option value="6">16:20-18:00</option>
+                                      <option value="7">18:15-19:45</option>
+                                      <option value="8">20:00-21:40</option>
+                                  </select>
+                              </div>
+                                      <div class="form-group">
+                                <label>Persona</label> 
+                                  <select name="persona_documento" class="form-control" required="">
+                                      <option value="0">Seleccionar</option>
+                                      <?php
+                                      require_once '../utili/Conexion.php';
+                                      $query=$mysqli->query("SELECT * FROM persona");
+                                      while($valores=mysqli_fetch_array($query)){
+                                          echo '<option value="'.$valores[documento].'">'.$valores[nombre].'</option>';
+                                          }
+                                      ?>
+                                  </select>
+                              </div>
+                               <div class="form-group">
+                                <label>Numero de Ficha</label> 
+                                  <select name="fichanumero_ficha" class="form-control" required="">
+                                      <option value="0">Seleccionar</option>
+                                      <?php
+                                      require_once '../utili/Conexion.php';
+                                      $query=$mysqli->query("SELECT * FROM ficha");
+                                      while($valores=mysqli_fetch_array($query)){
+                                          echo '<option value="'.$valores[numero_ficha].'">'.$valores[numero_ficha].'</option>';
+                                          }
+                                      ?>
+                                  </select>
+                              </div>
+                               <div class="form-group">
+                                <label>Aula</label> 
+                                  <select name="aulaid_aula" class="form-control" required="">
+                                      <option value="0">Seleccionar</option>
+                                      <?php
+                                      require_once '../utili/Conexion.php';
+                                      $query=$mysqli->query("SELECT * FROM aula");
+                                      while($valores=mysqli_fetch_array($query)){
+                                          echo '<option value="'.$valores[id_aula].'">'.$valores[id_aula].'</option>';
+                                          }
+                                      ?>
+                                  </select>
+                              </div>
+                              <div class="modal-footer">
+                              <label >Año:</label>
+                              <input type="number" name="anio" class="form-control" placeholder="Año"> 
+                            </div>  
+                            <button style="margin: 10px" type="submit" class="btn btn-dark">Registrar</button>
+
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-light" data-dismiss="modal" >Cerrar</button>
+                            </div>
+
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                   </div>
+                </form> 
+                
+                
               
-                                </div>
+                               
+            
+                
                 </div>
               </div>
               
