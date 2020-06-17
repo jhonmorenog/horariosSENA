@@ -93,7 +93,10 @@
                           <button type="button" class="close" data-dismiss="modal">&times;</button></div>
                           <div class="modal-body">
                             <div class="form-group">
-                            <input  type="text" name="denominacion" class="form-control" placeholder="Competencia">
+                            <input  type="text" name="id" class="form-control" placeholder="id">
+                              </div> 
+                            <div class="form-group">
+                                <textarea  name="denominacion" class="form-control" placeholder="Competencia"></textarea>
                               </div>  
                               <div class="form-group">
                             <input type="info-number" name="duracion" class="form-control" placeholder="Duracion en horas">
@@ -180,7 +183,7 @@
                             <div class="modal-body">
                               <div class="form-group">
                               <input type="text"  name="idu" id="idu" hidden="">
-                              <input type="text" name="denominacionu" id="denominacionu" class="form-control">
+                              <textarea name="denominacionu" id="denominacionu" class="form-control"></textarea>
                               </div>
                               <div class="form-group">
                                 <input type="info-number" name="duracionu" id="duracionu" class="form-control" placeholder="Duracion en horas">

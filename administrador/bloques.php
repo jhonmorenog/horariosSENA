@@ -114,7 +114,7 @@
                             <tbody>
                             <?php foreach ($query as $key) {
                                 
-                             ?>
+                     ?>
                              <tr>
                              <td><?php echo $key['id_aula']; ?></td>
                              <td><?php echo $key['rango_horas']; ?></td>

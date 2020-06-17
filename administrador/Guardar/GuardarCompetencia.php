@@ -1,5 +1,6 @@
 <?php 
 require_once "../../utili/Conexion.php";
+$id=$_POST['id'];
 $denominacion=$_POST['denominacion'];
 $duracion=$_POST['duracion'];
 
@@ -15,7 +16,7 @@ if($found)
 print"<script>alert(\"La competencia ya esta registrada.\");window.location='../competencias.php';</script>";
 }
 }
-$query="INSERT INTO competencia (denominacion,duracion) VALUES ('$denominacion','$duracion')";
+$query="INSERT INTO competencia (id_competencia,denominacion,duracion) VALUES ('$id','$denominacion','$duracion')";
 
 if($mysqli->query($query)){
 	print"<script>alert(\"Registro exitoso.\");window.location='../competencias.php';</script>";
