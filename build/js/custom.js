@@ -2530,6 +2530,15 @@ if (typeof NProgress != 'undefined') {
 				}();
 
 				$('#datatable').dataTable();
+				$('#datatable1').dataTable();
+				$('#datatable2').dataTable();
+				$('#datatable3').dataTable();
+				$('#datatable4').dataTable();
+				$('#datatable5').dataTable();
+				$('#datatable6').dataTable();
+				$('#datatable7').dataTable();
+				$('#datatable8').dataTable();
+                                $('#datatable9').dataTable();
 
 				$('#datatable-keytable').DataTable({
 				  keys: true

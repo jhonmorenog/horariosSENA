@@ -121,7 +121,7 @@
                             $query=$mysqli->query($sql1);
                               if ($query->num_rows>=1){?>
                                 <div class="container">
-                                <table id="datatable6" class="table table-striped table-bordered" style="width:100%">
+                                <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                 <tr>
                               <th>Id</th>    

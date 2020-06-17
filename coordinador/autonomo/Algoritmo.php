@@ -132,13 +132,13 @@ function seleccionCompetencia($ficha) {
     
      foreach ($minResultado as $min ) {
          foreach ($maxResultado as $max ) {
-        $r=rand($min["id_resultado"],$max["id_resultado"]);
+         $r=rand($min["id_resultado"],$max["id_resultado"]);
             //echo $r;
            echo "El resultado " . $r ." está asignado a la ficha :".$ficha["numero_ficha"]. "<br>"; 
         
   
- }
-        }
+}
+      }
     }
     
     ////
