@@ -121,7 +121,7 @@
                     <?php
                             require_once '../utili/Conexion.php';
                             
-                            $sql1="SELECT * , descripcion.estado as d FROM descripcion_aula";
+                            $sql1="SELECT *  FROM descripcion_aula";
                             $query=$mysqli->query($sql1);
                               if ($query->num_rows>=1){?>
                                 <div class="container">
@@ -141,7 +141,7 @@
                               $datos=$key['id_descripcion']."||".
                                         $key['descripcion'];
                              ?>
-                             <tr class="des<?php echo $key['d']; ?>">
+                             <tr class="des<?php echo $key['estado']; ?>">
                              <td><?php echo $key['id_descripcion']; ?></td>
                              <td><?php echo mb_strtoupper($key['descripcion']);?></td>
                              <td>
