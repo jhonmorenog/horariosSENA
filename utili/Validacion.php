@@ -3,7 +3,7 @@
 require_once "Conexion.php";
 $email = $_POST['email'];
 $clave = md5($_POST['password']);
- $query = "SELECT documento,nombre, email, rol, estado FROM 
+ $query = "SELECT documento,nombre, apellido, email, rol, estado FROM 
 persona 
 inner join
 rol on id_rol=rol_documento WHERE email='$email' AND clave='$clave'";
@@ -14,8 +14,10 @@ if ($consulta2->num_rows >= 1) {
     session_start();
     $_SESSION['verificar'] = true;
     $_SESSION['user'] = $fila['nombre'];
+    $_SESSION['apellido'] = $fila['apellido'];
     $_SESSION['correo'] = $fila['email'];
     $_SESSION['documento'] = $fila['documento'];
+    $_SESSION['rol'] = $fila['rol'];
     $_SESSION['tiempo'] = time();
     $_SESSION['expira'] = $_SESSION['tiempo'];
  

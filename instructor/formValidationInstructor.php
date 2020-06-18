@@ -93,7 +93,7 @@
                   </div>
                   <div class="x_content">
                        <?php
-                                  require("../utili/Conexion.php");
+                     		  require("../utili/Conexion.php");
                                   $email=$_SESSION['correo'];
                                   $query=$mysqli->query("SELECT documento FROM persona where email='$email'");
                                   if ($query->num_rows>=1){
@@ -104,18 +104,23 @@
                     <form action="ActualizarPersona.php?documento=<?php echo $key['documento']?>" method="POST">
                         <div class="form-group">
                            <label for="nombre"> Nombre: </label>
-                           <input name="nombre" type="text" class="form-control" ></div>
-               <div class="form-group">
-                   <label for="apellido"> Apellido: </label>
-                  <input name="apellido" type="text" class="form-control" >
-                </div>
-                 <div class="form-group">
-                     <label for="clave"> Clave: </label>
-                   <input name="clave" type="password" class="form-control" >
-                   </div>
+                           <input name="nombre" type="text" class="form-control" value="<?php echo $_SESSION["user"] ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido"> Apellido: </label>
+                            <input name="apellido" type="text" class="form-control" value="<?php echo $_SESSION["apellido"] ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"> Email: </label>
+                            <input name="email" type="email" class="form-control" value="<?php echo $_SESSION["correo"] ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="clave"> Clave: </label>
+                            <input name="clave" type="text" class="form-control" value="">
+                        </div>
                 <div class="form-group">
-               <button class="btn btn-default" style="background-color: #73879C;color:#fff"  name="actualizar" type="submit">Actualizar</button>
-      
+               <button class="btn btn-success" name="actualizar" type="submit">Actualizar</button>
+               <a href="profileInstructor.php"><button class="btn btn-danger" name="cancelar" type="button">Cancelar</button></a>
                   </div>
                   </form>
                 </div>
