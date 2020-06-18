@@ -155,7 +155,8 @@
                                         $key['denominacion_resultado']."||".
                                         $key['denominacion'];
                              ?>
-                             <tr>
+                           
+                                 <tr class="des<?php echo $key['estado']; ?>">
                              <td><?php echo $key['id_resultado']; ?></td>
                              <td><?php echo mb_strtoupper($key['denominacion_resultado']);?></td>
                              <td><?php echo mb_strtoupper($key['denominacion']);?></td>
