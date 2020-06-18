@@ -1,0 +1,2 @@
+ALTER TABLE `competencia` ADD `estado` BOOLEAN NOT NULL AFTER `duracion`;
+ALTER TABLE `resultado` ADD `estado` BOOLEAN NOT NULL AFTER `id_competencia`;
