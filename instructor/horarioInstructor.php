@@ -18,9 +18,7 @@ require_once '../utili/sesion.php';
         <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <!-- NProgress -->
         <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-        <!-- FullCalendar -->
-        <link href="../vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
-        <link href="../vendors/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
+
 
         <!-- Custom styling plus plugins -->
         <link href="../build/css/custom.min.css" rel="stylesheet">
@@ -71,9 +69,9 @@ require_once '../utili/sesion.php';
                 </div>
 
                 <!-- top navigation -->
-<?php
-require_once './menu.php';
-?>
+                <?php
+                require_once './menu.php';
+                ?>
                 <!-- /top navigation -->
 
                 <!-- page content -->
@@ -112,16 +110,11 @@ require_once './menu.php';
                                             <div class="table-responsive">
 
 
-<?php
-include_once './horarios.php';
-?>
+                                                <?php
+                                                include_once './horarios.php';
+                                                ?>
                                                 <p>El trimestre  del año</p>
                                             </div>
-
-
-
-
-
                                         </div>
                                     </div>
                                 </div>
@@ -131,9 +124,7 @@ include_once './horarios.php';
                 </div>
             </div>
 
-            <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
-            <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
-            <!-- /calendar modal -->
+
 
             <footer>
                 <div class="pull-right">
@@ -143,7 +134,6 @@ include_once './horarios.php';
             </footer>
             <!-- /footer content -->
         </div>
-    </div>
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -155,8 +145,7 @@ include_once './horarios.php';
     <!-- FullCalendar -->
     <script src="../vendors/moment/min/moment.min.js"></script>
 
-    <script src="../vendors/fullcalendar/dist/fullcalendar.min.js"></script>
-    <script src="../vendors/fullcalendar/dist/fullcalendar.js"></script>
+
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>

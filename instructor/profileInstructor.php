@@ -69,9 +69,9 @@ require_once '../utili/sesion.php';
                 </div>
 
                 <!-- top navigation -->
-<?php
-require_once './menu.php';
-?>
+                <?php
+                require_once './menu.php';
+                ?>
                 <!-- /top navigation -->
 
                 <!-- page content -->
@@ -119,25 +119,25 @@ require_once './menu.php';
                                                     inner join
                                                     persona on persona_documento=documento
                                                     WHERE email='$email'");
-                                                    $query=$mysqli->query($sql);
-                                                    if ($query->num_rows >= 1) {
-                                                    }
+                                                    $query = $mysqli->query($sql);
                                                     $mysqli->close();
                                                     ?>
                                                     <i class="fa fa-briefcase user-profile-icon"></i> <?php echo $_SESSION['rol'] ?> 
 
                                                 </li>
-                                                
+
                                                 <li>
-                                                    <i class="fa fa-briefcase user-profile-icon"></i> 
-                                                        <?php foreach ($query as $key) {
-                                                            echo $key['certificacion']." - ";
-                                                        } ?>
+                                                    <i class="fa fa-mortar-board user-profile-icon"></i> 
+                                                    <?php
+                                                    foreach ($query as $key) {
+                                                        echo $key['certificacion'] . " - ";
+                                                    }
+                                                    ?>
                                                 </li>
 
                                                 <li class="m-top-xs">
-                                                    <i class="fa fa-external-link user-profile-icon"></i>
-                                                    <a href="http://www.kimlabs.com/profile/" target="_blank"><?php echo $_SESSION['correo'] ?></a>
+                                                    <i class="fa fa-envelope user-profile-icon"></i>
+                                                    <?php echo $_SESSION['correo'] ?></a>
                                                 </li>
                                             </ul>
 
@@ -160,7 +160,7 @@ require_once './menu.php';
                 <!-- footer content -->
                 <footer>
                     <div class="pull-right">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Horarios SENA by ADSI
+                        Horarios SENA by ADSI
                     </div>
                     <div class="clearfix"></div>
                 </footer>
