@@ -31,24 +31,6 @@
     <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="icon/Horarios.ico" />
-     <script type="text/javascript">
-        function estadoh(datos){
-      d=datos.split('||');
-      $('#idh').val(d[0]);
-      $('#idht').val(d[0]);
-      $('#idhr').val(d[0]);
-      $('#idha').val(d[0]);
-      $('#idhn').val(d[0]);
-      }
-      function estadod(datos){
-      d=datos.split('||');
-      $('#idd').val(d[0]);
-      $('#iddt').val(d[0]);
-      $('#iddr').val(d[0]);
-      $('#idda').val(d[0]);
-      $('#iddn').val(d[0]);
-      }
-    </script>
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
   </head>
@@ -231,20 +213,10 @@
                    </div>
                 </form> 
                 
-                
-              
-                               
-            
-                
                 </div>
               </div>
             </div>
               
-             
-            
-
-          
-  
         <!-- /page content -->
 
         <!-- footer content -->

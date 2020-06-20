@@ -31,14 +31,7 @@
     <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="icon/Horarios.ico" />
-    <style>
-        .des1{
-            color: gainsboro;
-        }
-        .des0{
-            color: black;
-        }
-    </style>
+
     <script type="text/javascript">
         function agregaform(datos){
             d=datos.split('||');
@@ -46,14 +39,7 @@
             $('#denominacionu').val(d[1]);
             $('#duracionu').val(d[2]);
         }
-        function estadoh(datos){
-      d=datos.split('||');
-      $('#idh').val(d[0]);
-      }
-      function estadod(datos){
-      d=datos.split('||');
-      $('#idd').val(d[0]);
-      }
+
     </script>
 
     <!-- Custom Theme Style -->
@@ -140,7 +126,6 @@
                               <th>Competencia</th>
                               <th>Duración</th> 
                               <th>Actualizar</th>
-                              <th>Habilitar/Deshabilitar</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -149,16 +134,12 @@
                                         $key['denominacion']."||".
                                         $key['duracion'];
                              ?>
-                             <tr class="des<?php echo $key['estado']; ?>">
+                                <tr>
                              <td><?php echo $key['id_competencia']; ?></td>
                              <td><?php echo mb_strtoupper($key['denominacion']);?></td>
                              <td><?php echo $key['duracion']; ?></td>
                              <td>
                                 <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" onclick="agregaform('<?php echo $datos?>')"><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
-                                </td>
-                                <td>
-                                <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info" data-toggle="modal" data-target="#dataHabi" onclick="estadoh('<?php echo $datos?>')"><i class="fa fa-check" style="margin-left: -5px"></i></button>
-                                <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info" data-toggle="modal" data-target="#dataDeshabi" onclick="estadod('<?php echo $datos?>')"><i class="fa fa-close" style="margin-left: -3px"></i></button>
                                 </td>
                             </tr>
                             <?php }
@@ -207,54 +188,7 @@
                     </div>
                     </div>
                     </form>
-                <form action="Deshabilitar/DeshabilitarCompetencia.php" method="post"> 
-                    <div class="modal fade" id="dataDeshabi" role="dialog">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h4 class="modal-title">Deshabilitar Competencia</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          </div>
-                            <div class="modal-body">
-                              <div class="form-group">
-                                <input type="number"  name="idd" id="idd" hidden="" >
-                              </div>
-                              <label>¿Está seguro de que quiere deshabilitar la competencia?</label>
-
-                              <div class="modal-footer">
-                                <button style="margin: 10px" type="submit" class="btn btn-dark">Deshabilitar</button>
-
-                                <button type="button" class="btn btn-light" data-dismiss="modal" >Cerrar</button>
-                                </div>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    </form>
-                <form action="Habilitar/HabilitarCompetencia.php" method="post"> 
-                    <div class="modal fade" id="dataHabi" role="dialog">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h4 class="modal-title">Habilitar Competencia</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          </div>
-                            <div class="modal-body">
-                              <div class="form-group">
-                                <input type="number"  name="idh" id="idh" hidden="" >
-                              </div>
-                              <label>¿Está seguro de que quiere habilitar la competencia?</label>
-
-                              <div class="modal-footer">
-                                <button style="margin: 10px" type="submit" class="btn btn-dark">Habilitar</button>
-
-                                <button type="button" class="btn btn-light" data-dismiss="modal" >Cerrar</button>
-                                </div>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    </form>
+                
                                 </div>
                 </div>
               </div>
@@ -262,10 +196,7 @@
               </div>
               </div>
              </div>
-            
 
-          
-  
         <!-- /page content -->
 
         <!-- footer content -->

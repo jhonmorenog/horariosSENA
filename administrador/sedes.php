@@ -138,7 +138,7 @@
                             <?php
                              require_once '../utili/Conexion.php';
                             
-                            $sql1="SELECT * FROM sede,centro where centro.id_centro=sede.centroid_centro";
+                            $sql1="SELECT *, sede.estado as e FROM sede,centro where centro.id_centro=sede.centroid_centro";
                             $query=$mysqli->query($sql1);
                               if ($query->num_rows>=1){?>
                               
@@ -159,6 +159,7 @@
                                 $datos=$key['id_sede']."||".
                                         $key['direccion'];
                              ?>
+                                <tr class="des<?php echo $key['e']; ?>">   
                              <td><?php echo  mb_strtoupper($key['id_sede']); ?></td>
                              <td><?php echo  mb_strtoupper($key['nombre']); ?></td>
                             <td><?php echo  mb_strtoupper($key['direccion']); ?></td>
