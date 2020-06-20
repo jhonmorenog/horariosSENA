@@ -33,10 +33,11 @@
             color: gainsboro;
         }
         #des0{
-            color: black;
+            color: #73879C;
         }
     </style>
       <script type="text/javascript">
+      
       function estadoh(datos){
       d=datos.split('||');
       $('#idh').val(d[0]);
@@ -98,6 +99,7 @@
                             $query=$mysqli->query($sql1);
                               if ($query->num_rows>=1){?>
                                 <?php foreach ($query as $key) {
+                                    $datos=$key['documento'];
                                     ?>
                                <div class="col-md-55">
                           
