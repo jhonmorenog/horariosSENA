@@ -73,7 +73,16 @@
             </div>
 
             <div class="clearfix"></div>
-
+            <div class="row" style="margin-left: -20px; margin-right: -20px" >
+    <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                        <div>
+                        <label><h5>Recuerde:</h5>Los datos que aparecen en color gris están habilitados para el uso en la creción del horario<br> Los datos que aparecen en color <label style="color: gainsboro;">gainsboro </label> están dehabilitados para esta función.</label>
+                    </div>
+</div>
+    </div>
+    </div>
+            
             <div class="row">
                 <div class="x_panel">
                   <div class="x_content">
@@ -115,8 +124,8 @@
                                 <li><i class="fa fa-envelope-o"></i> E-mail: <?php echo $key['email'];?></li>
                               </ul>
                               <br>
-                              <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn" data-toggle="modal" data-target="#dataHabi" onclick="estadoh('<?php echo $datos?>')"><i class="fa fa-check" style="margin-left: -5px" ></i></button>
-                                <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn" data-toggle="modal" data-target="#dataDeshabi" onclick="estadod('<?php echo $datos?>')"><i class="fa fa-close" style="margin-left: -3px"></i></button>
+                              <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px; color: #73879C;" type="button" class="btn" data-toggle="modal" data-target="#dataHabi" onclick="estadoh('<?php echo $datos?>')"><i class="fa fa-check" style="margin-left: -5px" ></i></button>
+                                <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px; color: #73879C;" type="button" class="btn" data-toggle="modal" data-target="#dataDeshabi" onclick="estadod('<?php echo $datos?>')"><i class="fa fa-close" style="margin-left: -3px"></i></button>
                             </div>
                             </div>
                           </div>

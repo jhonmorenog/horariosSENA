@@ -29,19 +29,19 @@
                  <li><a href="profile.php"><i class="fa fa-laptop"></i> Inicio</a></li>
                      <li><a><i class="fa fa-info-circle"></i> Información</a><ul class="nav child_menu">
                       <li><a href="aulas.php">Aulas</a></li>
-                      <li><a href="sedes.php">Sedes</a></li>
-                      <li><a href="centros.php">Centros</a></li>
-                      <li><a href="programas.php">Programas</a></li>
-                      <li><a href="fichas.php">Fichas</a></li>
                       <li><a href="bloques.php">Bloques</a></li>
-                      <li><a href="formaciones.php">Formaciones</a></li>
+                      <li><a href="centros.php">Centros</a></li>
                       <li><a href="competencias.php">Competencias</a></li>
-                      <li><a href="resultados.php">Resultados</a></li>
-                      <li><a href="duraciones.php">Duraciones</a></li>
-                      <li><a href="tipos.php">Tipos de formación</a></li>
                       <li><a href="descripciones.php">Descripción de aula</a></li>
+                      <li><a href="duraciones.php">Duraciones de los niveles de formación</a></li>
+                      <li><a href="fichas.php">Fichas</a></li>
+                      <li><a href="formaciones.php">Formaciones</a></li>
+                      <li><a href="programas.php">Programas</a></li>
+                      <li><a href="resultados.php">Resultados</a></li>
+                      <li><a href="sedes.php">Sedes</a></li>
+                      <li><a href="tipos.php">Tipos de formación</a></li>  
                     </ul></li>
-                      <li><a href="contacts.php"><i class="fa fa-users"></i> Instructores</a></li>
+                      <li><a href="instructores.php"><i class="fa fa-users"></i> Instructores</a></li>
                  </ul>
               </div>
 
@@ -67,7 +67,7 @@
                       <?php echo $_SESSION['user'] ?>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="profile.php"> Perfil</a>
+                      <a class="dropdown-item"  href="inicio.php"> Perfil</a>
                         
                       <a class="dropdown-item"  href="../utili/logout.php"><i class="fa fa-sign-out pull-right"></i> Salir</a>
                     </div>

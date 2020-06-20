@@ -94,7 +94,7 @@
                    <input name="clave" type="password" class="form-control" >
                    </div>
                 <div class="form-group">
-               <button class="btn btn-default" style="background-color: #73879C;color:#fff"  name="actualizar" type="submit">Actualizar</button>
+               <button class="btn btn-info" name="actualizar" type="submit">Actualizar</button>
       
                   </div>
                   </form>

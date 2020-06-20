@@ -76,7 +76,15 @@
             </div>
 
             <div class="clearfix"></div>
-
+<div class="row">
+    <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                        <div>
+                        <label><h5>Recuerde:</h5>Los datos que aparecen en color <label style="color: black">negro </label> están habilitados para el uso en la creción del horario<br> Los datos que aparecen en color <label style="color: gainsboro;">gainsboro </label> están dehabilitados para esta función.</label>
+                    </div>
+</div>
+    </div>
+    </div>
            
             <div class="row">
     

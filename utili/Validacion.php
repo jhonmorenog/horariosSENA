@@ -26,7 +26,7 @@ if ($consulta2->num_rows >= 1) {
     if ($fila['rol'] == 'Instructor') {
         header("Location: ../instructor/horarioInstructor.php");
     } else if ($fila['rol'] == 'Administrador') {
-        header("Location: ../administrador/profile.php");
+        header("Location: ../administrador/inicio.php");
     } else if ($fila['rol'] == 'Coordinador') {
         header("Location: ../coordinador/production/index.php");
     } 
