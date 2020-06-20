@@ -48,7 +48,7 @@
                         </div>
                         <!-- /menu profile quick info -->
                         <br />
-                        <center><a href="index.html"><button class="btn" style="width: 150px; background-color: #57D3AF;">Home</button></a></center>
+                        <center><a href="index.php"><button class="btn" style="width: 150px; background-color: #57D3AF;">Home</button></a></center>
                         <br />
                         <!-- sidebar menu -->
                         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
