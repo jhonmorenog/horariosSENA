@@ -109,7 +109,7 @@
                      <?php
                              require_once '../utili/Conexion.php';
                             
-                            $sql1="SELECT *, duracion.estado as u FROM duracion ";
+                            $sql1="SELECT * FROM duracion ";
                             $query=$mysqli->query($sql1);
                               if ($query->num_rows>=1){?>
                                 <div class="container">

@@ -26,7 +26,7 @@
               <div class="menu_section">
                 <h3>Administrador</h3>
                 <ul class="nav side-menu">
-                 <li><a href="profile.php"><i class="fa fa-laptop"></i> Inicio</a></li>
+                    <li><a href="inicio.php"><i class="fa fa-laptop"></i> Inicio</a></li>
                      <li><a><i class="fa fa-info-circle"></i> Información</a><ul class="nav child_menu">
                       <li><a href="aulas.php">Aulas</a></li>
                       <li><a href="bloques.php">Bloques</a></li>
@@ -67,7 +67,6 @@
                       <?php echo $_SESSION['user'] ?>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="inicio.php"> Perfil</a>
                         
                       <a class="dropdown-item"  href="../utili/logout.php"><i class="fa fa-sign-out pull-right"></i> Salir</a>
                     </div>
