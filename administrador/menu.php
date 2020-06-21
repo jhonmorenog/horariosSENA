@@ -10,7 +10,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="icon/circle.ico" alt="..." class="img-circle profile_img">
+                <img src="icon/circle-sentime.ico" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Bienvenido</span>
@@ -35,9 +35,9 @@
                       <li><a href="descripciones.php">Descripción de aula</a></li>
                       <li><a href="duraciones.php">Duraciones de los niveles de formación</a></li>
                       <li><a href="fichas.php">Fichas</a></li>
-                      <li><a href="formaciones.php">Formaciones</a></li>
+                      <li><a href="formaciones.php">Niveles de formación</a></li>
                       <li><a href="programas.php">Programas</a></li>
-                      <li><a href="resultados.php">Resultados</a></li>
+                      <li><a href="resultados.php">Resultados de las competencias</a></li>
                       <li><a href="sedes.php">Sedes</a></li>
                       <li><a href="tipos.php">Tipos de formación</a></li>  
                     </ul></li>
