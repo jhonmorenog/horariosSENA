@@ -89,7 +89,7 @@
                </div> 
               <div>
                 <button class="btn btn-default submit" type="submit">Log in</button>
-                <button class="btn btn-default submit" href="#">¿olvidaste tu contraseña?</button>
+                <button class="btn btn-default submit" href="#">¿Olvidaste tu contraseña?</button>
               </div>
 
               <div class="clearfix"></div>
@@ -101,7 +101,7 @@
                 <br />
 
                 <div>
-                  <h1><i></i> Horarios SENA</h1>
+                  <h1><i></i> SENTIME</h1>
                   <p>©2020</p>
                 </div>
               </div>
