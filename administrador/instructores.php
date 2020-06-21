@@ -196,15 +196,10 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Horarios SENA by ADSI</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
+<?php 
+   require_once 'footer.php';
+?>
         <!-- /footer content -->
-      </div>
-    </div>
 
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>

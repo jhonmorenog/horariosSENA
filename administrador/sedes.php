@@ -270,15 +270,10 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-           Horarios SENA by ADSI</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
+<?php 
+   require_once 'footer.php';
+?>
         <!-- /footer content -->
-      </div>
-    </div>
 <?php 
    require_once 'archivos_js.php';
 ?>
