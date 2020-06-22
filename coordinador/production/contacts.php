@@ -232,253 +232,42 @@
                           <li><a href="#">Z</a></li>
                         </ul>
                       </div>
-
-                      <div class="clearfix"></div>
-
-                      <div class="col-md-4 col-sm-4  profile_details">
-                        <div class="well profile_view">
-                          <div class="col-sm-12">
-                            <h4 class="brief"><i>Instructor</i></h4>
-                            <div class="left col-md-7 col-sm-7">
-                              <h2>Alvaro Cortez</h2>
-                              <p><strong>Especialidad: </strong> Diseño Gráfico </p>
+                       <?php
+                               require_once '../../utili/Conexion.php';
+                            $sql1="SELECT *, persona.estado as co FROM persona";
+                            $query=$mysqli->query($sql1);
+                              if ($query->num_rows>=1){?>
+                                <?php foreach ($query as $key) {
+                                    $datos=$key['documento'];
+                                    ?>
+                               <div class="col-md-55">
+                          
+                          <div class="well profile_view" id="des<?php echo $key['co']; ?>">
+                            <div class="mask">
+                              <h2 class="brief"><i class="fa fa-user"></i><i> Instructor</i></h2>
+                              <br>
+                              <div>
+                              <h4 class="brief"> <?php echo $key['nombre'];?> <?php echo $key['apellido'];?></h4>
+                              <br>
+                              <strong>Especialidad: </strong> Diseñador Grafico 
                               <ul class="list-unstyled">
-                                <li><i class="fa fa-building"></i> Direccion: </li>
-                                <li><i class="fa fa-phone"></i> Telefono: </li>
+                                <li><i class="fa fa-envelope-o"></i> E-mail: <?php echo $key['email'];?></li>
                               </ul>
-                            </div>
-                            <div class="right col-md-5 col-sm-5 text-center">
-                              <img src="images/img2.jpg" alt="" class="img-circle img-fluid" style= "height: 120px; width: 115px;">
-                            </div>
-                          </div>
-                          <div class=" profile-bottom text-center">
-                            <div class=" col-sm-6 emphasis">
-                              <p class="ratings">
-                                <a>4.0</a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star-o"></span></a>
-                              </p>
-                            </div>
-                            <div class=" col-sm-6 emphasis">
+                              <br>
                               
-                              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal1">
-                                <i class="fa fa-user"> </i> Ver Perfil
-                              </button>
                             </div>
-                            <div id="myModal1" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Perfil de instructor</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        
-      </div>
-      <div class="modal-body">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-          
-                      <div class="profile_img">
-                        <div id="crop-avatar">
-                          <!-- Current avatar -->
-                          <img class="img-responsive avatar-view" src="images/img2.jpg" style="width: 200px; height: 200px;" alt="Avatar" title="Change the avatar">
-                        </div>
-                      </div>
-                      <h3>Alvaro Cortez</h3>
-
-                      <ul class="list-unstyled user_data">
-                        <li><i class="fa fa-map-marker user-profile-icon"></i> Bogotá, Colombia
-                        </li>
-
-                        <li>
-                          <i class="fa fa-briefcase user-profile-icon"></i> Instructor
-                        </li>
-
-                        <li class="m-top-xs">
-                          <i class="fa fa-external-link user-profile-icon"></i>
-                          <a href="http://www.kimlabs.com/profile/" target="_blank">www.alvaroxxx@misena.edu.co</a>
-                        </li>
-                      </ul>
-                      <br />
-
-                      </div>
-                      <div class="col-md-3"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-md-4 col-sm-4  profile_details">
-                        <div class="well profile_view">
-                          <div class="col-sm-12">
-                            <h4 class="brief"><i>Instructor</i></h4>
-                            <div class="left col-sm-7">
-                              <h2>Johanna Cifuentes</h2>
-                              <p><strong>Especialidad: </strong> Ingeniería en Sistemas</p>
-                              <ul class="list-unstyled">
-                                 <li><i class="fa fa-building"></i> Direccion: </li>
-                                <li><i class="fa fa-phone"></i> Telefono: </li>
-                              </ul>
-                            </div>
-                            <div class="right col-sm-5 text-center">
-                              <img src="images/img3.jpg" alt="" class="img-circle img-fluid" style= "height: 120px; width: 115px;">
                             </div>
                           </div>
-                          <div class=" bottom text-center">
-                            <div class=" col-sm-6 emphasis">
-                              <p class="ratings">
-                                <a>4.0</a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star-o"></span></a>
-                              </p>
-                            </div>
-                            <div class=" col-sm-6 emphasis">
-                              
-                              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal2">
-                                <i class="fa fa-user"> </i> Ver Perfil
-                              </button>
-                            </div>
-                            <div id="myModal2" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Perfil de instructor</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        
-      </div>
-      <div class="modal-body">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-          
-                      <div class="profile_img">
-                        <div id="crop-avatar">
-                          <!-- Current avatar -->
-                          <img class="img-responsive avatar-view" src="images/img3.jpg" style="width: 200px; height: 200px;" alt="Avatar" title="Change the avatar">
-                        </div>
+                          
                       </div>
-                      <h3>Johanna Cifuentes</h3>
+                      <?php }
+                    ?>
+                 <?php }else{
+                              echo "Tabla vacía";
+                          }
+                          ?>
 
-                      <ul class="list-unstyled user_data">
-                        <li><i class="fa fa-map-marker user-profile-icon"></i> Bogotá, Colombia
-                        </li>
-
-                        <li>
-                          <i class="fa fa-briefcase user-profile-icon"></i> Instructor
-                        </li>
-
-                        <li class="m-top-xs">
-                          <i class="fa fa-external-link user-profile-icon"></i>
-                          <a href="http://www.kimlabs.com/profile/" target="_blank">www.johannacifuentes@misena.edu.co</a>
-                        </li>
-                      </ul>
-                      <br />
-
-                      </div>
-                      <div class="col-md-3"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-md-4 col-sm-4  profile_details">
-                        <div class="well profile_view">
-                          <div class="col-sm-12">
-                            <h4 class="brief"><i>Instructor</i></h4>
-                            <div class="left col-sm-7">
-                              <h2>Jhon Moreno</h2>
-                              <p><strong>Especialidad: </strong> Ingeniería en Sistemas</p>
-                              <ul class="list-unstyled">
-                                 <li><i class="fa fa-building"></i> Direccion: </li>
-                                <li><i class="fa fa-phone"></i> Telefono: </li>
-                              </ul>
-                            </div>
-                            <div class="right col-sm-5 text-center">
-                              <img src="images/img1.jpg" alt="" class="img-circle img-fluid">
-                            </div>
-                          </div>
-                          <div class=" bottom text-center">
-                            <div class=" col-sm-6 emphasis">
-                              <p class="ratings">
-                                <a>4.0</a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star-o"></span></a>
-                              </p>
-                            </div>
-                            <div class=" col-sm-6 emphasis">
-                              
-                              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal3">
-                                <i class="fa fa-user"> </i> Ver Perfil
-                              </button>
-                            </div>
-                            <div id="myModal3" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Perfil de instructor</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        
-      </div>
-      <div class="modal-body">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-          
-                      <div class="profile_img">
-                        <div id="crop-avatar">
-                          <!-- Current avatar -->
-                          <img class="img-responsive avatar-view" src="images/img1.jpg" style="width: 200px; height: 200px;" alt="Avatar" title="Change the avatar">
-                        </div>
-                      </div>
-                      <h3>John Moreno</h3>
-
-                      <ul class="list-unstyled user_data">
-                        <li><i class="fa fa-map-marker user-profile-icon"></i> Bogotá, Colombia
-                        </li>
-
-                        <li>
-                          <i class="fa fa-briefcase user-profile-icon"></i> Instructor
-                        </li>
-
-                        <li class="m-top-xs">
-                          <i class="fa fa-external-link user-profile-icon"></i>
-                          <a href="http://www.kimlabs.com/profile/" target="_blank">www.johnmoreno@misena.edu.co</a>
-                        </li>
-                      </ul>
-                      <br />
-
-                      </div>
-                      <div class="col-md-3"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-      </div>
+                     
     </div>
 
   </div>
@@ -492,10 +281,10 @@
 
                      
                             </div>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
+                        
+                       
+                    
+                 
         <!-- /page content -->
 
         <!-- footer content -->

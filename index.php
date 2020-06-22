@@ -77,7 +77,7 @@
         <div class="animate form login_form">
           <section class="login_content">
               <form action="utili/Validacion.php" method="post">
-              <h1>Login</h1>
+              <h1>Inicio de sesión</h1>
               <div>
                 <input type="text" class="form-control" name="email" placeholder="Email" required="" />
               </div>
@@ -88,8 +88,8 @@
                 	<i id="hide2" class="fa fa-eye-slash"></i></span>
                </div> 
               <div>
-                <button class="btn btn-default submit" type="submit">Log in</button>
-                <button class="btn btn-default submit" href="#">¿Olvidaste tu contraseña?</button>
+                  <button style="color:#73879C" class="btn btn-default submit" type="submit">Ingresar</button>
+                <button style="color:#73879C" class="btn btn-default submit" href="#">¿Olvidaste tu contraseña?</button>
               </div>
 
               <div class="clearfix"></div>
