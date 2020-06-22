@@ -104,19 +104,19 @@ require_once '../utili/sesion.php';
                                         <form action="ActualizarPersona.php?documento=<?php echo $key['documento'] ?>" method="POST">
                                             <div class="form-group">
                                                 <label for="nombre"> Nombre: </label>
-                                                <input name="nombre" type="text" class="form-control" value="<?php echo $_SESSION["user"] ?>">
+                                                <input name="nombre" type="text" required="" class="form-control" value="<?php echo $_SESSION["user"] ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label for="apellido"> Apellido: </label>
-                                                <input name="apellido" type="text" class="form-control" value="<?php echo $_SESSION["apellido"] ?>">
+                                                <input name="apellido" type="text" required="" class="form-control" value="<?php echo $_SESSION["apellido"] ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label for="email"> Email: </label>
-                                                <input name="email" type="email" class="form-control" value="<?php echo $_SESSION["correo"] ?>">
+                                                <input name="email" type="email" required="" class="form-control" value="<?php echo $_SESSION["correo"] ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label for="clave"> Clave: </label>
-                                                <input name="clave" type="text" class="form-control" value="">
+                                                <input name="clave" type="text" required="" class="form-control" value="">
                                             </div>
                                             <div class="form-group">
                                                 <button class="btn btn-success" name="actualizar" type="submit">Actualizar</button>
