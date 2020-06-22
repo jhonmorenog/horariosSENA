@@ -177,63 +177,33 @@
               <hr>
 
             <div class="top_tiles">
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
+                 <?php
+                               require_once '../../utili/Conexion.php';
+                            $sql1="SELECT numero_ficha, denominacion, denominacion_nivel FROM ficha inner join"
+                                    . " programa_ficha pf on ficha.numero_ficha=pf.fichanumero_ficha inner join "
+                                    . "programa on programa.id_programa=pf.id_programa INNER JOIN "
+                                    . "nivel_formacion on programa.id_formacion=nivel_formacion.id_nivel";
+                            $query=$mysqli->query($sql1);
+                              if ($query->num_rows>=1){?>
+                                <?php foreach ($query as $key) {
+                                    
+                                    ?>
+                               <div class="animated flipInY col-lg-8  col-sm-4 ">
                 <div class="tile-stats">
-                  <div class="count">1828917</div>
-                  <h3>ADSI</h3>
-                  <p>Tecnólogo</p>
+                  <div class="count"><?php echo $key['numero_ficha'];?></div>
+                  <h3><?php echo $key['denominacion'];?></h3>
+                  <p><?php echo $key['denominacion_nivel'];?></p>
                 </div>
               </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
-                <div class="tile-stats">
-                  <div class="count">1860179</div>
-                  <h3>Ilustración</h3>
-                  <p>Técnico</p>
+                          
+                          
+                      <?php }
+                    ?>
+                 <?php }else{
+                              echo "Tabla vacía";
+                          }
+                          ?>
                 </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
-                <div class="tile-stats">
-                  <div class="count">1797658</div>
-                  <h3>Serigrafía</h3>
-                  <p>Tecnólogo</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
-                <div class="tile-stats">
-                  <div class="count">1245079</div>
-                  <h3>P. Multimedia</h3>
-                  <p>Tecnólogo</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
-                <div class="tile-stats">
-                  <div class="count">1784609</div>
-                  <h3>Fotografía</h3>
-                  <p>Complementaria</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
-                <div class="tile-stats">
-                  <div class="count">1570769</div>
-                  <h3>Sistemas</h3>
-                  <p>Tecnólogo</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
-                <div class="tile-stats">
-                  <div class="count">1654879</div>
-                  <h3>Sistemas</h3>
-                  <p>Técnico</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
-                <div class="tile-stats">
-                  <div class="count">1276579</div>
-                  <h3>Impresión 3D</h3>
-                  <p>Tecnólogo</p>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
         </div>
