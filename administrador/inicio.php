@@ -52,10 +52,40 @@
                       <!-- start of user-activity-graph -->
                       <!-- end of user-activity-graph -->
 
-                      
+                      <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                        <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                          <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Introducción</a>
+                          </li>
                           
+                          <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Actualización de datos</a>
+                          </li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                          <div role="tabpanel" class="tab-pane active " id="tab_content1" aria-labelledby="home-tab">
 
-                          <div  class="formulario" id="formulario" >
+                            <!-- start recent activity -->
+                            <br>
+                            <br>
+                            <center><div class="login"><h1>Bienvenidos a SenTime</h1> </div></center>
+                            <br>
+                            <h3>Bienvenidos a sentime en estos momentos te encuentras en el rol de administrador cuyas funcionalidades hacen que dependan
+                            de la creacion de los horarios estas son: ingreso de los datos, actualizacion de los datos y la eliminacion de los mismos.
+                            <br>
+                            <br>
+                            Cualquier duda o problema con el aplicativo y el rol del administrador podra encontrar los pdf a continuacion: </h3>
+                            <br>
+                            <div>
+                                <form action="Manual_Administrador.pdf" method="post">
+                                  <button type="submit" name="reporte" class="btn btn-info">Reporte</button>
+                                </form>
+                            </div>
+                            <!-- end recent activity -->
+
+                          </div>
+                          <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
+
+                            <!-- start user projects -->
+                         <div  class="formulario" id="formulario" >
                             <div class="col-md-4">
                             <?php
                                   require_once '../utili/Conexion.php';
@@ -84,6 +114,20 @@
                             
                           </div>
                         </div>
+                            
+                            <!-- end user projects -->
+
+                          </div>
+                         
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                          
+
+                         
                         </div>
                       </div>
                    </div>
