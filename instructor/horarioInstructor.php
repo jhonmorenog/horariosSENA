@@ -10,7 +10,7 @@ require_once '../utili/sesion.php';
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Horarios SENA </title>
+        <title>SENTIME</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@ require_once '../utili/sesion.php';
                         <!-- sidebar menu -->
                         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                             <div class="menu_section">
-                                <h3>Instructor</h3>
+                                <h3><?php echo $_SESSION['rol'] ?></h3>
                                 <ul class="nav side-menu">
 
                                     <li><a href="horarioInstructor.php"><i class="fa fa-laptop"></i> Mi Horario</a></li>
@@ -106,6 +106,13 @@ require_once '../utili/sesion.php';
                                                     <input type="number" class="form-control">
                                                 </div>
                                             </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label>&nbsp;</label>
+                                                    <button class="btn btn-primary form-control">Buscar</button>
+                                                </div>
+                                            </div>
+                                                
 
                                             <div class="table-responsive">
 
@@ -128,7 +135,7 @@ require_once '../utili/sesion.php';
 
             <footer>
                 <div class="pull-right">
-                    Horarios SENA by ADSI</a>
+                    SENTIME by ADSI</a>
                 </div>
                 <div class="clearfix"></div>
             </footer>
