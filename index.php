@@ -22,7 +22,7 @@
     <!-- Custom Theme Style -->
     <link href="build/css/custom.min.css" rel="stylesheet">
     
-    <link rel="shortcut icon" type="image/x-icon" href="icon/Horarios.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="administrador/icon/Horarios.ico" />
     
     <script type="text/javascript">
 		
