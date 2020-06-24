@@ -45,7 +45,7 @@ require_once '../utili/sesion.php';
         </script>
     </head>
 
-    <body class="nav-md">
+    <body class="nav-md" onload="ajax()">
         <div class="container body">
             <div class="main_container">
                 <div class="col-md-3 left_col">
