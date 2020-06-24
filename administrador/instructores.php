@@ -22,8 +22,6 @@
     <link href="../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="../vendor/nprogress/nprogress.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
@@ -205,11 +203,6 @@
     <script src="../vendor/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
    <script src="../vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FastClick -->
-    <script src="../vendor/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../vendor/nprogress/nprogress.js"></script>
-
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
   </body>

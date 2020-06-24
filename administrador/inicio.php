@@ -147,19 +147,6 @@
     <script src="../vendor/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
    <script src="../vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FastClick -->
-    <script src="../vendor/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../vendor/nprogress/nprogress.js"></script>
-    <!-- morris.js -->
-    <script src="../vendors/raphael/raphael.min.js"></script>
-    <script src="../vendors/morris.js/morris.min.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="../vendor/moment/min/moment.min.js"></script>
-    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-    
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
 
