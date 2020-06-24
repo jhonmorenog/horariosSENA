@@ -23,6 +23,26 @@ require_once '../utili/sesion.php';
         <!-- Custom styling plus plugins -->
         <link href="../build/css/custom.min.css" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon" href="icon/Horarios.ico" />
+
+        <script type="text/javascript">
+            function ajax() {
+
+                var tri = document.getElementById("tri").value;
+                var anio = document.getElementById("anio").value;
+                var url = "horarios.php?t=" + tri + "&a=" + anio;
+               
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("horariosAjax").innerHTML =
+                                this.responseText;
+                    }
+                };
+
+                xhttp.open("GET", url, true);
+                xhttp.send();
+            }
+        </script>
     </head>
 
     <body class="nav-md">
@@ -97,29 +117,29 @@ require_once '../utili/sesion.php';
                                             <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label for="Trimestre"> Trimestre </label>
-                                                    <input type="number" class="form-control">
+                                                    <input type="number" class="form-control" id="tri">
                                                 </div>
                                             </div>
                                             <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label for="anio"> Año </label>
-                                                    <input type="number" class="form-control">
+                                                    <input type="number" class="form-control" id="anio">
                                                 </div>
                                             </div>
                                             <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label>&nbsp;</label>
-                                                    <button class="btn btn-primary form-control">Buscar</button>
+                                                    <button class="btn btn-primary form-control" onclick="ajax()">Buscar</button>
                                                 </div>
                                             </div>
-                                                
+
 
                                             <div class="table-responsive">
 
+                                                <div id="horariosAjax">
 
-                                                <?php
-                                                include_once './horarios.php';
-                                                ?>
+                                                </div>
+
                                                 <p>El trimestre  del año</p>
                                             </div>
                                         </div>
@@ -141,23 +161,23 @@ require_once '../utili/sesion.php';
             </footer>
             <!-- /footer content -->
         </div>
-    <!-- jQuery -->
-    <script src="../vendor/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="../vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FastClick -->
-    <script src="../vendor/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../vendor/nprogress/nprogress.js"></script>
-    <!-- FullCalendar -->
-    <script src="../vendor/moment/min/moment.min.js"></script>
+        <!-- jQuery -->
+        <script src="../vendor/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- FastClick -->
+        <script src="../vendor/fastclick/lib/fastclick.js"></script>
+        <!-- NProgress -->
+        <script src="../vendor/nprogress/nprogress.js"></script>
+        <!-- FullCalendar -->
+        <script src="../vendor/moment/min/moment.min.js"></script>
 
 
 
-    <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+        <!-- Custom Theme Scripts -->
+        <script src="../build/js/custom.min.js"></script>
 
 
 
-</body>
+    </body>
 </html>

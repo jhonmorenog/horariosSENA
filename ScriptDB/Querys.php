@@ -54,7 +54,7 @@ $SeleccionarProgramaCompetencia = "Select c.id_competencia, c.denominacion AS 'D
         . "t.id_tipo=p.id_tipo inner join nivel_formacion n on n.id_nivel=p.id_formacion "
         . "inner join duracion d on d.id_duracion=p.id_duracion";
 
-function bloquePorInstructor($documentoInstructor) {
-    return "SELECT * FROM bloque where persona_documento='$documentoInstructor' and anio='2020' and trimestre =1 order by rango_horas;";
+function bloquePorInstructor($documentoInstructor, $anio, $trimestre) {
+    return "SELECT * FROM bloque where persona_documento='$documentoInstructor' and anio='$anio' and trimestre ='$trimestre' order by rango_horas;";
 }
 $competenciasQuery="SELECT id_competencia, denominacion from competencia";

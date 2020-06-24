@@ -73,9 +73,7 @@ $bloque=array(
     
     );
 
-
-
-$query = $mysqli->query(bloquePorInstructor($_SESSION['documento']));
+$query = $mysqli->query(bloquePorInstructor($_SESSION['documento'],$_GET['a'],$_GET['t']));
 $i = 0;
 $stop = 6;
 foreach ($query as $key) {
@@ -84,12 +82,13 @@ foreach ($query as $key) {
         $data=$key['rango_horas'].$key['dia'];
         
              $bloque[$data]='<p title="Especialidad">' . $key['aulaid_aula'] . '-' . $key['fichanumero_ficha'] . '</p>';
+            // echo "Trimestre (" . $key['trimestre'] . ") del año (" . $key['anio'] . ")";
     }
 }
 
 
 
-echo "Trimestre (" . $key['trimestre'] . ") del año (" . $key['anio'] . ")";
+
 ?>
 <table class="table table-bordered">
     <thead>
