@@ -2,6 +2,7 @@
 include_once '../utili/sesion.php';
 require_once '../ScriptDB/Querys.php';
 require_once '../utili/Conexion.php';
+require_once '../coordinador/autonomo/functionx.php';
 /*
  * $cars = array (
   array("Volvo",22,18),
@@ -72,8 +73,14 @@ $bloque=array(
     
     
     );
+if($_GET['a']!=""){
+    $query = $mysqli->query(bloquePorInstructor($_SESSION['documento'],$_GET['a'],$_GET['t']));
+    
+}else{
 
-$query = $mysqli->query(bloquePorInstructor($_SESSION['documento'],$_GET['a'],$_GET['t']));
+     $query = $mysqli->query(bloquePorInstructor($_SESSION['documento'],date('yy'), trimestreProximo(1)));
+}
+
 $i = 0;
 $stop = 6;
 foreach ($query as $key) {
