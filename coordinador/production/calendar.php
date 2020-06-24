@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <?php
+        require_once '../../utili/sesion.php';
+        ?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Meta, title, CSS, favicons, etc. -->
         <meta charset="utf-8">
@@ -20,15 +23,15 @@
         <link href="../../vendor/iCheck/skins/flat/green.css" rel="stylesheet">
 
         <!-- bootstrap-progressbar -->
-        <link href="../../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+        <link href="../../vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
         <!-- JQVMap -->
-        <link href="../../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+        <link href="../../vendor/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
         <!-- bootstrap-daterangepicker -->
-        <link href="../../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+        <link href="../../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
         <link href="../../vendor/nprogress/nprogress.css" rel="stylesheet">
         <!-- FullCalendar -->
-        <link href="../../vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
-        <link href="../../vendors/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
+        <link href="../../vendor/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <link href="../../vendor/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
 
         <!-- Custom styling plus plugins -->
         <link href="../../build/css/custom.min.css" rel="stylesheet">
@@ -55,7 +58,7 @@
                             </div>
                             <div class="profile_info">
                                 <span>Bienvenido,</span>
-                                <h2>Eddie Merck Camacho</h2>
+                                <h2><?php echo $_SESSION['user'] ?></h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -120,7 +123,7 @@
                             <ul class=" navbar-right">
                                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                                     <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                                        <img src="images/img.jpg" alt="">Eddie Merck Camacho
+                                        <img src="images/img.jpg" alt=""><?php echo $_SESSION['user'] ?>
                                     </a>
                                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item"  href="profile.html"> Perfil</a>
@@ -314,7 +317,7 @@
         <!-- FullCalendar -->
         <script src="../../vendor/moment/min/moment.min.js"></script>
 
-        <script src="../../vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script src="../../vendor/fullcalendar/dist/fullcalendar.min.js"></script>
 
         <!-- Custom Theme Scripts -->
         <script src="../../build/js/custom.min.js"></script>

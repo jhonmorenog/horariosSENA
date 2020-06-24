@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <?php
+        require_once '../../utili/sesion.php';
+        ?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Meta, title, CSS, favicons, etc. -->
         <meta charset="utf-8">
@@ -13,18 +16,18 @@
         <!-- Bootstrap -->
         <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Font Awesome -->
-        <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <!-- NProgress -->
         <link href="../../vendor/nprogress/nprogress.css" rel="stylesheet">
         <!-- iCheck -->
         <link href="../../vendor/iCheck/skins/flat/green.css" rel="stylesheet">
 
         <!-- bootstrap-progressbar -->
-        <link href="../../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+        <link href="../../vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
         <!-- JQVMap -->
-        <link href="../../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+        <link href="../../vendor/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
         <!-- bootstrap-daterangepicker -->
-        <link href="../../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+        <link href="../../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
         <!-- Custom Theme Style -->
         <link href="../../build/css/custom.min.css" rel="stylesheet">
@@ -48,7 +51,7 @@
                             </div>
                             <div class="profile_info">
                                 <span>Bienvenido,</span>
-                                <h2>Eddie Merck Camacho</h2>
+                                <h2><?php echo $_SESSION['user'] ?></h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -113,7 +116,7 @@
                             <ul class=" navbar-right">
                                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                                     <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                                        <img src="images/img.jpg" alt="">Eddie Merck Camacho
+                                        <img src="images/img.jpg" alt=""><?php echo $_SESSION['user'] ?>
                                     </a>
                                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item"  href="profile.html"> Perfil</a>
@@ -291,34 +294,34 @@
             <!-- NProgress -->
             <script src="../../vendor/nprogress/nprogress.js"></script>
             <!-- Chart.js -->
-            <script src="../../vendors/Chart.js/dist/Chart.min.js"></script>
+            <script src="../../vendor/Chart.js/dist/Chart.min.js"></script>
             <!-- gauge.js -->
-            <script src="../../vendors/gauge.js/dist/gauge.min.js"></script>
+            <script src="../../vendor/gauge.js/dist/gauge.min.js"></script>
             <!-- bootstrap-progressbar -->
-            <script src="../../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+            <script src="../../vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
             <!-- iCheck -->
             <script src="../../vendor/iCheck/icheck.min.js"></script>
             <!-- Skycons -->
-            <script src="../../vendors/skycons/skycons.js"></script>
+            <script src="../../vendor/skycons/skycons.js"></script>
             <!-- Flot -->
-            <script src="../../vendors/Flot/jquery.flot.js"></script>
-            <script src="../../vendors/Flot/jquery.flot.pie.js"></script>
-            <script src="../../vendors/Flot/jquery.flot.time.js"></script>
-            <script src="../../vendors/Flot/jquery.flot.stack.js"></script>
-            <script src="../../vendors/Flot/jquery.flot.resize.js"></script>
+            <script src="../../vendor/Flot/jquery.flot.js"></script>
+            <script src="../../vendor/Flot/jquery.flot.pie.js"></script>
+            <script src="../../vendor/Flot/jquery.flot.time.js"></script>
+            <script src="../../vendor/Flot/jquery.flot.stack.js"></script>
+            <script src="../../vendor/Flot/jquery.flot.resize.js"></script>
             <!-- Flot plugins -->
-            <script src="../../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-            <script src="../../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-            <script src="../../vendors/flot.curvedlines/curvedLines.js"></script>
+            <script src="../../vendor/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+            <script src="../../vendor/flot-spline/js/jquery.flot.spline.min.js"></script>
+            <script src="../../vendor/flot.curvedlines/curvedLines.js"></script>
             <!-- DateJS -->
             <script src="../../vendors/DateJS/build/date.js"></script>
             <!-- JQVMap -->
-            <script src="../../vendors/jqvmap/dist/jquery.vmap.js"></script>
-            <script src="../../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-            <script src="../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+            <script src="../../vendor/jqvmap/dist/jquery.vmap.js"></script>
+            <script src="../../vendor/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+            <script src="../../vendor/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
             <!-- bootstrap-daterangepicker -->
             <script src="../../vendor/moment/min/moment.min.js"></script>
-            <script src="../../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+            <script src="../../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
 
             <!-- Custom Theme Scripts -->
             <script src="../../build/js/custom.min.js"></script>
