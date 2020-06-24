@@ -11,13 +11,13 @@
     <title>Horarios SENA  </title>
 
     <!-- Bootstrap -->
-    <link href="otro/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="otro/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="otro/nprogress/nprogress.css" rel="stylesheet">
+    <link href="vendor/nprogress/nprogress.css" rel="stylesheet">
     <!-- Animate.css -->
-    <link href="otro/animate.css/animate.min.css" rel="stylesheet">
+    <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="build/css/custom.min.css" rel="stylesheet">
