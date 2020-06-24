@@ -13,11 +13,11 @@ require_once '../utili/sesion.php';
         <title>SENTIME</title>
 
         <!-- Bootstrap -->
-        <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Font Awesome -->
-        <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <!-- NProgress -->
-        <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+        <link href="../vendor/nprogress/nprogress.css" rel="stylesheet">
 
         <!-- Custom Theme Style -->
         <link href="../build/css/custom.min.css" rel="stylesheet">
@@ -144,13 +144,13 @@ require_once '../utili/sesion.php';
 
 
         <!-- jQuery -->
-        <script src="../vendors/jquery/dist/jquery.min.js"></script>
+        <script src="../vendor/jquery/dist/jquery.min.js"></script>
         <!-- Bootstrap -->
-        <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <!-- FastClick -->
-        <script src="../vendors/fastclick/lib/fastclick.js"></script>
+        <script src="../vendor/fastclick/lib/fastclick.js"></script>
         <!-- NProgress -->
-        <script src="../vendors/nprogress/nprogress.js"></script>
+        <script src="../vendor/nprogress/nprogress.js"></script>
         <!-- validator -->
         <script src="../vendors/validator/validator.js"></script>
 

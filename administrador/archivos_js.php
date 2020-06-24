@@ -11,11 +11,11 @@
     <script src="../vendor/iCheck/icheck.min.js"></script>
     <!-- Datatables -->
     <script src="../vendor/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../vendor/datatables.net/js/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
    
-    <script src="../vendor/jszip/dist/jszip.min.js"></script>
-    <script src="../vendor/pdfmake/build/pdfmake.min.js"></script>
-    <script src="../vendor/pdfmake/build/vfs_fonts.js"></script>
+    <script src="../vendors/jszip/dist/jszip.min.js"></script>
+    <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>

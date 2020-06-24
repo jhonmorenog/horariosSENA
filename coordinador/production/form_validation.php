@@ -11,13 +11,13 @@
         <title>SENA | Horarios </title>
 
         <!-- Bootstrap -->
-        <link href="../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Font Awesome -->
         <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <!-- NProgress -->
-        <link href="../../vendors/nprogress/nprogress.css" rel="stylesheet">
+        <link href="../../vendor/nprogress/nprogress.css" rel="stylesheet">
         <!-- iCheck -->
-        <link href="../../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+        <link href="../../vendor/iCheck/skins/flat/green.css" rel="stylesheet">
 
         <!-- bootstrap-progressbar -->
         <link href="../../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
@@ -283,13 +283,13 @@
             </div>
 
             <!-- jQuery -->
-            <script src="../../vendors/jquery/dist/jquery.min.js"></script>
+            <script src="../../vendor/jquery/dist/jquery.min.js"></script>
             <!-- Bootstrap -->
-            <script src="../../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="../../vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
             <!-- FastClick -->
-            <script src="../../vendors/fastclick/lib/fastclick.js"></script>
+            <script src="../../vendor/fastclick/lib/fastclick.js"></script>
             <!-- NProgress -->
-            <script src="../../vendors/nprogress/nprogress.js"></script>
+            <script src="../../vendor/nprogress/nprogress.js"></script>
             <!-- Chart.js -->
             <script src="../../vendors/Chart.js/dist/Chart.min.js"></script>
             <!-- gauge.js -->
@@ -297,7 +297,7 @@
             <!-- bootstrap-progressbar -->
             <script src="../../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
             <!-- iCheck -->
-            <script src="../../vendors/iCheck/icheck.min.js"></script>
+            <script src="../../vendor/iCheck/icheck.min.js"></script>
             <!-- Skycons -->
             <script src="../../vendors/skycons/skycons.js"></script>
             <!-- Flot -->
@@ -317,7 +317,7 @@
             <script src="../../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
             <script src="../../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
             <!-- bootstrap-daterangepicker -->
-            <script src="../../vendors/moment/min/moment.min.js"></script>
+            <script src="../../vendor/moment/min/moment.min.js"></script>
             <script src="../../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 
             <!-- Custom Theme Scripts -->

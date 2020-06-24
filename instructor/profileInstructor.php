@@ -13,11 +13,11 @@ require_once '../utili/sesion.php';
         <title>SENTIME</title>
 
         <!-- Bootstrap -->
-        <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Font Awesome -->
-        <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <!-- NProgress -->
-        <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+        <link href="../vendor/nprogress/nprogress.css" rel="stylesheet">
         <!-- bootstrap-daterangepicker -->
         <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
@@ -169,20 +169,20 @@ require_once '../utili/sesion.php';
         </div>
 
         <!-- jQuery -->
-        <script src="../vendors/jquery/dist/jquery.min.js"></script>
+        <script src="../vendor/jquery/dist/jquery.min.js"></script>
         <!-- Bootstrap -->
-        <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <!-- FastClick -->
-        <script src="../vendors/fastclick/lib/fastclick.js"></script>
+        <script src="../vendor/fastclick/lib/fastclick.js"></script>
         <!-- NProgress -->
-        <script src="../vendors/nprogress/nprogress.js"></script>
+        <script src="../vendor/nprogress/nprogress.js"></script>
         <!-- morris.js -->
         <script src="../vendors/raphael/raphael.min.js"></script>
         <script src="../vendors/morris.js/morris.min.js"></script>
         <!-- bootstrap-progressbar -->
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- bootstrap-daterangepicker -->
-        <script src="../vendors/moment/min/moment.min.js"></script>
+        <script src="../vendor/moment/min/moment.min.js"></script>
         <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 
         <!-- Custom Theme Scripts -->
