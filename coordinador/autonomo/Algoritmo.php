@@ -93,7 +93,7 @@ function seleccionAula($instruc, $ficha) {
 function seleccionDia($instruc, $ficha, $aula) {
     global $dia;
     foreach ($dia as $key => $d) {
-        //echo " El día " . $d . " El trimestre ". trimestreProximo()." En el aula " . $aula["id_aula"] . " estará la ficha "  . $ficha["numero_ficha"] . " con el instructor " . $instruc["documento"] .  "<br>";
+        //echo " El día " . $d . " El trimestre ". trimestreProximo(0)." En el aula " . $aula["id_aula"] . " estará la ficha "  . $ficha["numero_ficha"] . " con el instructor " . $instruc["documento"] .  "<br>";
         /*
          * se compara con la base de datos el día y el aula para saber si se asigna
          */
@@ -144,13 +144,13 @@ function seleccionBloque($instruc, $ficha, $aula, $d) {
                 if ($r->num_rows > 0) {
                     while ($row = $r->fetch_assoc()) {
                         if (($row['dia'] == $d &&
-                                $row['trimestre'] == trimestreProximo() &&
+                                $row['trimestre'] == trimestreProximo(0) &&
                                 $row['rango_horas'] == $b &&
                                 $row['fichanumero_ficha'] == $ficha["numero_ficha"] &&
                                 $row['aulaid_aula'] == $aula["id_aula"]
                                 )) {
 
-                           echo  "1('$d', '" . trimestreProximo() . "', '" . $b . "', '" . $instruc["documento"] . "', '" . $ficha["numero_ficha"] . "', '" . $aula["id_aula"] . "', " . date("yy") . ")";
+                           echo  "1('$d', '" . trimestreProximo(0) . "', '" . $b . "', '" . $instruc["documento"] . "', '" . $ficha["numero_ficha"] . "', '" . $aula["id_aula"] . "', " . date("yy") . ")";
                            $sql = "INSERT INTO `horarios_sena`.`bloque` (`dia`, `trimestre`, `rango_horas`, `persona_documento`, `fichanumero_ficha`, `aulaid_aula`, `anio`) VALUES ('$d', '" . trimestreProximo() . "', '" . $b . "', '" . $instruc["documento"] . "', '" . $ficha["numero_ficha"] . "', '" . $aula["id_aula"] . "', " . date("yy") . ")";
                             $mysqli->query($sql);
                         }else{
@@ -162,14 +162,14 @@ function seleccionBloque($instruc, $ficha, $aula, $d) {
                         }
                     }
                 } else {
-                     echo  "2('$d', '" . trimestreProximo() . "', '" . $b . "', '" . $instruc["documento"] . "', '" . $ficha["numero_ficha"] . "', '" . $aula["id_aula"] . "', " . date("yy") . ")";
+                     echo  "2('$d', '" . trimestreProximo(0) . "', '" . $b . "', '" . $instruc["documento"] . "', '" . $ficha["numero_ficha"] . "', '" . $aula["id_aula"] . "', " . date("yy") . ")";
                      $sql = "INSERT INTO `horarios_sena`.`bloque` (`dia`, `trimestre`, `rango_horas`, `persona_documento`, `fichanumero_ficha`, `aulaid_aula`, `anio`) VALUES ('$d', '" . trimestreProximo() . "', '" . $b . "', '" . $instruc["documento"] . "', '" . $ficha["numero_ficha"] . "', '" . $aula["id_aula"] . "', " . date("yy") . ")";
                     $mysqli->query($sql);
                 }
 
 
                 $mysqli->close();
-                // echo "El día " . $d . " y el trimestre " . trimestreProximo() . " en el bloque " . $b . " la ficha " . $ficha["numero_ficha"] . " con el instructor " . $instruc["documento"] . " En el aula " . $aula["id_aula"] . "<br>";
+                // echo "El día " . $d . " y el trimestre " . trimestreProximo(0) . " en el bloque " . $b . " la ficha " . $ficha["numero_ficha"] . " con el instructor " . $instruc["documento"] . " En el aula " . $aula["id_aula"] . "<br>";
             }
             if ($salto < 7) {
                 $salto++;
