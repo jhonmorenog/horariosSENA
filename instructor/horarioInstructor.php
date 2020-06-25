@@ -25,6 +25,7 @@ require_once '../utili/sesion.php';
         <link rel="shortcut icon" type="image/x-icon" href="icon/Horarios.ico" />
 
         <script type="text/javascript">
+            
             function ajax() {
 
                 var tri = document.getElementById("tri").value;
@@ -34,8 +35,10 @@ require_once '../utili/sesion.php';
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
                     if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("horariosAjax").innerHTML =
-                                this.responseText;
+                       var horarios=this.responseText;
+                        document.getElementById("horariosAjax").innerHTML =horarios;
+                        document.getElementById("h").value =horarios;
+                                
                     }
                 };
 
@@ -139,7 +142,12 @@ require_once '../utili/sesion.php';
                                                 <div id="horariosAjax">
 
                                                 </div>
-
+                                                <form action="../utili/creaPDF.php" method="post">
+                                                    <input type="hidden" value="" name="h" id="h" />
+                                                    <input type="submit" value="PDF" name="creaPDF" />
+                                                </form>
+                                                
+                                                
                                                 <p>El trimestre  del año</p>
                                             </div>
                                         </div>
