@@ -68,15 +68,15 @@
                             <br>
                             <center><div class="login"><h1>Bienvenidos a SenTime</h1> </div></center>
                             <br>
-                            <h3>Bienvenidos a sentime en estos momentos te encuentras en el rol de administrador cuyas funcionalidades hacen que dependan
+                            <h3>Bienvenidos a sentime en estos momentos se encuentra en el rol de administrador cuyas funcionalidades hacen que dependan
                             de la creacion de los horarios estas son: ingreso de los datos, actualizacion de los datos y la eliminacion de los mismos.
                             <br>
                             <br>
-                            Cualquier duda o problema con el aplicativo y el rol del administrador podra encontrar los pdf a continuacion: </h3>
+                            Cualquier duda o problema con el aplicativo y el rol del administrador podrá encontrar los pdf a continuacion: </h3>
                             <br>
                             <div>
                                 <form action="Manual_Administrador.pdf" method="post">
-                                  <button type="submit" name="reporte" class="btn btn-info">Reporte</button>
+                                  <button type="submit" name="reporte" class="btn btn-info">Manual de usuario</button>
                                 </form>
                             </div>
                             <!-- end recent activity -->
