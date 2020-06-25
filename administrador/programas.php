@@ -247,10 +247,9 @@
                     ?>
                 </select>
               </div>
-                             
-                            <button style="margin: 10px" type="submit" class="btn btn-dark">Actualizar</button>
 
                             <div class="modal-footer">
+                                <button style="margin: 10px" type="submit" class="btn btn-dark">Actualizar</button>
                               <button type="button" class="btn btn-light" data-dismiss="modal" >Cerrar</button>
                             </div>
                     </div>

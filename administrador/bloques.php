@@ -170,13 +170,11 @@
                                       ?>
                                   </select>
                               </div>
-                              <div class="modal-footer">
                               <label >Año:</label>
                               <input type="number" name="anio" class="form-control" placeholder="Año"> 
-                            </div>  
+                              <div class="modal-footer">
+                              
                             <button style="margin: 10px" type="submit" class="btn btn-dark">Registrar</button>
-
-                            <div class="modal-footer">
                               <button type="button" class="btn btn-light" data-dismiss="modal" >Cerrar</button>
                             </div>
 
