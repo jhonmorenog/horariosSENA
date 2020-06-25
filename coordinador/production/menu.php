@@ -1,4 +1,4 @@
-
+<!--inicio menu principal -->
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="clearfix"></div>
@@ -13,14 +13,13 @@
               </div>
             </div>
         <!-- /menu profile quick info -->
-        <br />
-        <center><a href="index.php"><button class="btn" style="width: 150px; background-color: #57D3AF;">Home</button></a></center>
-        <br />
+        
         <!-- sidebar menu -->
         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
                 <h3>Coordinador</h3>
                 <ul class="nav side-menu">
+                    <li><a href="index.php"><i class="fa fa-laptop"></i>Inicio</a></li>
                     <li><a><i class="fa fa-search"></i>Consultar datos<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="index2.php">Ficha</a></li>
@@ -36,8 +35,8 @@
                             <li><a href="horarios2.php">Ver horarios</a></li>
                         </ul>
                     </li>
-                    <li><a href="contacts.php"><i class="fa fa-users"></i>Instructores</a>
-                    <li><a href="calendar.php"><i class="fa fa-calendar-o"></i>Calendario</a>
+                    <li><a href="contacts.php"><i class="fa fa-users"></i>Instructores</a></li>
+                    
                     </li>
                 </ul>
             </div>
@@ -46,21 +45,33 @@
         </div>
         <!-- /sidebar menu -->
 
-        <!-- /menu footer buttons -->
-        <div class="sidebar-footer hidden-small">
-            <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Logout" href="../../utili/logout.php">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-            </a>
-        </div>
-        <!-- /menu footer buttons -->
     </div>
 </div>
+<!-- fin de menu principal -->
+
+<!-- top navigation -->
+<div class="top_nav">
+    <div class="nav_menu">
+        <div class="nav toggle">
+            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+        </div>
+        <nav class="nav navbar-nav">
+            <ul class=" navbar-right">
+                <li class="nav-item dropdown open" style="padding-left: 15px;">
+                    <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                        <img src="images/SENA Horarios.jpg" alt=""><?php echo $_SESSION['user'] ?>
+                    </a>
+                    <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item"  href="profile.html"> Perfil</a>
+                        <a class="dropdown-item"  href="form_validation.php">
+                            <span>Configuración</span>
+                        </a>
+                        <a class="dropdown-item"  href="../../utili/logout.php"><i class="fa fa-sign-out pull-right"></i>Salir</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- /top navigation -->
