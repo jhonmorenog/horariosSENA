@@ -211,10 +211,8 @@ while ($valores = mysqli_fetch_array($query)) {
 ?>
                                         </select>
                                     </div>
-
-                                    <button style="margin: 10px" type="submit" class="btn btn-dark" name="actualizar">Actualizar</button>
-
                                     <div class="modal-footer">
+                                        <button style="margin: 10px" type="submit" class="btn btn-dark" name="actualizar">Actualizar</button>
                                         <button type="button" class="btn btn-light" data-dismiss="modal" >Cerrar</button>
                                     </div>
 

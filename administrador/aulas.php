@@ -22,6 +22,9 @@
      function agregaform(datos){
       d=datos.split('||');
       $('#idu').val(d[0]);
+      $('#descripcionu option[value='+d[1]+']').attr('selected','selected');
+      $('#sedeu option[value='+d[2]+']').attr('selected','selected');
+
       }
       function estadoh(datos){
       d=datos.split('||');
@@ -147,8 +150,8 @@
                             <tbody>
                             <?php foreach ($query as $key) {
                                     $datos=$key['id_aula']."||".
-                                    $key['descripcion']."||".
-                                    $key['nombre']."||".
+                                    $key['id_descripcion']."||".
+                                    $key['id_sede']."||".
                                     $key['estado'];
 
                              ?>

@@ -7,6 +7,21 @@
 <?php 
    require_once 'head.php';
 ?>
+      <script type="text/javascript">
+     function agregaform(datos){
+      d=datos.split('||');
+      $('#aula option[value='+d[0]+']').attr('selected','selected');
+//      $('#rango option[value='+d[1]+']').attr('selected','selected');
+      $('#dia').val(d[2]);
+      $('#trimestre').val(d[3]);
+      $('#anio').val(d[4]); 
+      $('#fichanumero_ficha option[value='+d[5]+']').attr('selected','selected'); 
+      $('#persona_documento option[value='+d[6]+']').attr('selected','selected'); 
+       
+      
+
+      }
+      </script>
   </head>
 
   <?php
@@ -69,6 +84,14 @@
                             </thead>
                             <tbody>
                             <?php foreach ($query as $key) {
+                                $datos=$key['id_aula']."||".
+                                    $key['rango_horas']."||".
+                                    $key['dia']."||".
+                                        $key['trimestre']."||".
+                                        $key['anio']."||".
+                                        $key['numero_ficha']."||".
+                                        $key['documento']."||".
+                                    $key['estado'];
                                 
                      ?>
                              <tr>
@@ -80,7 +103,7 @@
                             <td><?php echo $key['numero_ficha']; ?></td>
                             <td><?php echo mb_strtoupper($key['nombre']);?></td>
                              <td>
-                                <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" action=""><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
+                                <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" onclick="agregaform('<?php echo $datos?>')"><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
                                 </td>
                             </tr>
                             <?php }
@@ -112,28 +135,27 @@
                           <button type="button" class="close" data-dismiss="modal">&times;</button></div>
                           <div class="modal-body">
                             <div class="form-group">
-                            <input type="text" name="dia" class="form-control" placeholder="Dia">
+                            <input type="text" name="dia" id="dia" class="form-control" placeholder="Dia">
                               </div>  
                               <div class="form-group">
-                            <input type="number" name="trimestre" class="form-control" placeholder="Trimestre">
+                            <input type="number" name="trimestre" id="trimestre" class="form-control" placeholder="Trimestre">
                               </div>  
                               <div class="form-group">
                                 <label>Rango de Horas</label> 
-                                  <select name="rango_horas" class="form-control" type="time">
+                                  <select name="rango" id="rango" class="form-control" type="time">
                                       <option value="0">Seleccionar</option>
-                                      <option value="1">6:00-7:40</option>
-                                      <option value="2">8:00-9:40</option>
-                                      <option value="3">10:00-11:40</option>
-                                      <option value="4">12:00-13:40</option>
-                                      <option value="5">14:20-16:00</option>
-                                      <option value="6">16:20-18:00</option>
-                                      <option value="7">18:15-19:45</option>
-                                      <option value="8">20:00-21:40</option>
+                                       <?php
+                                      require_once '../utili/Conexion.php';
+                                      $query=$mysqli->query("SELECT * FROM bloque");
+                                      while($valores=mysqli_fetch_array($query)){
+                                          echo '<option value="'.$valores[rango_horas].'">'.$valores[rango_horas].'</option>';
+                                          }
+                                      ?>
                                   </select>
                               </div>
                                       <div class="form-group">
                                 <label>Persona</label> 
-                                  <select name="persona_documento" class="form-control" required="">
+                                  <select name="persona_documento" id="persona_documento" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
                                       require_once '../utili/Conexion.php';
@@ -146,7 +168,7 @@
                               </div>
                                <div class="form-group">
                                 <label>Numero de Ficha</label> 
-                                  <select name="fichanumero_ficha" class="form-control" required="">
+                                <select name="fichanumero_ficha" id="fichanumero_ficha"class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
                                       require_once '../utili/Conexion.php';
@@ -159,7 +181,7 @@
                               </div>
                                <div class="form-group">
                                 <label>Aula</label> 
-                                  <select name="aulaid_aula" class="form-control" required="">
+                                  <select name="aulaid_aula" id="aula" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
                                       require_once '../utili/Conexion.php';
@@ -171,7 +193,7 @@
                                   </select>
                               </div>
                               <label >Año:</label>
-                              <input type="number" name="anio" class="form-control" placeholder="Año"> 
+                              <input type="number" name="anio" id="anio" class="form-control" placeholder="Año"> 
                               <div class="modal-footer">
                               
                             <button style="margin: 10px" type="submit" class="btn btn-dark">Registrar</button>

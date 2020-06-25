@@ -1,9 +1,8 @@
 <?php
 require_once "../../utili/Conexion.php";
 $lectiva=$_POST['lectiva'];
-$productiva=$_POST['productiva'];
 $found=false;
-$sql1="select * from duracion where meses_lectiva=\"$_POST[lectiva]\" and meses_productiva=\"$_POST[productiva]\"";
+$sql1="select * from duracion where meses_lectiva=\"$_POST[lectiva]\"";
 $query=$mysqli->query($sql1);
 while ($r=$query->fetch_array())
 {
@@ -13,7 +12,7 @@ if($found){
 	window.location='../duraciones.php';</script>";
 }
 }
-$query="INSERT INTO duracion (meses_lectiva,meses_productiva) values ('$lectiva','$productiva')";
+$query="INSERT INTO duracion (meses_lectiva) values ('$lectiva')";
 if ($mysqli->query($query)){
 	print"<script>alert (\"registro exitoso.\");
 	window.location='../duraciones.php';</script>"; 

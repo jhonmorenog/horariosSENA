@@ -14,6 +14,10 @@
             d=datos.split('||');
             $('#idu').val(d[0]);
             $('#denominacionu').val(d[1]);
+            $('#meses_lectivau option[value='+d[2]+']').attr('selected','selected');
+            $('#id_formacionu option[value='+d[3]+']').attr('selected','selected');
+            $('#id_tipou option[value='+d[4]+']').attr('selected','selected');
+            
         }
     </script>
   </head>
@@ -76,19 +80,6 @@
                                   </select>
                               </div>
                               <div class="form-group">
-                                <label>Meses productiva</label> 
-                                  <select name="id_duracion" class="form-control" required="">
-                                      <option value="0">Seleccionar</option>
-                                      <?php
-                                      require_once '../utili/Conexion.php';
-                                      $query=$mysqli->query("SELECT * FROM duracion");
-                                      while($valores=mysqli_fetch_array($query)){
-                                          echo '<option value="'.$valores[id_duracion].'">'.$valores[meses_productiva].'</option>';
-                                          }
-                                      ?>
-                                  </select>
-                              </div>
-                              <div class="form-group">
                                 <label>Nivel de formacion</label> 
                                   <select name="id_formacion" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
@@ -143,7 +134,6 @@
                                 <th>Id</th> 
                               <th>Nombre</th>
                               <th>Meses lectiva</th>
-                              <th>Meses productiva</th>
                               <th>Nivel de formación</th>
                               <th>Tipo de formación</th>
                               <th>Actualizar</th>
@@ -152,13 +142,15 @@
                             <tbody>
                             <?php foreach ($query as $key) {
                              $datos=$key['id_programa']."||".
-                                    $key['denominacion'];
+                                    $key['denominacion']."||".
+                                    $key['id_duracion']."||".
+                                    $key['id_nivel']."||".
+                                    $key['id_tipo'];
                              ?>
                              <tr>
                              <td><?php echo $key['id_programa']; ?></td>
                              <td><?php echo mb_strtoupper($key['denominacion']);?></td>
                              <td><?php echo $key['meses_lectiva'];?></td>
-                             <td><?php echo $key['meses_productiva'];?></td>
                              <td><?php echo mb_strtoupper($key['denominacion_nivel']);?></td>
                              <td><?php echo mb_strtoupper($key['tipo']);?></td>
                             <td>
@@ -197,26 +189,13 @@
                               </div>  
                               <div class="form-group">
                                 <label>Meses lectiva</label> 
-                                  <select name="id_duracionu" id="id_duracionu" class="form-control" required="">
+                                  <select name="meses_lectivau" id="meses_lectivau" class="form-control" required="">
                                       <option value="0">Seleccionar</option>
                                       <?php
                                       require_once '../utili/Conexion.php';
                                       $query=$mysqli->query("SELECT * FROM duracion");
                                       while($valores=mysqli_fetch_array($query)){
                                           echo '<option value="'.$valores[id_duracion].'">'.$valores[meses_lectiva].'</option>';
-                                          }
-                                      ?>
-                                  </select>
-                              </div>
-                              <div class="form-group">
-                                <label>Meses productiva</label> 
-                                  <select name="id_duracionu" id="id_duracionu"class="form-control" required="">
-                                      <option value="0">Seleccionar</option>
-                                      <?php
-                                      require_once '../utili/Conexion.php';
-                                      $query=$mysqli->query("SELECT * FROM duracion");
-                                      while($valores=mysqli_fetch_array($query)){
-                                          echo '<option value="'.$valores[id_duracion].'">'.$valores[meses_productiva].'</option>';
                                           }
                                       ?>
                                   </select>

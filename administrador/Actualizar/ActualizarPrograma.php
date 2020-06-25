@@ -3,7 +3,7 @@ require_once "../../utili/Conexion.php";
 
 $id_programa = $_POST['idu'];
 $denominacion = $_POST['denominacionu'];
-$duracion = $_POST['id_duracionu'];
+$duracion = $_POST['meses_lectivau'];
 $id_formacion = $_POST['id_formacionu'];
 $id_tipo = $_POST['id_tipou'];
 

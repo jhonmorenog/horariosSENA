@@ -14,7 +14,6 @@
             d=datos.split('||');
             $('#idu').val(d[0]);
             $('#lectivau').val(d[1]);
-            $('#productivau').val(d[2]);
         }
     </script>
 
@@ -64,9 +63,6 @@
           <div class="form-group">
           <input type="text" name="lectiva" class="form-control" placeholder="Meses lectiva"></textarea>
             </div>  
-            <div class="form-group">
-          <input type="text" name="productiva" class="form-control" placeholder="Meses Productiva"></textarea>
-            </div> 
           <button style="margin: 10px" type="submit" class="btn btn-dark">Registrar</button>
 
           <div class="modal-footer">
@@ -94,20 +90,17 @@
                                 <tr>
                               <th>Id</th>    
                                <th>Meses lectiva</th>
-                               <th>Meses productiva</th>
                               <th>Actualizar</th>
                               </tr>
                             </thead>
                             <tbody>
                             <?php foreach ($query as $key) {
                               $datos=$key['id_duracion']."||".
-                                        $key['meses_lectiva']."||".
-                                        $key['meses_productiva'];
+                                        $key['meses_lectiva'];
                              ?>
                              <tr>
                              <td><?php echo $key['id_duracion']; ?></td>
                              <td><?php echo $key['meses_lectiva']; ?></td>
-                             <td><?php echo $key['meses_productiva']; ?></td>
                              <td>
                                 <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" onclick="agregaform('<?php echo $datos?>')" ><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
                                 </td>
