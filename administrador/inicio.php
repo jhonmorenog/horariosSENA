@@ -94,13 +94,21 @@
                                   if ($query->num_rows>=1){
                                   foreach ($query as $key) {
                                   $key['documento'];}}?>
-                    <form action="ActualizarPersona.php?documento=<?php echo $key['documento']?>" method="POST">
+                                <form action="Actualizar/ActualizarPersona.php?documento=<?php echo $key['documento']?>" method="POST">
+                                    <div class="form-group">
+                           <label for="documento"> Documento: </label>
+                           <input name="documento" type="number" class="form-control" ></div>
                         <div class="form-group">
                            <label for="nombre"> Nombre: </label>
                            <input name="nombre" type="text" class="form-control" ></div>
+                        
                <div class="form-group">
                    <label for="apellido"> Apellido: </label>
                   <input name="apellido" type="text" class="form-control" >
+                </div>
+                        <div class="form-group">
+                   <label for="email"> Email: </label>
+                  <input name="email" type="text" class="form-control" >
                 </div>
                  <div class="form-group">
                      <label for="clave"> Clave: </label>
