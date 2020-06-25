@@ -84,7 +84,7 @@
                </div> 
               <div>
                   <button style="color:#73879C" class="btn btn-default submit" type="submit">Ingresar</button>
-                <button style="color:#73879C" class="btn btn-default submit" href="#">¿Olvidaste tu contraseña?</button>
+                  <button type="button" style="color:#73879C" class="btn btn-default " onclick="window.open('locas.html','_self')">¿Olvidaste tu contraseña?</button>
               </div>
 
               <div class="clearfix"></div>
