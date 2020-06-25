@@ -68,7 +68,7 @@
                             <br>
                             <center><div class="login"><h1>Bienvenidos a SenTime</h1> </div></center>
                             <br>
-                            <h3>Bienvenidos a sentime en estos momentos se encuentra en el rol de administrador cuyas funcionalidades hacen que dependan
+                            <h3>Bienvenido a sentime en estos momentos se encuentra en el rol de administrador cuyas funcionalidades hacen que dependan
                             de la creacion de los horarios estas son: ingreso de los datos, actualizacion de los datos y la eliminacion de los mismos.
                             <br>
                             <br>
