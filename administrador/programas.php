@@ -17,6 +17,11 @@ require_once 'head.php';
                 $('#id_tipou option[value=' + d[4] + ']').attr('selected', 'selected');
 
             }
+            
+            function delet(datos){
+                d = datos.split('||');
+                $('#ide').val(d[0]);
+            }
         </script>
     </head>
 
@@ -134,6 +139,8 @@ if ($query->num_rows >= 1) {
                                                             <th>Nivel de formación</th>
                                                             <th>Tipo de formación</th>
                                                             <th>Actualizar</th>
+                                                            <th>Eliminar</th>
+
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -153,6 +160,9 @@ if ($query->num_rows >= 1) {
                                                                 <td><?php echo mb_strtoupper($key['tipo']); ?></td>
                                                                 <td>
                                                                     <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate1" onclick="agregaform('<?php echo $datos ?>')"><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
+                                                                </td>
+                                                                <td>
+                                                                    <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataDelete" onclick="delet('<?php echo $datos ?>')"><i class="fa fa-trash" style="margin-left: -3px;"></i></button>
                                                                 </td>
                                                             </tr>
     <?php }
@@ -226,6 +236,31 @@ while ($valores = mysqli_fetch_array($query)) {
 
                                     <div class="modal-footer">
                                         <button style="margin: 10px" type="submit" class="btn btn-dark">Actualizar</button>
+                                        <button type="button" class="btn btn-light" data-dismiss="modal" >Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form action="Eliminar/EliminarPrograma.php" method="post"> 
+                    <div class="modal fade" id="dataDelete" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Eliminar Programa</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <input type="number"  name="ide" id="ide" hidden="" >
+                                    </div>
+
+                                    <label>¿Está seguro de que quiere eliminar el programa?</label>
+
+                                    <div class="modal-footer">
+                                        <button id="comsea" style="margin: 10px" type="submit"  class="btn btn-dark">Eliminar</button>
+
                                         <button type="button" class="btn btn-light" data-dismiss="modal" >Cerrar</button>
                                     </div>
                                 </div>
