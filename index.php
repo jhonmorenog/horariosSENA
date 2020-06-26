@@ -84,12 +84,12 @@
                </div> 
               <div>
                   <button style="color:#73879C" class="btn btn-default submit" type="submit">Ingresar</button>
-                  <button type="button" style="color:#73879C" class="btn btn-default " onclick="window.open('locas.html','_self')">¿Olvidaste tu contraseña?</button>
+<!--                  <button type="button" style="color:#73879C" class="btn btn-default " onclick="window.open('locas.html','_self')">¿Olvidaste tu contraseña?</button>-->
               </div>
                </form>
               <form action="aprendiz/horarioAprendiz.php" method="post">
               <label>¿Eres Aprendiz? Consulta aquí</label>
-              <input type="number" class="form-control" id="ficha_numero" name="ficha_numero" placeholder="Ficha" required=""/>
+              <input type="text" class="form-control" id="ficha_numero" name="ficha_numero" placeholder="Ficha" required=""/>
               <button style="color:#73879C" class="btn btn-default submit" type="submit">Consultar</button>
               </form>
               
