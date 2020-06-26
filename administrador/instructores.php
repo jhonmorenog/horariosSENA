@@ -102,7 +102,7 @@
                       
                              <?php
                                require_once '../utili/Conexion.php';
-                            $sql1="SELECT *, persona.estado as co FROM persona";
+                            $sql1="SELECT *, persona.estado as co FROM persona where rol_documento=3";
                             $query=$mysqli->query($sql1);
                               if ($query->num_rows>=1){?>
                                 <?php foreach ($query as $key) {
@@ -117,7 +117,7 @@
                               <div>
                               <h4 class="brief"> <?php echo $key['nombre'];?> <?php echo $key['apellido'];?></h4>
                               <br>
-                              <strong>Especialidad: </strong> Diseñador Grafico 
+                              <strong>Especialidad: </strong> Ingeniero de sistemas 
                               <ul class="list-unstyled">
                                 <li><i class="fa fa-envelope-o"></i> E-mail: <?php echo $key['email'];?></li>
                               </ul>

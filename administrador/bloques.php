@@ -100,7 +100,7 @@ if ($query->num_rows >= 1) {
                                                                 <td><?php echo $key['trimestre']; ?></td>
                                                                 <td><?php echo $key['anio']; ?></td>
                                                                 <td><?php echo $key['numero_ficha']; ?></td>
-                                                                <td><?php echo mb_strtoupper($key['nombre']); ?></td>
+                                                                <td><?php echo mb_strtoupper($key['documento']); ?> </td>
                                                                 <td>
                                                                     <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" onclick="agregaform('<?php echo $datos ?>')"><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
                                                                 </td>
@@ -194,7 +194,7 @@ while ($valores = mysqli_fetch_array($query)) {
                                         <input type="number" name="anio" id="anio" class="form-control" placeholder="Año"> 
                                         <div class="modal-footer">
 
-                                            <button style="margin: 10px" type="submit" class="btn btn-dark">Registrar</button>
+                                            <button style="margin: 10px" type="submit" class="btn btn-dark">Actualizar</button>
                                             <button type="button" class="btn btn-light" data-dismiss="modal" >Cerrar</button>
                                         </div>
 
