@@ -144,11 +144,9 @@ require_once '../utili/sesion.php';
                                                 </div>
                                                 <form action="../utili/creaPDF.php" method="post">
                                                     <input type="hidden" value="" name="h" id="h" />
-                                                    <input type="submit" value="PDF" name="creaPDF" />
+                                                    <input class="btn btn-danger" type="submit" value="Generar PDF" name="creaPDF" />
                                                 </form>
                                                 
-                                                
-                                                <p>El trimestre  del año</p>
                                             </div>
                                         </div>
                                     </div>
