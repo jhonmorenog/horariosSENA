@@ -67,6 +67,9 @@ require_once 'menu.php';
                                                 <form action="Manual_Administrador.pdf" method="post">
                                                     <button type="submit" name="reporte" class="btn btn-info">Manual de usuario</button>
                                                 </form>
+                                                <form action="pdf.php" method="post">
+                                                    <button type="submit" name="reporte" class="btn btn-info">Manual de usuario</button>
+                                                </form>
                                             </div>
                                             <!-- end introduccion -->
 
