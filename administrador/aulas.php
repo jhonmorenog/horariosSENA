@@ -24,6 +24,10 @@ require_once '../utili/sesion.php';
                 $('#sedeu option[value=' + d[2] + ']').attr('selected', 'selected');
 
             }
+            function delet(datos){
+                d = datos.split('||');
+                $('#ide').val(d[0]);
+            }
             function estadoh(datos) {
                 d = datos.split('||');
                 $('#idh').val(d[0]);
@@ -142,6 +146,7 @@ require_once '../utili/sesion.php';
                                                             <th>Sede</th>
                                                             <th>Actualizar</th>
                                                             <th>Habilitar/Deshabilitar</th>
+                                                            <th>Eliminar</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -164,6 +169,9 @@ require_once '../utili/sesion.php';
                                                                 <td>
                                                                     <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info" data-toggle="modal" data-target="#dataHabi" onclick="estadoh('<?php echo $datos ?>')"><i class="fa fa-check" style="margin-left: -5px" ></i></button>
                                                                     <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info" data-toggle="modal" data-target="#dataDeshabi" onclick="estadod('<?php echo $datos ?>')"><i class="fa fa-close" style="margin-left: -3px"></i></button>
+                                                                </td>
+                                                                <td>
+                                                                    <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataDelete" onclick="delet('<?php echo $datos ?>')"><i class="fa fa-trash" style="margin-left: -3px;"></i></button>
                                                                 </td>
                                                             </tr>
                                                         <?php }
@@ -273,6 +281,31 @@ require_once '../utili/sesion.php';
 
                                     <div class="modal-footer">
                                         <button style="margin: 10px" type="submit" class="btn btn-dark">Habilitar</button>
+
+                                        <button type="button" class="btn btn-light" data-dismiss="modal" >Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form action="Eliminar/EliminarAula.php" method="post"> 
+                    <div class="modal fade" id="dataDelete" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Eliminar Aula</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <input type="number"  name="ide" id="ide" hidden="" >
+                                    </div>
+
+                                    <label>¿Está seguro de que quiere eliminar el aula?</label>
+
+                                    <div class="modal-footer">
+                                        <button id="comsea" style="margin: 10px" type="submit"  class="btn btn-dark">Eliminar</button>
 
                                         <button type="button" class="btn btn-light" data-dismiss="modal" >Cerrar</button>
                                     </div>
