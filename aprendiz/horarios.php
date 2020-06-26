@@ -4,6 +4,7 @@ require_once '../ScriptDB/Querys.php';
 require_once '../utili/Conexion.php';
 require_once '../coordinador/autonomo/functionx.php';
 /*
+ * que hizo karen
  * $cars = array (
   array("Volvo",22,18),
   array("BMW",15,13),

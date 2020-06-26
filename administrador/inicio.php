@@ -90,22 +90,22 @@ if ($query->num_rows >= 1) {
                                                     <form action="Actualizar/ActualizarPersona.php?documento=<?php echo $key['documento'] ?>" method="POST">
                                                         <div class="form-group">
                                                             <label for="documento"> Documento: </label>
-                                                            <input name="documento" type="number" class="form-control" ></div>
+                                                            <input name="documento" type="number" class="form-control" required=""></div>
                                                         <div class="form-group">
                                                             <label for="nombre"> Nombre: </label>
-                                                            <input name="nombre" type="text" class="form-control" ></div>
+                                                            <input name="nombre" type="text" class="form-control" required="" ></div>
 
                                                         <div class="form-group">
                                                             <label for="apellido"> Apellido: </label>
-                                                            <input name="apellido" type="text" class="form-control" >
+                                                            <input name="apellido" type="text" class="form-control" required="">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="email"> Email: </label>
-                                                            <input name="email" type="text" class="form-control" >
+                                                            <input name="email" type="text" class="form-control" required="">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="clave"> Clave: </label>
-                                                            <input name="clave" type="password" class="form-control" >
+                                                            <input name="clave" type="password" class="form-control" required="">
                                                         </div>
                                                         <div class="form-group">
                                                             <button class="btn btn-info" name="actualizar" type="submit">Actualizar</button>
