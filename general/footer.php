@@ -1,6 +1,6 @@
 <footer>
     <div class="pull-right">
-        SENTIME by ADSI</a>
+        SENTIME por ADSI
     </div>
     <div class="clearfix"></div>
 </footer>
