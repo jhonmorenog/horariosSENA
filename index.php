@@ -2,22 +2,9 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>SENTIME  </title>
-
-    <!-- Bootstrap -->
-    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
-    <!--icon-->
-    <link rel="shortcut icon" type="image/x-icon" href="administrador/icon/Horarios.ico" />
+    <?php
+    require_once './general/header.php';
+    ?>
     
     <script type="text/javascript">
 		
@@ -71,7 +58,7 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-              <form action="utili/Validacion.php" method="post">
+              <form action="util/Validacion.php" method="post">
               <h1>Inicio de sesión</h1>
               <div>
                   <input type="text" class="form-control" name="email" placeholder="Email" required=""/>
