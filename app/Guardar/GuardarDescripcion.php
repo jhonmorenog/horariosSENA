@@ -10,13 +10,13 @@ while ($r=$query->fetch_array())
 $found=true;
 if($found)
 {
-print"<script>alert(\"La descripcion ya esta registrada.\");window.location='../descripciones.php';</script>";
+print"<script>alert(\"La descripcion ya esta registrada.\");window.location='../sentime.php';;</script>";
 }
 }
 $query="INSERT INTO descripcion_aula (descripcion) VALUES ('$descripcion')";
 
 if($mysqli->query($query)){
-	print"<script>alert(\"Registro exitoso.\");window.location='../descripciones.php';</script>";
+	print"<script>alert(\"Registro exitoso.\");window.location='../sentime.php';</script>";
 }else {
 	echo "Ocurrio un error";
 }

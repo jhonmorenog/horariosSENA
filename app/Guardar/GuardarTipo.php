@@ -10,13 +10,13 @@ while ($r=$query->fetch_array())
 $found=true;
 if($found)
 {
-print"<script>alert(\"El tipo de formacion ya esta registrado.\");window.location='../informacion.php';</script>";
+print"<script>alert(\"El tipo de formacion ya esta registrado.\");window.location='../sentime.php';</script>";
 }
 }
 $query="INSERT INTO tipo (tipo) VALUES ('$tipo')";
 
 if($mysqli->query($query)){
-	print"<script>alert(\"Registro exitoso.\");window.location='../tipos.php';</script>";
+	print"<script>alert(\"Registro exitoso.\");window.location='../sentime.php';</script>";
 }else {
 	echo "Ocurrio un error";
 }

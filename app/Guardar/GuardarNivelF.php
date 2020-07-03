@@ -10,13 +10,13 @@ while ($r=$query->fetch_array())
 $found=true;
 if($found)
 {
-print"<script>alert(\"La denominacion ya esta registrada.\");window.location='../formaciones.php';</script>";
+print"<script>alert(\"La denominacion ya esta registrada.\");window.location='../sentime.php';</script>";
 }
 }
 $query="INSERT INTO nivel_formacion (denominacion_nivel) VALUES ('$denominacion')";
 
 if($mysqli->query($query)){
-	print"<script>alert(\"Registro exitoso.\");window.location='../formaciones.php';</script>";
+	print"<script>alert(\"Registro exitoso.\");window.location='../sentime.php';</script>";
 }else {
 	echo "Ocurrio un error";
 }

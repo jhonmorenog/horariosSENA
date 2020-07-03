@@ -12,13 +12,13 @@ while ($r=$query->fetch_array())
 $found=true;
 if($found)
 {
-print"<script>alert(\"Nombre de la sede ya registrado.\");window.location='../sedes.php';</script>";
+print"<script>alert(\"Nombre de la sede ya registrado.\");window.location='../sentime.php';</script>";
 }
 }
 $query="INSERT INTO sede (direccion,nombre,centroid_centro) VALUES ('$direccion','$nombre_sede','$centro')";
 
 if($mysqli->query($query)){
-	print"<script>alert(\"Registro exitoso.\");window.location='../sedes.php';</script>";
+	print"<script>alert(\"Registro exitoso.\");window.location='../sentime.php';</script>";
 }else {
 	echo "Ocurrio un error";
 }

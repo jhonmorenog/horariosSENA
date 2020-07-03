@@ -13,13 +13,13 @@ while ($r=$query->fetch_array())
 $found=true;
 if($found)
 {
-print"<script>alert(\"La competencia ya esta registrada.\");window.location='../competencias.php';</script>";
+print"<script>alert(\"La competencia ya esta registrada.\");window.location='../sentime.php';</script>";
 }
 }
 $query="INSERT INTO competencia (id_competencia,denominacion,duracion) VALUES ('$id','$denominacion','$duracion')";
 
 if($mysqli->query($query)){
-	print"<script>alert(\"Registro exitoso.\");window.location='../competencias.php';</script>";
+	print"<script>alert(\"Registro exitoso.\");window.location='../sentime.php';</script>";
 }else {
 	echo "Ocurrio un error";
 }

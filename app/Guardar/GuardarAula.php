@@ -7,7 +7,7 @@ $found=false;
 $query="INSERT INTO aula (id_aula,id_descripcion,sedeid_sede) VALUES ('$id','$descripcion','$sede')";
 
 if($mysqli->query($query)){
-	print"<script>alert(\"Registro exitoso.\");window.location='../aulas.php';</script>";
+	print"<script>alert(\"Registro exitoso.\");window.location='../sentime.php';</script>";
 }else {
 	echo "Ocurrio un error";
 }

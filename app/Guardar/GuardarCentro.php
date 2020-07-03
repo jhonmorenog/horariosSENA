@@ -16,7 +16,7 @@ print"<script>alert(\"Nombre de centro ya registrado.\");window.location='../cen
 $query="INSERT INTO centro (nombre_centro) VALUES ('$centro')";
 
 if($mysqli->query($query)){
-	print"<script>alert(\"Registro exitoso.\");window.location='../centros.php';</script>";
+	print"<script>alert(\"Registro exitoso.\");window.location='../sentime.php';</script>";
 }else {
 	echo "Ocurrio un error";
 }
