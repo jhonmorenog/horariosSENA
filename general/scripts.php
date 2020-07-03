@@ -15,6 +15,14 @@
     getNombreSitio("Inicio");
 </script>
 <script type="text/javascript">
+
+    function actuaform(datos) {
+        d = datos.split('||');
+        $('#numero_fichau').val(d[0]);
+        $('#iniciou').val(d[1]);
+        $('#finalu').val(d[2]);
+        $('#jornadau').val(d[3]);
+    }
     function agregaform(datos) {
         d = datos.split('||');
         $('#idu').val(d[0]);

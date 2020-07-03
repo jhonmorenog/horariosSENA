@@ -12,23 +12,6 @@ require_once $rutaConexionGestion;
         color: black;
     }
 </style>
-<script type="text/javascript">
-    function agregaform(datos) {
-        d = datos.split('||');
-        $('#numero_fichau').val(d[0]);
-        $('#iniciou').val(d[1]);
-        $('#finalu').val(d[2]);
-    }
-    function estadoh(datos) {
-        d = datos.split('||');
-        $('#idh').val(d[0]);
-    }
-    function estadod(datos) {
-        d = datos.split('||');
-        $('#idd').val(d[0]);
-    }
-</script>
-
 
 <div class="col-md-12 col-sm-12 ">
     <div class="x_panel">
@@ -93,6 +76,15 @@ require_once $rutaConexionGestion;
                 </div>
             </div>
         </form> 
+        <div class="row">
+                <div class="col-md-12 col-sm-12 ">
+                    <div class="x_panel">
+                        <div>
+                            <label><h5>Recuerde:</h5>Los datos que aparecen en color <label style="color: black">negro </label> están habilitados para el uso en la creción del horario<br> Los datos que aparecen en color <label style="color: gainsboro;">gainsboro </label> están dehabilitados para esta función.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <div class="x_content">
             <div class="row">
                 <div class="col-sm-12">
@@ -119,14 +111,15 @@ require_once $rutaConexionGestion;
                                         foreach ($query as $key) {
                                             $datos = $key['numero_ficha'] . "||" .
                                                     $key['ingreso'] . "||" .
-                                                    $key['salida'];
+                                                    $key['salida']. "||" .
+                                                    $key['jornada'];
                                             ?>
                                             <tr class="des<?php echo $key['f']; ?>">
                                                 <td><?php echo $key['numero_ficha']; ?></td>
                                                 <td><?php echo $key['ingreso']; ?></td>
                                                 <td><?php echo $key['salida']; ?></td>
                                                 <td>
-                                                    <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" onclick="agregaform('<?php echo $datos ?>')"><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
+                                                    <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" onclick="actuaform('<?php echo $datos ?>')"><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
                                                 </td>
                                                 <td>
                                                     <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info" data-toggle="modal" data-target="#dataHabi" onclick="estadoh('<?php echo $datos ?>')"><i class="fa fa-check" style="margin-left: -5px"></i></button>
@@ -149,6 +142,8 @@ require_once $rutaConexionGestion;
         </div>
     </div>
 </div>
+
+
 <form action="Actualizar/ActualizarFicha.php" method="post"> 
     <div class="modal fade" id="dataUpdate" role="dialog">
         <div class="modal-dialog">
@@ -168,6 +163,15 @@ require_once $rutaConexionGestion;
                     <div class="form-group">
                         <label for="final">Fecha de finalizacion:</label>
                         <input type="date" id="finalu" name="finalu" class="form-control"> 
+                    </div>
+                    <div class="modal-footer">
+                        <label for="Jornada">Jornada:</label>
+                        <select id="jornadau" name="jornadau" class="form-control" required="">
+                            <option value="" selected disabled>Seleccionar</option>
+                            <option value="Diurna" >Diurna</option>
+                            <option value="Nocturna" >Nocturna</option>
+                            <option value="Fines de semana" >Fines de semana</option>
+                        </select> 
                     </div>
                     <div class="modal-footer">
                         <button style="margin: 10px" type="submit" class="btn btn-dark">Actualizar</button>
