@@ -41,6 +41,7 @@ require_once $rutaConexionGestion;
             <div class="clearfix"></div>
         </div>
         <button style="margin: 10px" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal5" action="">Registrar Fichas</button>
+        
         <form action="Guardar/GuardarFicha.php" method="post">
             <div class="modal fade" id="myModal5" role="dialog">
                 <div class="modal-dialog">
@@ -50,16 +51,37 @@ require_once $rutaConexionGestion;
                             <button type="button" class="close" data-dismiss="modal">&times;</button></div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <input name="numero_ficha" class="form-control" placeholder="Numero ficha">
+                                <input name="numero_ficha" class="form-control" placeholder="Numero ficha" required="">
                             </div>  
                             <div class="modal-footer">
                                 <label for="inicio">Fecha de inicio:</label>
-                                <input type="date" id="inicio" name="inicio" class="form-control"> 
+                                <input type="date" id="inicio" name="inicio" class="form-control" required=""> 
                             </div>  
                             <div class="modal-footer">
                                 <label for="final">Fecha de finalizacion:</label>
-                                <input type="date" id="final" name="final" class="form-control"> 
+                                <input type="date" id="final" name="final" class="form-control" required=""> 
                             </div>  
+                            <div class="modal-footer">
+                                <label for="Jornada">Jornada:</label>
+                                <select name="jornada" class="form-control" required="">
+                                    <option value="" selected disabled>Seleccionar</option>
+                                    <option value="Diurna" >Diurna</option>
+                                    <option value="Nocturna" >Nocturna</option>
+                                    <option value="Fines de semana" >Fines de semana</option>
+                                </select> 
+                            </div>  
+                            <div class="modal-footer">
+                                <label for="programa">Programa:</label>
+                                <select name="programa" class="form-control" required="">
+                                    <option value="" selected disabled>Seleccionar</option>
+                                    <?php
+                                    $query = $mysqli->query("SELECT * FROM programa");
+                                    while ($valores = mysqli_fetch_array($query)) {
+                                        echo '<option value="' . $valores[id_programa] . '">' . $valores[denominacion] . '</option>';
+                                    }
+                                    ?>
+                                </select> 
+                            </div>
                             <button style="margin: 10px" type="submit" class="btn btn-dark">Registrar</button>
 
                             <div class="modal-footer">

@@ -1,5 +1,5 @@
 <?php
-require_once "../../utili/Conexion.php";
+require_once "../../util/Conexion.php";
 $lectiva=$_POST['lectiva'];
 $found=false;
 $sql1="select * from duracion where meses_lectiva=\"$_POST[lectiva]\"";

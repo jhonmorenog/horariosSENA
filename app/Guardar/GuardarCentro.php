@@ -1,5 +1,5 @@
 <?php 
-require_once "../../utili/Conexion.php";
+require_once "../../util/Conexion.php";
 $centro=$_POST['centro'];
 $found=false;
 
