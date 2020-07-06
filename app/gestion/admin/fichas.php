@@ -91,7 +91,7 @@ require_once $rutaConexionGestion;
                     <div class="card-box table-responsive">
 
                         <?php
-                        $sql1 = "SELECT numero_ficha,ingreso,salida,ficha.estado,jornada,denominacion FROM ficha,programa_ficha,programa WHERE numero_ficha=fichanumero_ficha AND programa_ficha.id_programa=programa.id_programa";
+                        $sql1 = "SELECT numero_ficha,ingreso,salida,ficha.estado,jornada,denominacion,ficha.estado as f FROM ficha,programa_ficha,programa WHERE numero_ficha=fichanumero_ficha AND programa_ficha.id_programa=programa.id_programa order by numero_ficha desc";
                         $query = $mysqli->query($sql1);
                         if ($query->num_rows >= 1) {
                             ?>
@@ -103,6 +103,7 @@ require_once $rutaConexionGestion;
                                             <th>Fecha de inicio</th>
                                             <th>Fecha de finalización</th>
                                             <th>Programa</th>
+                                            <th>Jornada</th>                                            
                                             <th>Actualizar</th>
                                             <th>Habilitar/Deshabilitar</th>
                                         </tr>
@@ -113,13 +114,15 @@ require_once $rutaConexionGestion;
                                             $datos = $key['numero_ficha'] . "||" .
                                                     $key['ingreso'] . "||" .
                                                     $key['salida']. "||" .
+                                                    $key['denominacion']. "||" .
                                                     $key['jornada'];
                                             ?>
                                             <tr class="des<?php echo $key['f']; ?>">
                                                 <td><?php echo $key['numero_ficha']; ?></td>
                                                 <td><?php echo $key['ingreso']; ?></td>
                                                 <td><?php echo $key['salida']; ?></td>
-                                                <td><?php echo $key['denominacion']; ?></td>
+                                                <td><?php echo $key['denominacion']; ?></td>                                                
+                                                <td><?php echo $key['jornada']; ?></td>
                                                 <td>
                                                     <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" onclick="actuaform('<?php echo $datos ?>')"><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
                                                 </td>
@@ -165,6 +168,18 @@ require_once $rutaConexionGestion;
                     <div class="form-group">
                         <label for="final">Fecha de finalizacion:</label>
                         <input type="date" id="finalu" name="finalu" class="form-control"> 
+                    </div>
+                    <div class="modal-footer">
+                        <label for="programa">Programa:</label>
+                        <select name="programau" class="form-control" required="">
+                            <option value="" selected disabled>Seleccionar</option>
+                            <?php
+                            $query = $mysqli->query("SELECT * FROM programa");
+                            while ($valores = mysqli_fetch_array($query)) {
+                                echo '<option value="' . $valores[id_programa] . '">' . $valores[denominacion] . '</option>';
+                            }
+                            ?>
+                        </select> 
                     </div>
                     <div class="modal-footer">
                         <label for="Jornada">Jornada:</label>

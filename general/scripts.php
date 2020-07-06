@@ -21,7 +21,9 @@
         $('#numero_fichau').val(d[0]);
         $('#iniciou').val(d[1]);
         $('#finalu').val(d[2]);
-        $('#jornadau').val(d[3]);
+        $('#programau').val(d[3]);
+        $('#jornadau').val(d[4]);
+
     }
     function agregaform(datos) {
         d = datos.split('||');
