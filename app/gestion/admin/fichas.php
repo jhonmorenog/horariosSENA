@@ -91,7 +91,7 @@ require_once $rutaConexionGestion;
                     <div class="card-box table-responsive">
 
                         <?php
-                        $sql1 = "SELECT *, ficha.estado as f FROM ficha";
+                        $sql1 = "SELECT numero_ficha,ingreso,salida,ficha.estado,jornada,denominacion FROM ficha,programa_ficha,programa WHERE numero_ficha=fichanumero_ficha AND programa_ficha.id_programa=programa.id_programa";
                         $query = $mysqli->query($sql1);
                         if ($query->num_rows >= 1) {
                             ?>
@@ -102,6 +102,7 @@ require_once $rutaConexionGestion;
                                             <th>Numero ficha</th> 
                                             <th>Fecha de inicio</th>
                                             <th>Fecha de finalización</th>
+                                            <th>Programa</th>
                                             <th>Actualizar</th>
                                             <th>Habilitar/Deshabilitar</th>
                                         </tr>
@@ -118,6 +119,7 @@ require_once $rutaConexionGestion;
                                                 <td><?php echo $key['numero_ficha']; ?></td>
                                                 <td><?php echo $key['ingreso']; ?></td>
                                                 <td><?php echo $key['salida']; ?></td>
+                                                <td><?php echo $key['denominacion']; ?></td>
                                                 <td>
                                                     <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" onclick="actuaform('<?php echo $datos ?>')"><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
                                                 </td>
