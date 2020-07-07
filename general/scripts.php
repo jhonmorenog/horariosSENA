@@ -14,6 +14,8 @@
     }
     getNombreSitio("Inicio");
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 
     function actuaform(datos) {
@@ -31,6 +33,17 @@
         $('#descripcionu option[value=' + d[1] + ']').attr('selected', 'selected');
         $('#sedeu option[value=' + d[2] + ']').attr('selected', 'selected');
 
+    }
+
+    function llenaform(datos) {
+        d = datos.split('||');
+        $('#aulab').var(d[0]);
+        $('#rangob').val(d[1]);
+        $('#diab').val(d[2]);
+        $('#trimestreb').val(d[3]);
+        $('#aniob').val(d[4]);
+        $('#fichab') .val(d[5]);
+        $('#documentob').val(d[6]);
     }
     function delet(datos) {
         d = datos.split('||');

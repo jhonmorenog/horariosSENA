@@ -76,6 +76,13 @@ require_once $rutaConexionGestion;
                 </div>
             </div>
         </form> 
+        <div class="col-md-2">
+                                <div class="form-group">
+                                    <label>&nbsp;</label>
+                                    <button class="btn btn-primary form-control" onclick="ajax2()">Buscar</button>
+                                </div>
+                            </div>
+
         <div class="row">
                 <div class="col-md-12 col-sm-12 ">
                     <div class="x_panel">
@@ -108,7 +115,7 @@ require_once $rutaConexionGestion;
                                             <th>Habilitar/Deshabilitar</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="ficha">
                                         <?php
                                         foreach ($query as $key) {
                                             $datos = $key['numero_ficha'] . "||" .

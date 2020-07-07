@@ -2,26 +2,6 @@
 require_once '../../../util/rutas.php';
 require_once $rutaConexionGestion;
 ?>
-
-<script type="text/javascript">
-    function agregaform(datos) {
-        d = datos.split('||');
-        $('#aula option[value=' + d[0] + ']').attr('selected', 'selected');
-        //      $('#rango option[value='+d[1]+']').attr('selected','selected');
-        $('#dia').val(d[2]);
-        $('#trimestre').val(d[3]);
-        $('#anio').val(d[4]);
-        $('#fichanumero_ficha option[value=' + d[5] + ']').attr('selected', 'selected');
-        $('#persona_documento option[value=' + d[6] + ']').attr('selected', 'selected');
-
-
-
-    }
-</script>
-</head>
-
-
-
 <div class="col-md-12 col-sm-12 ">
     <div class="x_panel">
         <div class="x_title">
@@ -34,6 +14,13 @@ require_once $rutaConexionGestion;
         </div> 
 
         <button style="margin: 10px" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal6" action="">Registrar Bloques</button>
+        <form>
+    <label>buscar</label>
+                            <input class="form-control" id="buscar" type="text" placeholder="Search..">
+                            <button onclick=""></button>
+                            </form>
+          
+                  
         <form action="Guardar/GuardarBloque.php" method="post">
             <div class="modal fade" id="myModal6" role="dialog">
                 <div class="modal-dialog">
@@ -112,7 +99,7 @@ require_once $rutaConexionGestion;
                                 <select name="instructor" class="form-control" required="">
                                     <option selected disabled>Seleccionar</option>
                                     <?php
-                                    $query = $mysqli->query("SELECT * FROM persona");
+                                    $query = $mysqli->query("SELECT * FROM persona where rol_documento='3'");
                                     while ($valores = mysqli_fetch_array($query)) {
                                         echo '<option value="' . $valores[documento] . '">' . $valores[documento] . '</option>';
                                     }
@@ -154,7 +141,7 @@ require_once $rutaConexionGestion;
                                             <th>Actualizar</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="myTable">
                                         <?php
                                         foreach ($query as $key) {
                                             $datos = $key['id_aula'] . "||" .
@@ -173,9 +160,12 @@ require_once $rutaConexionGestion;
                                                 <td><?php echo $key['trimestre']; ?></td>
                                                 <td><?php echo $key['anio']; ?></td>
                                                 <td><?php echo $key['numero_ficha']; ?></td>
-                                                <td><?php echo mb_strtoupper($key['documento']); ?> </td>
                                                 <td>
-                                                    <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" onclick="agregaform('<?php echo $datos ?>')"><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
+                                                    <?php echo mb_strtoupper($key['nombre']); ?> 
+                                                    <?php echo mb_strtoupper($key['apellido']); ?> 
+                                                </td>
+                                                <td>
+                                                    <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" onclick="llenaform('<?php echo $datos ?>')"><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
                                                 </td>
                                             </tr>
                                         <?php }
@@ -202,54 +192,12 @@ require_once $rutaConexionGestion;
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Registrar Bloques</h4>
+                        <h4 class="modal-title">Actualizar Bloque</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button></div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <input type="text" name="dia" id="dia" class="form-control" placeholder="Dia">
-                        </div>  
-                        <div class="form-group">
-                            <input type="number" name="trimestre" id="trimestre" class="form-control" placeholder="Trimestre">
-                        </div>  
-                        <div class="form-group">
-                            <label>Rango de Horas</label> 
-                            <select name="rango" id="rango" class="form-control" type="time">
-                                <option value="0">Seleccionar</option>
-                                <?php
-                                $query = $mysqli->query("SELECT * FROM bloque");
-                                while ($valores = mysqli_fetch_array($query)) {
-                                    echo '<option value="' . $valores[rango_horas] . '">' . $valores[rango_horas] . '</option>';
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Persona</label> 
-                            <select name="persona_documento" id="persona_documento" class="form-control" required="">
-                                <option value="0">Seleccionar</option>
-                                <?php
-                                $query = $mysqli->query("SELECT * FROM persona");
-                                while ($valores = mysqli_fetch_array($query)) {
-                                    echo '<option value="' . $valores[documento] . '">' . $valores[nombre] . '</option>';
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Numero de Ficha</label> 
-                            <select name="fichanumero_ficha" id="fichanumero_ficha"class="form-control" required="">
-                                <option value="0">Seleccionar</option>
-                                <?php
-                                $query = $mysqli->query("SELECT * FROM ficha");
-                                while ($valores = mysqli_fetch_array($query)) {
-                                    echo '<option value="' . $valores[numero_ficha] . '">' . $valores[numero_ficha] . '</option>';
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label>Aula</label> 
-                            <select name="aulaid_aula" id="aula" class="form-control" required="">
+                            <select name="aulab" id="aulab" class="form-control" required="">
                                 <option value="0">Seleccionar</option>
                                 <?php
                                 $query = $mysqli->query("SELECT * FROM aula");
@@ -259,8 +207,71 @@ require_once $rutaConexionGestion;
                                 ?>
                             </select>
                         </div>
-                        <label >Año:</label>
-                        <input type="number" name="anio" id="anio" class="form-control" placeholder="Año"> 
+                        <div class="form-group">
+                            <label>Rango de Horas</label> 
+                            <select name="rangob" id="rangob" class="form-control" required="">
+                                <option selected disabled>Seleccionar</option>
+                                <option value="06:00-07:40">06:00-07:40</option>
+                                <option value="08:00-09:40">08:00-09:40</option>
+                                <option value="10:00-11:40">10:00-11:40</option>
+                                <option value="12:00-13:40">12:00-13:40</option>
+                                <option value="14:20-16:00">14:20-16:00</option>
+                                <option value="16:20-18:00">16:20-18:00</option>
+                                <option value="18:15-19:45">18:15-19:45</option>
+                                <option value="20:00-21:40">20:00-21:40</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label >Dia:</label>                            
+                            <select name="diab" id="diab" class="form-control" required="">
+                                    <option selected disabled>Seleccionar</option>
+                                    <option value="LUNES">Lunes</option>
+                                    <option value="MARTES">Martes</option>
+                                    <option value="MIERCOLES">Miercoles</option>
+                                    <option value="JUEVES">Jueves</option>
+                                    <option value="VIERNES">Viernes</option>
+                                    <option value="SABADO">Sabado</option>
+                                </select>
+                        </div>  
+                        <div class="form-group">
+                            <label >Trimestre:</label>                            
+                            <select name="trimestreb"  id="trimestreb" class="form-control" required="">
+                                    <option selected disabled>Seleccionar</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>                                    
+                                </select>
+                        </div>  
+                        <div class="form-group">
+                            <label >Año:</label>
+                        <input type="number" name="aniob" id="aniob" class="form-control" placeholder="Año">
+                        </div>
+                        <div class="form-group">
+                            <label>Numero de Ficha</label> 
+                            <select name="fichab" id="fichab" class="form-control" required="">
+                                <option selected disabled>Seleccionar</option>
+                                <?php
+                                $query = $mysqli->query("SELECT * FROM ficha");
+                                while ($valores = mysqli_fetch_array($query)) {
+                                    echo '<option value="' . $valores[numero_ficha] . '">' . $valores[numero_ficha] . '</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>                        
+                        <div class="form-group">
+                            <label>Instructor</label> 
+                            <select name="documentob" id="documentob" class="form-control" required="">
+                                <option selected disabled>Seleccionar</option>
+                                <?php
+                                $query = $mysqli->query("SELECT nombre,apellido,documento FROM persona where rol_documento='3'");
+                                while ($valores = mysqli_fetch_array($query)) {
+                                    echo '<option value="' . $valores[documento] . '">' . $valores[nombre]." ". $valores[apellido] . '</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>                                               
+                         
                         <div class="modal-footer">
 
                             <button style="margin: 10px" type="submit" class="btn btn-dark">Actualizar</button>
@@ -273,3 +284,4 @@ require_once $rutaConexionGestion;
         </div>
     </div>
 </form> 
+
