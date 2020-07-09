@@ -17,6 +17,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+    function formsede(datos) {
+        d = datos.split('||');
+        $('#nombreu').val(d[0]);
+        $('#idu').val(d[1]);
+        $('#direccionu').val(d[2]);
+        $('#centrou option[value=' + d[3] + ']').attr('selected', 'selected');
+    }
 
     function actuaform(datos) {
         d = datos.split('||');
@@ -37,13 +44,13 @@
 
     function llenaform(datos) {
         d = datos.split('||');
-        $('#aulab').var(d[0]);
-        $('#rangob').val(d[1]);
-        $('#diab').val(d[2]);
-        $('#trimestreb').val(d[3]);
+        $('#aulab option[value=' + d[0] + ']').attr('selected', 'selected');
+        $('#rangob option[value=' + d[1] + ']').attr('selected', 'selected');
+        $('#diab option[value=' + d[2] + ']').attr('selected', 'selected');
+        $('#trimestreb option[value=' + d[3] + ']').attr('selected', 'selected');
         $('#aniob').val(d[4]);
-        $('#fichab') .val(d[5]);
-        $('#documentob').val(d[6]);
+        $('#fichab option[value=' + d[5] + ']').attr('selected', 'selected');
+        $('#documentob option[value=' + d[6] + ']').attr('selected', 'selected');
     }
     function delet(datos) {
         d = datos.split('||');

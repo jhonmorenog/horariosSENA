@@ -12,7 +12,7 @@
 <?php
 
 /**
- * Se verifica si se encuentra en nel index, en dado caso se cambio no no la dirección de los css
+ * Se verifica si se encuentra en el index, en dado caso se cambio no no la dirección de los css
  */
 if( $_SERVER['PHP_SELF']=="/SenTime/index.php"){
     $dir="";
@@ -24,6 +24,4 @@ if( $_SERVER['PHP_SELF']=="/SenTime/index.php"){
 <link href="<?php echo $dir; ?>css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <link href="<?php echo $dir; ?>css/font-awesome/font-awesome.min.css" rel="stylesheet">
 <link href="<?php echo $dir; ?>css/build/custom.min.css" rel="stylesheet">
-
-
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo $dir; ?>icon/Horarios.ico" />

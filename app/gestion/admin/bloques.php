@@ -141,7 +141,7 @@ require_once $rutaConexionGestion;
                                             <th>Actualizar</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="myTable">
+                                    <tbody>
                                         <?php
                                         foreach ($query as $key) {
                                             $datos = $key['id_aula'] . "||" .

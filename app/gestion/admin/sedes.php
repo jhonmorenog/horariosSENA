@@ -118,7 +118,7 @@ require_once $rutaConexionGestion;
                                                 <td><?php echo mb_strtoupper($key['nombre_centro']); ?></td>
 
                                                 <td>
-                                                    <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" onclick="agregaform('<?php echo $datos ?>')"><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
+                                                    <button style="border-radius: 50%; width: 33px; height: 33px; margin-top: -5px; margin-bottom: -5px" type="button" class="btn btn-info"  data-toggle="modal" data-target="#dataUpdate" onclick="formsede('<?php echo $datos ?>')"><i class="fa fa-edit" style="margin-left: -4px;"></i></button>
 
                                                 </td>
 
@@ -167,12 +167,12 @@ require_once $rutaConexionGestion;
                         <label>Centro al que pertenece</label> 
                         <select name="centrou" id="centrou" class="form-control" required="">
                             <option value="0">Seleccionar</option>
-<?php
-$query = $mysqli->query("SELECT * FROM centro");
-while ($valores = mysqli_fetch_array($query)) {
-    echo '<option value="' . $valores[id_centro] . '">' . $valores[nombre_centro] . '</option>';
-}
-?>
+                                        <?php
+                        $query = $mysqli->query("SELECT * FROM centro");
+                        while ($valores = mysqli_fetch_array($query)) {
+                            echo '<option value="' . $valores[id_centro] . '">' . $valores[nombre_centro] . '</option>';
+                        }
+                        ?>
                         </select>
                     </div>
                     <div class="modal-footer">

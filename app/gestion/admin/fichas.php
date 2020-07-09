@@ -23,6 +23,9 @@ require_once $rutaConexionGestion;
             </ul>
             <div class="clearfix"></div>
         </div>
+
+        
+
         <button style="margin: 10px" type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal5" action="">Registrar Fichas</button>
         
         <form action="Guardar/GuardarFicha.php" method="post">
@@ -76,13 +79,7 @@ require_once $rutaConexionGestion;
                 </div>
             </div>
         </form> 
-        <div class="col-md-2">
-                                <div class="form-group">
-                                    <label>&nbsp;</label>
-                                    <button class="btn btn-primary form-control" onclick="ajax2()">Buscar</button>
-                                </div>
-                            </div>
-
+        
         <div class="row">
                 <div class="col-md-12 col-sm-12 ">
                     <div class="x_panel">
